@@ -61,6 +61,30 @@ build CMakeFiles/University_Unit.dir/Time.cpp.obj: CXX_COMPILER__University_Unit
   OBJECT_DIR = CMakeFiles\University_Unit.dir
   OBJECT_FILE_DIR = CMakeFiles\University_Unit.dir
 
+build CMakeFiles/University_Unit.dir/Date.cpp.obj: CXX_COMPILER__University_Unit_unscanned_Debug E$:/Final_Project/University_Unit/Date.cpp || cmake_object_order_depends_target_University_Unit
+  DEP_FILE = CMakeFiles\University_Unit.dir\Date.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\University_Unit.dir
+  OBJECT_FILE_DIR = CMakeFiles\University_Unit.dir
+
+build CMakeFiles/University_Unit.dir/Person.cpp.obj: CXX_COMPILER__University_Unit_unscanned_Debug E$:/Final_Project/University_Unit/Person.cpp || cmake_object_order_depends_target_University_Unit
+  DEP_FILE = CMakeFiles\University_Unit.dir\Person.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\University_Unit.dir
+  OBJECT_FILE_DIR = CMakeFiles\University_Unit.dir
+
+build CMakeFiles/University_Unit.dir/Student.cpp.obj: CXX_COMPILER__University_Unit_unscanned_Debug E$:/Final_Project/University_Unit/Student.cpp || cmake_object_order_depends_target_University_Unit
+  DEP_FILE = CMakeFiles\University_Unit.dir\Student.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\University_Unit.dir
+  OBJECT_FILE_DIR = CMakeFiles\University_Unit.dir
+
+build CMakeFiles/University_Unit.dir/Teacher.cpp.obj: CXX_COMPILER__University_Unit_unscanned_Debug E$:/Final_Project/University_Unit/Teacher.cpp || cmake_object_order_depends_target_University_Unit
+  DEP_FILE = CMakeFiles\University_Unit.dir\Teacher.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\University_Unit.dir
+  OBJECT_FILE_DIR = CMakeFiles\University_Unit.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target University_Unit
@@ -69,7 +93,7 @@ build CMakeFiles/University_Unit.dir/Time.cpp.obj: CXX_COMPILER__University_Unit
 #############################################
 # Link the executable University_Unit.exe
 
-build University_Unit.exe: CXX_EXECUTABLE_LINKER__University_Unit_Debug CMakeFiles/University_Unit.dir/main.cpp.obj CMakeFiles/University_Unit.dir/Time.cpp.obj
+build University_Unit.exe: CXX_EXECUTABLE_LINKER__University_Unit_Debug CMakeFiles/University_Unit.dir/main.cpp.obj CMakeFiles/University_Unit.dir/Time.cpp.obj CMakeFiles/University_Unit.dir/Date.cpp.obj CMakeFiles/University_Unit.dir/Person.cpp.obj CMakeFiles/University_Unit.dir/Student.cpp.obj CMakeFiles/University_Unit.dir/Teacher.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\University_Unit.dir
