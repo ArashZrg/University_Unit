@@ -4,13 +4,13 @@ project(University_Unit)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(University_Unit main.cpp
-        Time.cpp
-        Time.h
-        Date.cpp
-        Date.h
-        Person.cpp
-        Person.h
-        Student.cpp
-        Student.h
-        Teacher.cpp
-        Teacher.h)
+        DateTime/Time.cpp
+        DateTime/Time.h
+        DateTime/Date.cpp
+        DateTime/Date.h
+        People/Person.cpp
+        People/Person.h
+        People/Student.cpp
+        People/Student.h
+        People/Teacher.cpp
+        People/Teacher.h)
