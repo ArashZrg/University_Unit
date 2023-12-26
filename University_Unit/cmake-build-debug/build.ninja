@@ -85,6 +85,18 @@ build CMakeFiles/University_Unit.dir/People/Teacher.cpp.obj: CXX_COMPILER__Unive
   OBJECT_DIR = CMakeFiles\University_Unit.dir
   OBJECT_FILE_DIR = CMakeFiles\University_Unit.dir\People
 
+build CMakeFiles/University_Unit.dir/Location/Location.cpp.obj: CXX_COMPILER__University_Unit_unscanned_Debug E$:/Final_Project/University_Unit/Location/Location.cpp || cmake_object_order_depends_target_University_Unit
+  DEP_FILE = CMakeFiles\University_Unit.dir\Location\Location.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\University_Unit.dir
+  OBJECT_FILE_DIR = CMakeFiles\University_Unit.dir\Location
+
+build CMakeFiles/University_Unit.dir/Section/Section.cpp.obj: CXX_COMPILER__University_Unit_unscanned_Debug E$:/Final_Project/University_Unit/Section/Section.cpp || cmake_object_order_depends_target_University_Unit
+  DEP_FILE = CMakeFiles\University_Unit.dir\Section\Section.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\University_Unit.dir
+  OBJECT_FILE_DIR = CMakeFiles\University_Unit.dir\Section
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target University_Unit
@@ -93,7 +105,7 @@ build CMakeFiles/University_Unit.dir/People/Teacher.cpp.obj: CXX_COMPILER__Unive
 #############################################
 # Link the executable University_Unit.exe
 
-build University_Unit.exe: CXX_EXECUTABLE_LINKER__University_Unit_Debug CMakeFiles/University_Unit.dir/main.cpp.obj CMakeFiles/University_Unit.dir/DateTime/Time.cpp.obj CMakeFiles/University_Unit.dir/DateTime/Date.cpp.obj CMakeFiles/University_Unit.dir/People/Person.cpp.obj CMakeFiles/University_Unit.dir/People/Student.cpp.obj CMakeFiles/University_Unit.dir/People/Teacher.cpp.obj
+build University_Unit.exe: CXX_EXECUTABLE_LINKER__University_Unit_Debug CMakeFiles/University_Unit.dir/main.cpp.obj CMakeFiles/University_Unit.dir/DateTime/Time.cpp.obj CMakeFiles/University_Unit.dir/DateTime/Date.cpp.obj CMakeFiles/University_Unit.dir/People/Person.cpp.obj CMakeFiles/University_Unit.dir/People/Student.cpp.obj CMakeFiles/University_Unit.dir/People/Teacher.cpp.obj CMakeFiles/University_Unit.dir/Location/Location.cpp.obj CMakeFiles/University_Unit.dir/Section/Section.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\University_Unit.dir

@@ -13,4 +13,8 @@ add_executable(University_Unit main.cpp
         People/Student.cpp
         People/Student.h
         People/Teacher.cpp
-        People/Teacher.h)
+        People/Teacher.h
+        Location/Location.cpp
+        Location/Location.h
+        Section/Section.cpp
+        Section/Section.h)
