@@ -47,3 +47,14 @@
 6	833	7253991877793226	CMakeFiles/University_Unit.dir/DateTime/Date.cpp.obj	ac2d81c90462402a
 17	892	7253991878380760	CMakeFiles/University_Unit.dir/Location/Location.cpp.obj	eab2c6a4f7daed16
 892	1124	7253991880662827	University_Unit.exe	3f5c6d49c3535444
+2	1087	7257349093589339	CMakeFiles/University_Unit.dir/main.cpp.obj	cb39c7b36933757d
+5	1105	7257349093739351	CMakeFiles/University_Unit.dir/DateTime/Time.cpp.obj	edefc3c1f0f682db
+11	1109	7257349093769340	CMakeFiles/University_Unit.dir/People/Person.cpp.obj	13919fc66b89819b
+13	1117	7257349093739351	CMakeFiles/University_Unit.dir/People/Teacher.cpp.obj	4e35b6279bdb9704
+8	1118	7257349093769340	CMakeFiles/University_Unit.dir/DateTime/Date.cpp.obj	ac2d81c90462402a
+16	1152	7257349094241806	CMakeFiles/University_Unit.dir/People/Student.cpp.obj	525086334a2e233a
+1152	1468	7257349097372134	University_Unit.exe	3f5c6d49c3535444
+2	442	7257349863972646	CMakeFiles/University_Unit.dir/DateTime/Date.cpp.obj	ac2d81c90462402a
+442	526	7257349864783287	University_Unit.exe	3f5c6d49c3535444
+2	375	7257349990015368	CMakeFiles/University_Unit.dir/main.cpp.obj	cb39c7b36933757d
+376	462	7257349990843325	University_Unit.exe	3f5c6d49c3535444

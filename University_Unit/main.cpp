@@ -4,22 +4,23 @@
 #include "DateTime/Time.h"
 //#include "People/Person.h"
 //#include "People/Student.h"
+#include "DateTime/Date.h"
 
 using namespace std;
 
 int main() {
 
-    Time test(8 , 0 , 3 , 5 );
-    cout << test.computeFinishTime() << endl;
-    cout << test.showClassStartTime() << endl;
-    cout << test.showClassDuration() << endl;
-    cout << test.showClassFinishTime() << endl;
-    cout << test.getStartHour() << endl;
-    cout << test.getStartMinute() << endl;
-    cout << test.getDuration() << endl;
-    cout << test.getExmaDuration() << endl;
-    cout << test.getFinishHour() << endl;
-    cout << test.getFinishMinute() << endl;
+//    Time test(8 , 0 , 3 , 5 );
+//    cout << test.computeFinishTime() << endl;
+//    cout << test.showClassStartTime() << endl;
+//    cout << test.showClassDuration() << endl;
+//    cout << test.showClassFinishTime() << endl;
+//    cout << test.getStartHour() << endl;
+//    cout << test.getStartMinute() << endl;
+//    cout << test.getDuration() << endl;
+//    cout << test.getExmaDuration() << endl;
+//    cout << test.getFinishHour() << endl;
+//    cout << test.getFinishMinute() << endl;
 
 //    Student s1("Arash", "Zarghami", 18, 234567);
 //    Student s2("Mohammad", "Rahi", 19, 234567);
@@ -45,6 +46,7 @@ int main() {
 //    cout << s3.showPersonInformation() << endl;
 //    cout << s4.showPersonInformation() << endl;
 
-
+Date d(1402 , 12 , 23 , 1403 , 1 , 12);
+cout << d.showStartDateOfClass();
 
 }
