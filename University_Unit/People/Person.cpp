@@ -5,9 +5,8 @@
 
 using namespace std;
 
-Person::Person(string firstName, string lastName, int age, int idNumber) : _firstname(firstName),
-                                                                           _lastName(lastName) {
-
+Person::Person(string firstName, string lastName, int age) : _firstname(firstName),
+                                                        _lastName(lastName) {
 
     if (isValidAge(age)) {
         _age = age;
@@ -15,12 +14,7 @@ Person::Person(string firstName, string lastName, int age, int idNumber) : _firs
         throw invalid_argument("Illegal Age!");
     }
 
-
-
 }
-
-
-
 
 bool Person::isValidAge(int age) {
     bool isValid = true;
@@ -45,7 +39,4 @@ int Person::getAge() {
     return _age;
 }
 
-int Person::getIdNumber() {
-    return _idNumber;
-}
 

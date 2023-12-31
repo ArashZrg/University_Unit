@@ -1,7 +1,7 @@
 #include "Location.h"
 
 Location::Location(string buidldingName, int roomNumber, int floorNumber, string buildingAddress) :
-        _buildingName(buidldingName), _roomNumber(roomNumber), _floorNumber(floorNumber),
+        _buildingName(buidldingName), _roomNumberInEachFloor(roomNumber), _floorsNumber(floorNumber),
         _buildingAddress(buildingAddress) {}
 
 
@@ -10,11 +10,11 @@ string Location::getBuildingName() {
 }
 
 int Location::getRoomNumber() {
-    return _roomNumber;
+    return _roomNumberInEachFloor;
 }
 
 int Location::getFloorNumber() {
-    return _floorNumber;
+    return _floorsNumber;
 }
 
 string Location::getBuildingAddress() {

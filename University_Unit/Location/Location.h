@@ -9,8 +9,8 @@ using namespace std;
 class Location {
 private:
     string _buildingName;
-    int _roomNumber;
-    int _floorNumber;
+    int _floorsNumber;
+    int _roomNumberInEachFloor;
     string _buildingAddress;
 public:
 

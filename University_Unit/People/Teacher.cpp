@@ -4,8 +4,7 @@
 
 using namespace std;
 
-Teacher::Teacher(std::string firstName, std::string lastName, int age, int idNumber) : Person(firstName, lastName, age,
-                                                                                              idNumber) {
+Teacher::Teacher(string firstName, string lastName, int age) : Person(firstName, lastName, age) {
     _teacherNumber++;
     _distTeacherNumber = _teacherNumber;
 }
@@ -18,7 +17,6 @@ string Teacher::showPersonInformation() {
     string fullName = getFirstName() + " " + getLastName();
     string result = "[Name: " + fullName + "]\n"
                     + "[Age: " + to_string(getAge()) + "]\n"
-                    + "[ID Number: " + to_string(getIdNumber()) + "]\n"
                     + "[Teacher Number: " + to_string(getTeacherNumber()) + "]\n";
 
     return result;

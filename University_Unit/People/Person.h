@@ -17,8 +17,7 @@ private:
 
 public:
 
-    Person(string firstName, string lastName, int age , int idNumber);
-
+    Person(string firstName, string lastName, int age );
 
 
     bool isValidAge(int age);
@@ -28,8 +27,6 @@ public:
     string getLastName();
 
     int getAge();
-
-    int getIdNumber();
 
     virtual string showPersonInformation() = 0;
 

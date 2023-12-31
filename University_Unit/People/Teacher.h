@@ -15,14 +15,14 @@ private:
     int _distTeacherNumber;
 
 public:
-    Teacher(string firstName, string lastName, int age, int idNumber);
+    Teacher(string firstName, string lastName, int age);
 
     int getTeacherNumber();
 
     string showPersonInformation();
 };
 
-int Teacher::_teacherNumber = 135;
+int Teacher::_teacherNumber = 3500;
 
 
 #endif

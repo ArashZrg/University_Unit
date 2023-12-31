@@ -16,7 +16,7 @@ private:
     int _distStudentNumber;
 
 public:
-    Student(string firstName, string lastName, int age, int idNumber);
+    Student(string firstName, string lastName, int age);
 
     string showPersonInformation() override;
 
