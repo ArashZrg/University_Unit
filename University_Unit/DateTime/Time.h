@@ -32,7 +32,7 @@ public:
 
     int finishThirdState();
 
-//    // Handling interfrence class times
+//    // Handling conflict class times
 //    bool handleTimeInterference(Time &ob);
 
     string showClassStartTime() const;
