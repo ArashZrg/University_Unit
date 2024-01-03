@@ -3,15 +3,29 @@
 #include <string>
 #include <vector>
 
-Section::Section(string classId) {}
+using namespace std;
 
-bool Section::isClassIdValid(string classId) {
-    bool isValid = true;
+[[maybe_unused]] vector<string> Section::existingSectionIDs;
 
-    if (classId == this->_classID) {
-        isValid = false;
-        return isValid;
+Section::Section(string sectionId, string sectionName) : _sectionName(sectionName) {
+    if (isSectionIdValid(sectionId)) {
+        _sectionId = sectionId;
+        existingSectionIDs.push_back(sectionId);
+    } else {
+        throw invalid_argument("This ClassID Is Already Exist in System , Choose Another one !");
     }
+}
 
-    return isValid;
+
+bool Section::isSectionIdValid(string sectionId) {
+    for (const string &existingId: existingSectionIDs) {
+        if (sectionId == existingId) {
+            return false;
+        }
+    }
+    return true;
+}
+
+string Section::getSectionId() {
+    return _sectionId;
 }

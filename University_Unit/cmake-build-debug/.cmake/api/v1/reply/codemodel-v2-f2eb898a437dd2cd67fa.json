@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "E:/Final_Project/University_Unit/cmake-build-debug",
-		"source" : "E:/Final_Project/University_Unit"
+		"build" : "E:/University_Unit/University_Unit/cmake-build-debug",
+		"source" : "E:/University_Unit/University_Unit"
 	},
 	"version" : 
 	{

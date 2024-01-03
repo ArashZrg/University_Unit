@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="University_Unit"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="E:/University_Unit/University_Unit/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="F:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/University_Unit/University_Unit/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="F:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/University_Unit/University_Unit/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="F:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/University_Unit/University_Unit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="F:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/University_Unit/University_Unit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="University_Unit">
+				<Option output="E:/University_Unit/University_Unit/cmake-build-debug/University_Unit.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/University_Unit/University_Unit/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="F:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
+					<Add directory="F:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="F:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
+					<Add directory="F:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="F:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="F:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="F:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="F:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/University_Unit/University_Unit/cmake-build-debug/Makefile&quot;  VERBOSE=1 University_Unit"/>
+					<CompileFile command="F:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/University_Unit/University_Unit/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="F:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/University_Unit/University_Unit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="F:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/University_Unit/University_Unit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="University_Unit/fast">
+				<Option output="E:/University_Unit/University_Unit/cmake-build-debug/University_Unit.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/University_Unit/University_Unit/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="F:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
+					<Add directory="F:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="F:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
+					<Add directory="F:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="F:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="F:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="F:/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="F:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/University_Unit/University_Unit/cmake-build-debug/Makefile&quot;  VERBOSE=1 University_Unit/fast"/>
+					<CompileFile command="F:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/University_Unit/University_Unit/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="F:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/University_Unit/University_Unit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="F:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/University_Unit/University_Unit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="E:/University_Unit/University_Unit/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="F:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/University_Unit/University_Unit/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="F:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/University_Unit/University_Unit/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="F:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/University_Unit/University_Unit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="F:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/University_Unit/University_Unit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="E:/University_Unit/University_Unit/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="F:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/University_Unit/University_Unit/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="F:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/University_Unit/University_Unit/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="F:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/University_Unit/University_Unit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="F:/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/University_Unit/University_Unit/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="E:/University_Unit/University_Unit/DateTime/Date.cpp">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/DateTime/Date.h">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/DateTime/Time.cpp">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/DateTime/Time.h">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/Location/Location.cpp">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/Location/Location.h">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/People/Person.cpp">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/People/Person.h">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/People/Student.cpp">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/People/Student.h">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/People/Teacher.cpp">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/People/Teacher.h">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/Section/Section.cpp">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/Section/Section.h">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/main.cpp">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

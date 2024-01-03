@@ -1,4 +1,4 @@
-# Install script for directory: E:/Final_Project/University_Unit
+# Install script for directory: E:/University_Unit/University_Unit
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "E:/Final_Project/University_Unit/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "E:/University_Unit/University_Unit/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -15,12 +15,16 @@ using namespace std;
 
 class Section {
 private:
-    string _classID;
+    string _sectionId;
+    string _sectionName;
 public:
-    Section(string classId);
+    Section(string sectionId, string sectionName);
 
-    bool isClassIdValid(string classId);
+    bool isSectionIdValid(string sectionId);
 
+    string getSectionId();
+
+    static vector<string> existingSectionIDs;
 };
 
 

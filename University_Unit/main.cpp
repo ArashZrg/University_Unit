@@ -4,11 +4,17 @@
 #include "DateTime/Time.h"
 //#include "People/Person.h"
 //#include "People/Student.h"
-#include "DateTime/Date.h"
+//#include "DateTime/Date.h"
+#include "Section/Section.h"
 
 using namespace std;
 
 int main() {
+
+    Section ob("Ap001");
+    Section ob1("Ap002");
+    Section ob2("Ap002");
+
 
 //    Time test(8 , 0 , 3 , 5 );
 //    cout << test.computeFinishTime() << endl;
@@ -46,7 +52,7 @@ int main() {
 //    cout << s3.showPersonInformation() << endl;
 //    cout << s4.showPersonInformation() << endl;
 
-Date d(1402 , 12 , 23 , 1403 , 1 , 12);
-cout << d.showStartDateOfClass();
+//Date d(1402 , 12 , 23 , 1403 , 1 , 12);
+//cout << d.showStartDateOfClass();
 
 }
