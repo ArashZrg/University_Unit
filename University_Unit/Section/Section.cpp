@@ -5,9 +5,13 @@
 
 using namespace std;
 
-[[maybe_unused]] vector<string> Section::existingSectionIDs;
+vector<string> Section::existingSectionIDs;
 
-Section::Section(string sectionId, string sectionName) : _sectionName(sectionName) {
+Section::Section(string sectionId, string sectionName, int year, int month, int day, int examYear, int examMonth,
+                 int examDay, int dayNum, int startHour, int startMinute, int classDuration, int examDuration) :
+        _sectionName(sectionName),
+        date(year, month, day, examYear, examMonth, examDay, dayNum),
+        time(startHour, startMinute, classDuration, examDuration) {
     if (isSectionIdValid(sectionId)) {
         _sectionId = sectionId;
         existingSectionIDs.push_back(sectionId);

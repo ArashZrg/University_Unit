@@ -17,8 +17,12 @@ class Section {
 private:
     string _sectionId;
     string _sectionName;
+    Date date;
+    Time time;
+    bool isNeedVideoProjector;
 public:
-    Section(string sectionId, string sectionName);
+    Section(string sectionId, string sectionName, int year, int month, int day, int examYear, int examMonth,
+            int examDay, int number, int startHour, int startMinute, int classDuration, int examDuration);
 
     bool isSectionIdValid(string sectionId);
 
