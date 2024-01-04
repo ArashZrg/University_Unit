@@ -4,14 +4,11 @@
 
 using namespace std;
 
-Date::Date(int year, int month, int day, int examYear, int examMonth, int examDay, DaysOfWeek dayNum) : _yearOfSection(year),
-                                                                                                 _monthOfSection(month),
-                                                                                                 _dayOfSection(day),
-                                                                                                 _yearOfExam(examYear),
-                                                                                                 _monthOfExam(
-                                                                                                         examMonth),
-                                                                                                 _dayOfExam(examDay),
-                                                                                                 _dayNum(dayNum) {}
+Date::Date(int year, int month, int day, int examYear, int examMonth, int examDay, int dayNum)
+        : _yearOfSection(year), _monthOfSection(month), _dayOfSection(day),
+          _yearOfExam(examYear), _monthOfExam(examMonth), _dayOfExam(examDay),
+          _dayNum(dayNum) {}
+
 
 string Date::showSectionStartDate() const {
     string result =
@@ -21,6 +18,7 @@ string Date::showSectionStartDate() const {
 
 string Date::showSectionExamDate() const {
     string result = "[" + to_string(_yearOfExam) + "/" + formatDate(_monthOfExam) + "/" + formatDate(_dayOfExam) + "]";
+    return result;
 }
 
 string Date::formatDate(int date) {
@@ -53,6 +51,6 @@ string Date::showSectionDay(int dayNum) {
     }
 }
 
-DaysOfWeek Date::getDayNum() const {
+int Date::getDayNum() const {
     return _dayNum;
 }

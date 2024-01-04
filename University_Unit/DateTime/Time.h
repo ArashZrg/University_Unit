@@ -29,11 +29,9 @@ private:
 
     static bool isValidExamDuration(int duration);
 
-public:
+private:
 
     int computeFinishTime();
-
-private:
 
     int finishFirstState();
 
