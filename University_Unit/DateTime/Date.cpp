@@ -1,25 +1,26 @@
 #include "Date.h"
 #include <iostream>
 #include <string>
-#include <vector>
 
 using namespace std;
 
-Date::Date(int year, int month, int day,  int examYear, int examMonth, int examDay, int dayNum) : _year(year),
-                                                                                                 _month(month),
-                                                                                                 _day(day),
-                                                                                                 _examYear(examYear),
-                                                                                                 _examMonth(examMonth),
-                                                                                                 _examDay(examDay),
+Date::Date(int year, int month, int day, int examYear, int examMonth, int examDay, DaysOfWeek dayNum) : _yearOfSection(year),
+                                                                                                 _monthOfSection(month),
+                                                                                                 _dayOfSection(day),
+                                                                                                 _yearOfExam(examYear),
+                                                                                                 _monthOfExam(
+                                                                                                         examMonth),
+                                                                                                 _dayOfExam(examDay),
                                                                                                  _dayNum(dayNum) {}
 
-string Date::showStartDateOfClass() {
-    string result = to_string(_year) + "/" + formatDate(_month) + "/" + formatDate(_day);
+string Date::showSectionStartDate() const {
+    string result =
+            "[" + to_string(_yearOfSection) + "/" + formatDate(_monthOfSection) + "/" + formatDate(_dayOfSection) + "]";
     return result;
 }
 
-string Date::showExamDate() {
-    string result = to_string(_examYear) + "/" + formatDate(_examMonth) + "/" + formatDate(_examDay);
+string Date::showSectionExamDate() const {
+    string result = "[" + to_string(_yearOfExam) + "/" + formatDate(_monthOfExam) + "/" + formatDate(_dayOfExam) + "]";
 }
 
 string Date::formatDate(int date) {
@@ -31,7 +32,7 @@ string Date::formatDate(int date) {
     }
 }
 
-string Date::showDay(int dayNum) {
+string Date::showSectionDay(int dayNum) {
     switch (dayNum) {
         case 0 :
             return "Saturday";
@@ -50,4 +51,8 @@ string Date::showDay(int dayNum) {
         default:
             return "Invalid Day Of The Week!";
     }
+}
+
+DaysOfWeek Date::getDayNum() const {
+    return _dayNum;
 }

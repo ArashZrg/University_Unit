@@ -3,28 +3,37 @@
 
 #include <iostream>
 #include <string>
-#include <ctime>
 
 using namespace std;
 
 class Time {
+
 private:
+
     int _startHour;
     int _startMinute;
 
-    int _classDuration;
+    int _sectionDuration;
     int _examDuration;
 
     int _finishHour = 0;
     int _finishMinute = 0;
+
 public:
-    Time(int startHour, int startMinute, int classDuration, int examDuration);
 
-    static bool isValidDuration(int durationHour);
+    Time(int startHour, int startMinute, int sectionDuration, int examDuration);
 
-    static bool isValidExamDuration(int examDuration);
+private:
+
+    static bool isValidDuration(int duration);
+
+    static bool isValidExamDuration(int duration);
+
+public:
 
     int computeFinishTime();
+
+private:
 
     int finishFirstState();
 
@@ -32,28 +41,30 @@ public:
 
     int finishThirdState();
 
-//    // Handling conflict class times
-//    bool handleTimeInterference(Time &ob);
+public:
 
-    string showClassStartTime() const;
+    bool handleTimeInterference(Time &ob);
 
-    string showClassDuration() const;
+public:
 
-    string showClassFinishTime();
+    [[nodiscard]] string showSectionStartTime() const;
 
-    int getStartHour() const;
+    [[nodiscard]] string showSectionDuration() const;
 
-    int getStartMinute() const;
+    string showSectionFinishTime();
 
-    int getDuration() const;
+    [[nodiscard]] int getStartHour() const;
 
-    int getExmaDuration() const;
+    [[nodiscard]] int getStartMinute() const;
 
-    int getFinishHour() const;
+    [[nodiscard]] int getDuration() const;
 
-    int getFinishMinute() const;
+    [[nodiscard]] int getExamDuration() const;
+
+    [[nodiscard]] int getFinishHour() const;
+
+    [[nodiscard]] int getFinishMinute() const;
 
 };
-
 
 #endif

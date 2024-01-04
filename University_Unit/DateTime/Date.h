@@ -7,40 +7,47 @@
 
 using namespace std;
 
+enum class DaysOfWeek {
+    Saturday = 0,
+    Sunday = 1,
+    Monday = 2,
+    Tuesday = 3,
+    Wednesday = 4,
+    Thursday = 5,
+    Friday = 6
+};
+
 class Date {
+
 private:
-    int _year;
-    int _month;
-    int _day;
-    int _examYear;
-    int _examMonth;
-    int _examDay;
-    int _dayNum;
+
+    int _yearOfSection;
+    int _monthOfSection;
+    int _dayOfSection;
+    int _yearOfExam;
+    int _monthOfExam;
+    int _dayOfExam;
+    DaysOfWeek _dayNum;
 
 public:
 
-    enum class Days {
-        Saturday = 0,
-        Sunday = 1,
-        Monday = 2,
-        Tuesday = 3,
-        Wednesday = 4,
-        Thursday = 5,
-        Friday = 6
-    };
+    Date(int year, int month, int day, int examYear, int examMonth, int examDay, DaysOfWeek dayNum);
 
-    Date(int year, int month, int day, int examYear, int examMonth, int examDay , int dayNum);
+public:
 
-    string showStartDateOfClass();
+    [[nodiscard]] string showSectionStartDate() const;
 
-    string showExamDate();
+    [[nodiscard]] string showSectionExamDate() const;
 
-    string formatDate(int date);
+    [[nodiscard]] DaysOfWeek getDayNum() const;
+private:
 
-    string showDay(int dayNum);
+    static string formatDate(int date);
 
+public:
+
+    static string showSectionDay(int dayNum);
 
 };
-
 
 #endif

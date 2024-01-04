@@ -152,6 +152,30 @@ DateTime/Date.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/DateTime/Date.cpp.s
 .PHONY : DateTime/Date.cpp.s
 
+DateTime/DateTime_Test.obj: DateTime/DateTime_Test.cpp.obj
+.PHONY : DateTime/DateTime_Test.obj
+
+# target to build an object file
+DateTime/DateTime_Test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/DateTime/DateTime_Test.cpp.obj
+.PHONY : DateTime/DateTime_Test.cpp.obj
+
+DateTime/DateTime_Test.i: DateTime/DateTime_Test.cpp.i
+.PHONY : DateTime/DateTime_Test.i
+
+# target to preprocess a source file
+DateTime/DateTime_Test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/DateTime/DateTime_Test.cpp.i
+.PHONY : DateTime/DateTime_Test.cpp.i
+
+DateTime/DateTime_Test.s: DateTime/DateTime_Test.cpp.s
+.PHONY : DateTime/DateTime_Test.s
+
+# target to generate assembly for a file
+DateTime/DateTime_Test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/DateTime/DateTime_Test.cpp.s
+.PHONY : DateTime/DateTime_Test.cpp.s
+
 DateTime/Time.obj: DateTime/Time.cpp.obj
 .PHONY : DateTime/Time.obj
 
@@ -332,6 +356,9 @@ help:
 	@echo ... DateTime/Date.obj
 	@echo ... DateTime/Date.i
 	@echo ... DateTime/Date.s
+	@echo ... DateTime/DateTime_Test.obj
+	@echo ... DateTime/DateTime_Test.i
+	@echo ... DateTime/DateTime_Test.s
 	@echo ... DateTime/Time.obj
 	@echo ... DateTime/Time.i
 	@echo ... DateTime/Time.s

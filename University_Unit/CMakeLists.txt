@@ -17,4 +17,5 @@ add_executable(University_Unit main.cpp
         Location/Location.cpp
         Location/Location.h
         Section/Section.cpp
-        Section/Section.h)
+        Section/Section.h
+        DateTime/DateTime_Test.cpp)

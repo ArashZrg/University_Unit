@@ -8,7 +8,13 @@
 //Student::Student(std::string firstName, std::string lastName, int age) : Person(firstName, lastName, age) {
 //    _studentNumber++;
 //    _distStudentNumber = _studentNumber;
+//    pushToStudents();
 //}
+//
+//void Student::pushToStudents() {
+//    _students.push_back(*this);
+//}
+//
 //
 //string Student::showPersonInformation() {
 //    string fullName = getFirstName() + " " + getLastName();

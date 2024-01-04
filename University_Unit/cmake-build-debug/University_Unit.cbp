@@ -88,6 +88,9 @@
 		<Unit filename="E:/University_Unit/University_Unit/DateTime/Date.h">
 			<Option target="University_Unit"/>
 		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/DateTime/DateTime_Test.cpp">
+			<Option target="University_Unit"/>
+		</Unit>
 		<Unit filename="E:/University_Unit/University_Unit/DateTime/Time.cpp">
 			<Option target="University_Unit"/>
 		</Unit>

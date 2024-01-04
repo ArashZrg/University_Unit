@@ -1,27 +1,26 @@
+#include <iostream>
+#include <string>
 #include "Time.h"
 
-
-Time::Time(int startHour, int startMinute, int classDuration, int examDuration) : _startHour(startHour),
-
-
-                                                                                  _startMinute(startMinute) {
-    if (isValidDuration(classDuration)) {
-        _classDuration = classDuration;
+Time::Time(int startHour, int startMinute, int sectionDuration, int examDuration) : _startHour(startHour),
+                                                                                    _startMinute(startMinute) {
+    if (isValidDuration(sectionDuration)) {
+        _sectionDuration = sectionDuration;
     } else {
-        throw invalid_argument("Time Of Section Most Be Between 1 Or 3 Hour!");
+        throw invalid_argument("Time Of Section Most Be (1 , 2 Or 3) Hour!");
     }
 
     if (isValidExamDuration(examDuration)) {
         _examDuration = examDuration;
     } else {
-        throw invalid_argument("Time Of Test Most Be Between 2 Or 3 Hour");
+        throw invalid_argument("Time Of Test Most Be (2 Or 3) Hour");
     }
 }
 
-bool Time::isValidDuration(int durationHour) {
+bool Time::isValidDuration(int duration) {
     bool isValid = true;
 
-    if (durationHour < 1 || durationHour > 3) {
+    if (duration < 1 || duration > 3) {
         isValid = false;
         return isValid;
     }
@@ -29,10 +28,10 @@ bool Time::isValidDuration(int durationHour) {
     return isValid;
 }
 
-bool Time::isValidExamDuration(int examDuration) {
+bool Time::isValidExamDuration(int duration) {
     bool isValid = true;
 
-    if (!(examDuration == 2 || examDuration == 3)) {
+    if (!(duration == 2 || duration == 3)) {
         isValid = false;
         return isValid;
     }
@@ -41,14 +40,15 @@ bool Time::isValidExamDuration(int examDuration) {
 }
 
 int Time::computeFinishTime() {
-    if (_classDuration == 1) {
-        return finishFirstState();
-    } else if (_classDuration == 2) {
-        return finishSecondState();
-    } else if (_classDuration == 3) {
-        return finishThirdState();
+    int result = 0;
+    if (_sectionDuration == 1) {
+        result = finishFirstState();
+    } else if (_sectionDuration == 2) {
+        result = finishSecondState();
+    } else if (_sectionDuration == 3) {
+        result = finishThirdState();
     }
-
+    return result;
 }
 
 int Time::finishFirstState() {
@@ -59,7 +59,7 @@ int Time::finishFirstState() {
 
     if (_finishMinute >= 60) {
         _finishHour = (_finishHour + 1) * 60;
-        _finishHour -= 60;
+        _finishMinute -= 60;
         result = _finishHour + _finishMinute;
         return result;
     } else {
@@ -76,7 +76,7 @@ int Time::finishSecondState() {
 
     if (_finishMinute >= 60) {
         _finishHour = (_finishHour + 1) * 60;
-        _finishHour -= 60;
+        _finishMinute -= 60;
         result = _finishHour + _finishMinute;
         return result;
     } else {
@@ -92,7 +92,7 @@ int Time::finishThirdState() {
 
     if (_finishMinute >= 60) {
         _finishHour = (_finishHour + 1) * 60;
-        _finishHour -= 60;
+        _finishMinute -= 60;
         result = _finishHour + _finishMinute;
         return result;
     } else {
@@ -101,18 +101,20 @@ int Time::finishThirdState() {
     }
 }
 
-//bool Time::handleTimeInterference(Time &ob) {
-//    bool isValid = true;
-//    if (ob._startHour >= _startHour && ob.computeFinishTime() <= this->computeFinishTime()) {
-//        isValid = false;
-//        isValid;
-//    } else {
-//        return isValid;
-//    }
-//
-//}
+bool Time::handleTimeInterference(Time &ob) {
+    bool isValid = true;
+    if (ob._startHour >= _startHour && ob.computeFinishTime() <= this->computeFinishTime()) {
+        isValid = false;
+        return isValid;
+    } else if (ob._startHour <= _startHour && this->computeFinishTime() <= ob.computeFinishTime()) {
+        isValid = false;
+    } else {
+        return isValid;
+    }
+    return isValid;
+}
 
-string Time::showClassStartTime() const {
+string Time::showSectionStartTime() const {
     if (_startMinute >= 0 && _startMinute <= 9) {
         string result = "[Start-> Hour:" + to_string(_startHour) + " , Minute:0" + to_string(_startMinute) + "]";
         return result;
@@ -122,12 +124,12 @@ string Time::showClassStartTime() const {
     }
 }
 
-string Time::showClassDuration() const {
-    string result = "[Duration-> Hour:" + to_string(_classDuration) + " , Minute:00]";
+string Time::showSectionDuration() const {
+    string result = "[Duration-> Hour:" + to_string(_sectionDuration) + " , Minute:00]";
     return result;
 }
 
-string Time::showClassFinishTime() {
+string Time::showSectionFinishTime() {
     int hour = computeFinishTime() / 60;
     int minute = computeFinishTime() % 60;
     string result = "[Finish At-> Hour: " + to_string(hour) + ", Minute: " + to_string(minute) + "]";
@@ -143,10 +145,10 @@ int Time::getStartMinute() const {
 }
 
 int Time::getDuration() const {
-    return _classDuration;
+    return _sectionDuration;
 }
 
-int Time::getExmaDuration() const {
+int Time::getExamDuration() const {
     return _examDuration;
 }
 

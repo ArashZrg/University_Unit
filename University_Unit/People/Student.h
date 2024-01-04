@@ -14,15 +14,20 @@
 //
 //    static int _studentNumber;
 //    int _distStudentNumber;
+//    vector<Student> _students;
+//    vector<int> _studentIDs;
+//
 //
 //public:
 //    Student(string firstName, string lastName, int age);
+//
+//    void pushToStudents();
+//
 //
 //    string showPersonInformation() override;
 //
 //    int getStudentNumber() const;
 //};
-//
 //
 //
 //#endif

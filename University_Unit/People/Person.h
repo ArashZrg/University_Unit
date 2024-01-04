@@ -5,6 +5,7 @@
 //#include <string>
 //#include <vector>
 //#include <algorithm>
+//
 //using namespace std;
 //
 //class Person {
@@ -14,11 +15,9 @@
 //    string _lastName;
 //    int _age;
 //    int _idNumber;
-//
 //public:
 //
-//    Person(string firstName, string lastName, int age );
-//
+//    Person(string firstName, string lastName, int age);
 //
 //    bool isValidAge(int age);
 //
@@ -27,6 +26,8 @@
 //    string getLastName();
 //
 //    int getAge();
+//
+//    int getIdNumber();
 //
 //    virtual string showPersonInformation() = 0;
 //

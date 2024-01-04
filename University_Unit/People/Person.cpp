@@ -6,7 +6,7 @@
 //using namespace std;
 //
 //Person::Person(string firstName, string lastName, int age) : _firstname(firstName),
-//                                                        _lastName(lastName) {
+//                                                             _lastName(lastName) {
 //
 //    if (isValidAge(age)) {
 //        _age = age;
@@ -38,5 +38,10 @@
 //int Person::getAge() {
 //    return _age;
 //}
+//
+//int Person::getIdNumber() {
+//    return _idNumber;
+//}
+//
 //
 //
