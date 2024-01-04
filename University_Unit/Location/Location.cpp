@@ -1,12 +1,12 @@
 //#include "Location.h"
 //
 //Location::Location(string buidldingName, int roomNumber, int floorNumber, string buildingAddress) :
-//        _buildingName(buidldingName), _roomNumberInEachFloor(roomNumber), _floorsNumber(floorNumber),
+//        _facultyName(buidldingName), _roomNumberInEachFloor(roomNumber), _floorNumber(floorNumber),
 //        _buildingAddress(buildingAddress) {}
 //
 //
 //string Location::getBuildingName() {
-//    return _buildingName;
+//    return _facultyName;
 //}
 //
 //int Location::getRoomNumber() {
@@ -14,7 +14,7 @@
 //}
 //
 //int Location::getFloorNumber() {
-//    return _floorsNumber;
+//    return _floorNumber;
 //}
 //
 //string Location::getBuildingAddress() {

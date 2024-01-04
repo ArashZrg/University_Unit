@@ -7,11 +7,14 @@
 //using namespace std;
 //
 //class Location {
+//
 //private:
-//    string _buildingName;
-//    int _floorsNumber;
-//    int _roomNumberInEachFloor;
+//
+//    string _facultyName;
+//    int _floorNumber;
 //    string _buildingAddress;
+//    int _roomNumberInEachFloor;
+//
 //public:
 //
 //    Location(string buildingName ,int roomNumber ,int floorNumber , string buildingAddress);
@@ -19,11 +22,13 @@
 //    string showBuildingInformation();
 //
 //    string getBuildingName();
+//
 //    int getRoomNumber();
+//
 //    int getFloorNumber();
+//
 //    string getBuildingAddress();
 //
 //};
-//
 //
 //#endif

@@ -224,6 +224,54 @@ Location/Location.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Location/Location.cpp.s
 .PHONY : Location/Location.cpp.s
 
+Location/Location_Test.obj: Location/Location_Test.cpp.obj
+.PHONY : Location/Location_Test.obj
+
+# target to build an object file
+Location/Location_Test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Location/Location_Test.cpp.obj
+.PHONY : Location/Location_Test.cpp.obj
+
+Location/Location_Test.i: Location/Location_Test.cpp.i
+.PHONY : Location/Location_Test.i
+
+# target to preprocess a source file
+Location/Location_Test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Location/Location_Test.cpp.i
+.PHONY : Location/Location_Test.cpp.i
+
+Location/Location_Test.s: Location/Location_Test.cpp.s
+.PHONY : Location/Location_Test.s
+
+# target to generate assembly for a file
+Location/Location_Test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Location/Location_Test.cpp.s
+.PHONY : Location/Location_Test.cpp.s
+
+People/People_Test.obj: People/People_Test.cpp.obj
+.PHONY : People/People_Test.obj
+
+# target to build an object file
+People/People_Test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/People/People_Test.cpp.obj
+.PHONY : People/People_Test.cpp.obj
+
+People/People_Test.i: People/People_Test.cpp.i
+.PHONY : People/People_Test.i
+
+# target to preprocess a source file
+People/People_Test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/People/People_Test.cpp.i
+.PHONY : People/People_Test.cpp.i
+
+People/People_Test.s: People/People_Test.cpp.s
+.PHONY : People/People_Test.s
+
+# target to generate assembly for a file
+People/People_Test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/People/People_Test.cpp.s
+.PHONY : People/People_Test.cpp.s
+
 People/Person.obj: People/Person.cpp.obj
 .PHONY : People/Person.obj
 
@@ -365,6 +413,12 @@ help:
 	@echo ... Location/Location.obj
 	@echo ... Location/Location.i
 	@echo ... Location/Location.s
+	@echo ... Location/Location_Test.obj
+	@echo ... Location/Location_Test.i
+	@echo ... Location/Location_Test.s
+	@echo ... People/People_Test.obj
+	@echo ... People/People_Test.i
+	@echo ... People/People_Test.s
 	@echo ... People/Person.obj
 	@echo ... People/Person.i
 	@echo ... People/Person.s
