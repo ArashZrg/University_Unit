@@ -1,31 +1,36 @@
-//#include "Location.h"
-//
-//Location::Location(string buidldingName, int roomNumber, int floorNumber, string buildingAddress) :
-//        _facultyName(buidldingName), _roomNumberInEachFloor(roomNumber), _floorNumber(floorNumber),
-//        _buildingAddress(buildingAddress) {}
-//
-//
-//string Location::getBuildingName() {
-//    return _facultyName;
-//}
-//
-//int Location::getRoomNumber() {
-//    return _roomNumberInEachFloor;
-//}
-//
-//int Location::getFloorNumber() {
-//    return _floorNumber;
-//}
-//
-//string Location::getBuildingAddress() {
-//    return _buildingAddress;
-//}
-//
-//
-//string Location::showBuildingInformation() {
-//    string result = "[Name: " + getBuildingName() + "]\n" +
-//                    "[Count Of Rooms : " + to_string(getRoomNumber()) + "]\n" +
-//                    "[Count Of Floors : " + to_string(getFloorNumber()) + "]\n" +
-//                    "[Address -> " + getBuildingAddress() + "]\n";
-//    return result;
-//}
+#include "Location.h"
+
+Location::Location(string facultyName, int floorNumber, int classNumber) :
+        _facultyName(facultyName), _floorNumber(floorNumber), _classNumber(classNumber) {
+
+    _locationID++;
+    _mainLocationID = _locationID;
+}
+
+string Location::getFacultyName() const {
+    return _facultyName;
+}
+
+int Location::getFloorNumber() const {
+    return _floorNumber;
+}
+
+int Location::getClassNumber() const {
+    return _classNumber;
+}
+
+int Location::getLocationID() const {
+    return _mainLocationID;
+}
+
+
+string Location::showLocationAddress() const {
+    string result = string("*ADDRESS*\n") +
+                    "[Faculty Name: " + getFacultyName() + "]\n" +
+                    "[Floor Number : " + to_string(getFloorNumber()) + "]\n" +
+                    "[Class Number : " + to_string(getClassNumber()) + "]\n";
+    return result;
+}
+
+
+int Location::_locationID = 00;

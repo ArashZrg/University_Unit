@@ -1,5 +1,4 @@
 #include "Student.h"
-#include <iostream>
 #include <string>
 
 using namespace std;
@@ -17,7 +16,6 @@ string Student::showPersonInformation() {
 
     return result;
 }
-
 
 int Student::getStudentNumber() const {
     return _distStudentNumber;

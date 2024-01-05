@@ -1,5 +1,4 @@
 #include "Teacher.h"
-#include <iostream>
 #include <string>
 
 using namespace std;
@@ -21,6 +20,5 @@ string Teacher::showPersonInformation() {
 
     return result;
 }
-
 
 int Teacher::_teacherNumber = 3500;

@@ -1,11 +1,10 @@
 #include "Person.h"
-#include <iostream>
 #include <string>
 
 using namespace std;
 
 Person::Person(string firstName, string lastName) : _firstname(firstName),
-                                                             _lastName(lastName) {}
+                                                    _lastName(lastName) {}
 
 string Person::getFirstName() {
     return _firstname;

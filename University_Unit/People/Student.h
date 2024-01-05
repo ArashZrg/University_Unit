@@ -22,6 +22,4 @@ public:
     [[nodiscard]] int getStudentNumber() const;
 };
 
-
-
 #endif

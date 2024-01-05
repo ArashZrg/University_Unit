@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <string>
-#include <vector>
 #include "Person.h"
 
 using namespace std;
@@ -24,7 +23,5 @@ public:
     string showPersonInformation() override;
 
 };
-
-
 
 #endif
