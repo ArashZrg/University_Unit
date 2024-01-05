@@ -6,6 +6,7 @@
 //using namespace std;
 //
 //int main() {
+//    vector<Location> locs;
 //    Location loc("Fani", 2, 15);
 //    Location loc1("Fani", 2, 15);
 //    Location loc2("Fani", 2, 15);
@@ -15,13 +16,17 @@
 //    Location loc6("Fani", 2, 15);
 //    Location loc7("Fani", 2, 15);
 //    Location loc8("Fani", 2, 15);
-//    cout << loc.getLocationID() << endl;
-//    cout << loc1.getLocationID() << endl;
-//    cout << loc2.getLocationID() << endl;
-//    cout << loc3.getLocationID() << endl;
-//    cout << loc4.getLocationID() << endl;
-//    cout << loc5.getLocationID() << endl;
-//    cout << loc6.getLocationID() << endl;
-//    cout << loc7.getLocationID() << endl;
-//    cout << loc8.getLocationID() << endl;
+//    locs.push_back(loc);
+//    locs.push_back(loc1);
+//    locs.push_back(loc2);
+//    locs.push_back(loc3);
+//    locs.push_back(loc4);
+//    locs.push_back(loc5);
+//    locs.push_back(loc6);
+//    locs.push_back(loc7);
+//    locs.push_back(loc8);
+//
+//    for (const Location &l: locs) {
+//        cout << l.getLocationID() << endl;
+//    }
 //}

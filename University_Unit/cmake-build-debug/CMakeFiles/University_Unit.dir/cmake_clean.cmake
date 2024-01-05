@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/University_Unit.dir/People/Teacher.cpp.obj.d"
   "CMakeFiles/University_Unit.dir/Section/Section.cpp.obj"
   "CMakeFiles/University_Unit.dir/Section/Section.cpp.obj.d"
+  "CMakeFiles/University_Unit.dir/Section/Section_Test.cpp.obj"
+  "CMakeFiles/University_Unit.dir/Section/Section_Test.cpp.obj.d"
   "CMakeFiles/University_Unit.dir/main.cpp.obj"
   "CMakeFiles/University_Unit.dir/main.cpp.obj.d"
   "University_Unit.exe"

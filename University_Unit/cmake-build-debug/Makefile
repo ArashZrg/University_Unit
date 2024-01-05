@@ -368,6 +368,30 @@ Section/Section.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Section/Section.cpp.s
 .PHONY : Section/Section.cpp.s
 
+Section/Section_Test.obj: Section/Section_Test.cpp.obj
+.PHONY : Section/Section_Test.obj
+
+# target to build an object file
+Section/Section_Test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Section/Section_Test.cpp.obj
+.PHONY : Section/Section_Test.cpp.obj
+
+Section/Section_Test.i: Section/Section_Test.cpp.i
+.PHONY : Section/Section_Test.i
+
+# target to preprocess a source file
+Section/Section_Test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Section/Section_Test.cpp.i
+.PHONY : Section/Section_Test.cpp.i
+
+Section/Section_Test.s: Section/Section_Test.cpp.s
+.PHONY : Section/Section_Test.s
+
+# target to generate assembly for a file
+Section/Section_Test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Section/Section_Test.cpp.s
+.PHONY : Section/Section_Test.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -431,6 +455,9 @@ help:
 	@echo ... Section/Section.obj
 	@echo ... Section/Section.i
 	@echo ... Section/Section.s
+	@echo ... Section/Section_Test.obj
+	@echo ... Section/Section_Test.i
+	@echo ... Section/Section_Test.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

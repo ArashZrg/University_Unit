@@ -33,4 +33,4 @@ string Location::showLocationAddress() const {
 }
 
 
-int Location::_locationID = 00;
+int Location::_locationID = 0;

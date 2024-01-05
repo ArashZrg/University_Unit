@@ -18,6 +18,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/University_Unit/University_Unit/People/Student.cpp" "CMakeFiles/University_Unit.dir/People/Student.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/People/Student.cpp.obj.d"
   "E:/University_Unit/University_Unit/People/Teacher.cpp" "CMakeFiles/University_Unit.dir/People/Teacher.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/People/Teacher.cpp.obj.d"
   "E:/University_Unit/University_Unit/Section/Section.cpp" "CMakeFiles/University_Unit.dir/Section/Section.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/Section/Section.cpp.obj.d"
+  "E:/University_Unit/University_Unit/Section/Section_Test.cpp" "CMakeFiles/University_Unit.dir/Section/Section_Test.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/Section/Section_Test.cpp.obj.d"
   "E:/University_Unit/University_Unit/main.cpp" "CMakeFiles/University_Unit.dir/main.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/main.cpp.obj.d"
   )
 
