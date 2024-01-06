@@ -9,6 +9,7 @@
 #include "People/Student.h"
 #include "Section/Section.h"
 
+
 using namespace std;
 
 string whileMenu() {
@@ -33,36 +34,46 @@ string locationMenu() {
 }
 
 string teacherMenu() {
+
     string result = string(" 1-ADD TEACHER \n")
                     + string(" 2-DELETE TEACHER \n")
                     + string(" 3-EDIT TEACHER \n")
-                    + string(" 4-BACK TO MAIN MENU \n")
+                    + string(" 4-SHOW ALL TEACHERS \n")
+                    + string(" 5-BACK TO MAIN MENU \n")
                     + string(" CHOOSE OPTION -> ");
     return result;
 }
 
-string studentMenu(){
+string studentMenu() {
     string result = string(" 1-ADD STUDENT \n")
                     + string(" 2-DELETE STUDENT \n")
                     + string(" 3-EDIT STUDENT \n")
-                    + string(" 4-BACK TO MAIN MENU \n")
-                    + string(" CHOOSE OPTION -> ");
+                    + string(" 4-SHOW ALL STUDENTS \n")
+                    + string(" 5-BACK TO MAIN MENU \n")
+                    + string("CHOOSE OPTION -> ");
     return result;
+
 }
 
 int main() {
 
-    vector<Location> __LOCATIONS__;
-    vector<Teacher> __TEACHERS__;
-    vector<Student> __STUDENTS__;
 
-    int OPTION = 0;
+    vector<Location> locationsList;
+    vector<Teacher> teachersList;
+    vector<Student> studentsList;
+    vector<int> studentsNumbers;
+
+    int OPTION;
 
     while (OPTION != 5) {
 
         cout << whileMenu();
         cin >> OPTION;
         cout << "*************** \n";
+
+        if (OPTION == 5) {
+            cout << "[MESSAGE FOR YOU -->" << " THANK YOU FOR USING OUR PROGRAM \003]";
+        }
 
         switch (OPTION) {
 
@@ -91,20 +102,20 @@ int main() {
                         cin >> classNumber;
 
                         Location location(facultyName, floorNumber, classNumber);
-                        __LOCATIONS__.push_back(location);
+                        locationsList.push_back(location);
                         break;
                     }
                     case 2: {
                         cout << "ID OF EXIST LOCATIONS : ";
-                        for (Location loc: __LOCATIONS__) {
+                        for (Location loc: locationsList) {
                             cout << loc.getLocationID() << " , ";
                         }
                         int number;
                         cout << '\n' << "WHICH LOCATION DO YOU WANT TO DELETE?";
                         cin >> number;
-                        for (int i = 0; i < __LOCATIONS__.size(); ++i) {
-                            if (__LOCATIONS__[i].getLocationID() == number) {
-                                __LOCATIONS__.erase(__LOCATIONS__.begin() + i);
+                        for (int i = 0; i < locationsList.size(); ++i) {
+                            if (locationsList[i].getLocationID() == number) {
+                                locationsList.erase(locationsList.begin() + i);
                                 break;
                             }
                         }
@@ -115,7 +126,7 @@ int main() {
                         cout << "ENTER THE ID OF THE LOCATION TO EDIT: ";
                         cin >> locationId;
 
-                        for (Location &loc: __LOCATIONS__) {
+                        for (Location &loc: locationsList) {
                             if (loc.getLocationID() == locationId) {
                                 loc.editLocation();
                                 break;
@@ -133,11 +144,85 @@ int main() {
             }
 
             case 3: {
+
                 int teacherOption;
                 cout << teacherMenu();
                 cin >> teacherOption;
+                cout << "*************** \n";
 
                 switch (teacherOption) {
+                    case 1: {
+                        string firstName;
+                        cout << " ENTER FIRST NAME: ";
+                        cin.ignore();
+                        getline(cin, firstName);
+
+                        string lastName;
+                        cout << "ENTER LAST NAME: ";
+                        cin.ignore();
+                        getline(cin, lastName);
+
+                        Teacher teacher(firstName, lastName);
+                        teachersList.push_back(teacher);
+                        break;
+                    }
+                    case 2: {
+                        cout << "ID OF EXIST TEACHERS : \n";
+                        for (Teacher tech: teachersList) {
+                            cout << "[" << tech.getFirstName() << "_" << tech.getLastName() << " , "
+                                 << tech.getTeacherNumber() << "]" << endl;
+                        }
+                        int number;
+                        cout << "ENTER YOUR PREFERRED ID --> ";
+                        cin >> number;
+                        for (int i = 0; i < teachersList.size(); ++i) {
+                            if (teachersList[i].getTeacherNumber() == number) {
+                                teachersList.erase(teachersList.begin() + i);
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                    case 3: {
+                        int teacherNumber;
+                        for (Teacher tech: teachersList) {
+                            cout << "[" << tech.getFirstName() << "_" << tech.getLastName() << " , "
+                                 << tech.getTeacherNumber() << "]" << endl;
+                        }
+                        cout << "ENTER THE NUMBER OF THE TEACHER TO EDIT: ";
+                        cin >> teacherNumber;
+
+                        for (Teacher &tech: teachersList) {
+                            if (tech.getTeacherNumber() == teacherNumber) {
+                                tech.editTeacher();
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                    case 4: {
+                        for (Teacher tech: teachersList) {
+                            int count = 1;
+                            cout << "  ***" << "\n TEACHER " << count << "\n";
+                            cout << tech.showPersonInformation() << endl;
+                            count++;
+                        }
+                        break;
+                    }
+                    case 5: {
+                        break;
+                    }
+                }
+                break;
+            }
+
+            case 4: {
+                int studentOption;
+                cout << studentMenu();
+                cin >> studentOption;
+                cout << "*************** \n";
+
+                switch (studentOption) {
                     case 1: {
                         string firstName;
                         cout << "ENTER FIRST NAME: ";
@@ -149,97 +234,55 @@ int main() {
                         cin.ignore();
                         getline(cin, lastName);
 
-                        Teacher teacher(firstName , lastName);
-                        __TEACHERS__.push_back(teacher);
+                        Student student(firstName, lastName);
+                        studentsList.push_back(student);
+                        studentsNumbers.push_back(student.getStudentNumber());
+
                         break;
                     }
-                    case 2:{
-                        cout << "ID OF EXIST TEACHERS : \n";
-                        for(Teacher tech:__TEACHERS__){
-                            cout << tech.getTeacherNumber() << " , ";
+                    case 2: {
+                        cout << "EXIST STUDENTS NUMBERS: \n";
+                        for (Student student: studentsList) {
+                            cout << student.getStudentNumber() << endl;
                         }
                         int number;
+                        cout << "ENTER YOUR PREFERRED Number --> ";
                         cin >> number;
-                        for(int i= 0; i<__TEACHERS__.size(); ++i){
-                            if(__TEACHERS__[i].getTeacherNumber() == number){
-                                __TEACHERS__.erase(__TEACHERS__.begin() + i);
+                        for (int i = 0; i < studentsList.size(); ++i) {
+                            if (studentsList[i].getStudentNumber() == number) {
+                                studentsList.erase(studentsList.begin() + i);
                                 break;
                             }
                         }
                         break;
                     }
-                    case 3:{
-                        int teacherNumber;
-                        cout << "ENTER THE NUMBER OF THE TEACHER TO EDIT: ";
-                        cin >> teacherNumber;
-
-                        for(Teacher tech:__TEACHERS__){
-                            if(tech.getTeacherNumber() == teacherNumber){
-                                tech.editTeacher();
-                                break;
-                            }
-                        }
-                        break;
-                    }
-                    case 4:{
-                        break;
-                    }
-                }
-                break;
-            }
-
-            case 4: {
-                int studentOption;
-                cout << studentMenu();
-                cin >> studentOption;
-
-                switch (studentOption) {
-                    case 1:{
-                        string firstName;
-                        cout << "ENTER FIRST NAME: ";
-                        cin.ignore();
-                        getline(cin , firstName);
-
-                        string lastName;
-                        cout << "ENTER LAST NAME: ";
-                        cin.ignore();
-                        getline(cin , lastName);
-
-                        Student student(firstName , lastName);
-
-                        __STUDENTS__.push_back(student);
-
-                        break;
-                    }
-                    case 2:{
-                        cout << "ID OF EXIST STUDENTS : \n";
-                        for(Student student:__STUDENTS__){
-                            cout << student.getStudentNumber() << " , ";
-                        }
-                        int number;
-                        cin >> number;
-                        for(int i = 0 ; i < __STUDENTS__.size(); ++i){
-                            if(__STUDENTS__[i].getStudentNumber() == number){
-                                __STUDENTS__.erase(__STUDENTS__.begin() + i);
-                                break;
-                            }
-                        }
-                        break;
-                    }
-                    case 3:{
+                    case 3: {
                         int studentNumber;
-                        cout << "ENTER THE NUMBER OF THE TEACHER TO EDIT: ";
+                        for (Student student: studentsList) {
+                            cout << "[" << student.getFirstName() << "_" << student.getLastName() << " , "
+                                 << student.getStudentNumber() << "]" << endl;
+                        }
+                        cout << "ENTER THE NUMBER OF THE STUDENT TO EDIT: ";
                         cin >> studentNumber;
 
-                        for(Student student:__STUDENTS__){
-                            if(student.getStudentNumber() == studentNumber){
+                        for (Student &student: studentsList) {
+                            if (student.getStudentNumber() == studentNumber) {
                                 student.editStudent();
                                 break;
                             }
                         }
                         break;
                     }
-                    case 4:{
+                    case 4: {
+                        for (Student student: studentsList) {
+                            int count = 1;
+                            cout << "  ***" << "\n STUDENT " << count << "\n";
+                            cout << student.showPersonInformation() << endl;
+                            count++;
+                        }
+                        break;
+                    }
+                    case 5: {
                         break;
                     }
                 }
@@ -247,6 +290,7 @@ int main() {
             }
 
         }
+
 
     }
 

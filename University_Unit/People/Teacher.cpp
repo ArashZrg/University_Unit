@@ -14,8 +14,7 @@ int Teacher::getTeacherNumber() const {
 }
 
 string Teacher::showPersonInformation() {
-    string fullName = getFirstName() + " " + getLastName();
-    string result = "[Name: " + fullName + "]\n"
+    string result = "[Name: " + getFirstName() + " " + getLastName() + "]\n"
                     + "[Teacher Number: " + to_string(getTeacherNumber()) + "]\n";
 
     return result;
