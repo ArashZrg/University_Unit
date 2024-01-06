@@ -22,6 +22,10 @@ public:
 
     string getLastName();
 
+    void setFirstName(string firstName);
+
+    void setLastName(string lastName);
+
     virtual string showPersonInformation() = 0;
 
 };

@@ -21,4 +21,24 @@ int Student::getStudentNumber() const {
     return _distStudentNumber;
 }
 
+void Student::editStudent() {
+    cout << "CURRENT STUDENT INFORMATION:\n";
+    cout << showPersonInformation() << endl;
+
+    string firstName;
+    cout << "ENTER NEW FIRST NAME: ";
+    cin.ignore();
+    getline(cin, firstName);
+
+    string lastName;
+    cout << "ENTER NEW LAST NAME: ";
+    cin.ignore();
+    getline(cin, lastName);
+
+    setFirstName(firstName);
+    setLastName(lastName);
+
+    cout << "STUDENT UPDATED SUCCESSFULLY!\n";
+}
+
 int Student::_studentNumber = 4023600;

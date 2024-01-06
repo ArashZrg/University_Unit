@@ -22,6 +22,9 @@ public:
 
     string showPersonInformation() override;
 
+    void editTeacher();
+
 };
 
 #endif
+

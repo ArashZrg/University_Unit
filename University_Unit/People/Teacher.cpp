@@ -21,4 +21,24 @@ string Teacher::showPersonInformation() {
     return result;
 }
 
+void Teacher::editTeacher() {
+    cout << "CURRENT TEACHER INFORMATION:\n";
+    cout << showPersonInformation() << endl;
+
+    string firstName;
+    cout << "ENTER NEW FIRST NAME: ";
+    cin.ignore();
+    getline(cin, firstName);
+
+    string lastName;
+    cout << "ENTER NEW LAST NAME: ";
+    cin.ignore();
+    getline(cin, lastName);
+
+    setFirstName(firstName);
+    setLastName(lastName);
+
+    cout << "TEACHER UPDATED SUCCESSFULLY!\n";
+}
+
 int Teacher::_teacherNumber = 3500;

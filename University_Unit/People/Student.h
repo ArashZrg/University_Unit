@@ -20,6 +20,8 @@ public:
     string showPersonInformation() override;
 
     [[nodiscard]] int getStudentNumber() const;
+
+    void editStudent();
 };
 
 #endif

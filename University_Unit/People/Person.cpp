@@ -14,6 +14,14 @@ string Person::getLastName() {
     return _lastName;
 }
 
+void Person::setFirstName(string firstName) {
+    _firstname = firstName;
+}
+
+void Person::setLastName(std::string lastName) {
+    _lastName = lastName;
+}
+
 
 
 
