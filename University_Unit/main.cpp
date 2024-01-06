@@ -4,13 +4,13 @@
 #include "DateTime/Time.h"
 #include "DateTime/Date.h"
 #include "Location/Location.h"
-#include "People/Person.h"
 #include "People/Teacher.h"
 #include "People/Student.h"
 #include "Section/Section.h"
 
 
 using namespace std;
+
 
 string whileMenu() {
     string result = string("      [Menu]\n")
@@ -21,6 +21,16 @@ string whileMenu() {
                     + string(" 4-STUDENT \n")
                     + string(" 5-EXIT \n")
                     + string(" CHOOSE OPTION -> ");
+    return result;
+}
+
+string sectionMenu() {
+    string result = string(" 1-ADD SECTION \n")
+                    + string(" 2-DELETE SECTION \n")
+                    + string(" 3-EDIT SECTION \n")
+                    + string(" 4-SHOW SECTION \n")
+                    + string(" 5-BACK TO MAIN MENU \n")
+                    + string(" CHOOSE OPTION ->");
     return result;
 }
 
@@ -56,6 +66,7 @@ string studentMenu() {
 
 }
 
+
 int main() {
 
 
@@ -79,6 +90,94 @@ int main() {
         switch (OPTION) {
 
             case 1: {
+                int sectionOption;
+                cout << sectionMenu();
+                cin >> sectionOption;
+                cout << "*************** \n";
+
+                switch (sectionOption) {
+                    case 1: {
+                        string sectionId;
+                        cout << "ENTER SECTION ID: ";
+                        cin.ignore();
+                        getline(cin, sectionId);
+
+                        string sectionNmae;
+                        cout << "ENTER SECTION NAME: ";
+                        cin.ignore();
+                        getline(cin, sectionNmae);
+
+                        string answer;
+                        bool isNeed;
+                        cout << "DO YOU NEED PROJECTOR ? (YES OR NO) : ";
+                        cin.ignore();
+                        getline(cin, answer);
+                        if (answer == "yes") {
+                            isNeed = true;
+                        } else if (answer == "no") {
+                            isNeed = false;
+                        }
+
+                        int startHour;
+                        int startMinute;
+                        cout << "ENTER SECTION START HOUR : \n";
+                        cout << "HOUR : ";
+                        cin >> startHour;
+                        cout << "MINUTE : ";
+                        cin >> startMinute;
+
+                        int sectionDuration;
+                        int examDuration;
+                        cout << "ENTER DURATION : \n";
+                        cout << "SECTION DURATION : ";
+                        cin >> sectionDuration;
+                        cout << "EXAM DURATION : ";
+                        cin >> examDuration;
+
+                        int year, month, day, examYear, examMonth, examDay;
+                        cout << "ENTER BY ORDER : \n";
+                        cout << "YEAR : ";
+                        cin >> year;
+
+                        cout << "MONTH : ";
+                        cin >> month;
+
+                        cout << "DAY : ";
+                        cin >> day;
+
+                        cout << "YEAR OF EXAM : ";
+                        cin >> examYear;
+
+                        cout << "MONTH OF EXAM : ";
+                        cin >> examMonth;
+
+                        cout << "DAY OF EXAM : ";
+                        cin >> examDay;
+
+                        int dayNum;
+                        cout << "ENTER NUMBER FORM 0 TO 6 (SATURDAY , ... , FRIDAY) : ";
+                        cin >> dayNum;
+
+                        Section section(sectionId, sectionNmae, isNeed, startHour, startMinute, sectionDuration,
+                                        examDuration, year, month, day, examYear, examMonth, examDay, dayNum);
+
+
+                        break;
+                    }
+                    case 2: {
+                        break;
+                    }
+                    case 3: {
+                        break;
+                    }
+                    case 4: {
+                        break;
+                    }
+                    case 5: {
+                        break;
+                    }
+                }
+
                 break;
             }
 
