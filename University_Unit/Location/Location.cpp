@@ -32,5 +32,30 @@ string Location::showLocationAddress() const {
     return result;
 }
 
+void Location::editLocation() {
+    cout << "CURRENT LOCATION INFORMATION:\n";
+    cout << showLocationAddress() << endl;
+
+    string facultyName;
+    cout << "ENTER NEW FACULTY NAME: ";
+    cin.ignore();
+    getline(cin, facultyName);
+
+    int floorNumber;
+    cout << "ENTER NEW FLOOR NUMBER: ";
+    cin >> floorNumber;
+
+    int classNumber;
+    cout << "ENTER NEW CLASS NUMBER: ";
+    cin >> classNumber;
+
+    _facultyName = facultyName;
+    _floorNumber = floorNumber;
+    _classNumber = classNumber;
+
+    cout << "LOCATION UPDATED SUCCESSFULLY!\n";
+
+}
+
 
 int Location::_locationID = 0;

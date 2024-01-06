@@ -31,6 +31,8 @@ public:
 
     [[nodiscard]] string showLocationAddress() const;
 
+    void editLocation();
+
 };
 
 #endif
