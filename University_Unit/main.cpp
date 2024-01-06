@@ -28,7 +28,8 @@ string locationMenu() {
     string result = string(" 1-ADD LOCATION \n")
                     + string(" 2-DELETE LOCATION \n")
                     + string(" 3-EDIT LOCATION \n")
-                    + string(" 4-BACK TO MAIN MENU \n")
+                    + string(" 4-SHOW ALL LOCATION \n")
+                    + string(" 5-BACK TO MAIN MENU \n")
                     + string(" CHOOSE OPTION -> ");
     return result;
 }
@@ -86,19 +87,21 @@ int main() {
                 int locationOption;
                 cout << locationMenu();
                 cin >> locationOption;
+                cout << "*************** \n";
 
                 switch (locationOption) {
                     case 1: {
                         string facultyName;
-                        cout << "ENTER FACULTY NAME: \n";
+                        cout << "ENTER FACULTY NAME: ";
+                        cin.ignore();
                         getline(cin, facultyName);
 
                         int floorNumber;
-                        cout << "ENTER FLOOR NUMBER: \n";
+                        cout << "ENTER FLOOR NUMBER: ";
                         cin >> floorNumber;
 
                         int classNumber;
-                        cout << "ENTER CLASS NUMBER: \n";
+                        cout << "ENTER CLASS NUMBER: ";
                         cin >> classNumber;
 
                         Location location(facultyName, floorNumber, classNumber);
@@ -106,12 +109,14 @@ int main() {
                         break;
                     }
                     case 2: {
-                        cout << "ID OF EXIST LOCATIONS : ";
-                        for (Location loc: locationsList) {
-                            cout << loc.getLocationID() << " , ";
+                        cout << "ID OF EXIST LOCATIONS : \n";
+                        for (Location location: locationsList) {
+                            cout << "[" << location.getFacultyName() << " , " << location.getLocationID() << "]"
+                                 << endl;
                         }
+
                         int number;
-                        cout << '\n' << "WHICH LOCATION DO YOU WANT TO DELETE?";
+                        cout << "ENTER YOUR PREFERRED LOCATION ID -->";
                         cin >> number;
                         for (int i = 0; i < locationsList.size(); ++i) {
                             if (locationsList[i].getLocationID() == number) {
@@ -123,6 +128,10 @@ int main() {
                     }
                     case 3: {
                         int locationId;
+                        for (Location location: locationsList) {
+                            cout << "[" << location.getFacultyName() << " , "
+                                 << location.getLocationID() << "]" << endl;
+                        }
                         cout << "ENTER THE ID OF THE LOCATION TO EDIT: ";
                         cin >> locationId;
 
@@ -135,12 +144,20 @@ int main() {
                         break;
                     }
                     case 4: {
+                        int count = 1;
+                        for (Location location: locationsList) {
+                            cout << "  ***" << "\n LOCATION " << count << "\n";
+                            cout << location.showLocationAddress() << endl;
+                            count++;
+                        }
+                        break;
+                    }
+
+                    case 5: {
                         break;
                     }
                 }
-
                 break;
-
             }
 
             case 3: {
@@ -201,8 +218,8 @@ int main() {
                         break;
                     }
                     case 4: {
+                        int count = 1;
                         for (Teacher tech: teachersList) {
-                            int count = 1;
                             cout << "  ***" << "\n TEACHER " << count << "\n";
                             cout << tech.showPersonInformation() << endl;
                             count++;
@@ -274,8 +291,8 @@ int main() {
                         break;
                     }
                     case 4: {
+                        int count = 1;
                         for (Student student: studentsList) {
-                            int count = 1;
                             cout << "  ***" << "\n STUDENT " << count << "\n";
                             cout << student.showPersonInformation() << endl;
                             count++;
