@@ -53,3 +53,15 @@ string Date::showSectionDay(int dayNum) {
 int Date::getDayNum() const {
     return _dayNum;
 }
+
+bool Date::handleDayInterference(Date &ob) const {
+
+    bool isValid = true;
+
+    if (_dayNum == ob._dayNum) {
+        isValid = false;
+        return isValid;
+    }
+
+    return isValid;
+}

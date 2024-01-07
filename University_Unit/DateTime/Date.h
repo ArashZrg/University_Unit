@@ -50,6 +50,10 @@ public:
 
     static string showSectionDay(int dayNum);
 
+    bool handleDayInterference(Date &ob)const;
+
+
+
 };
 
 #endif

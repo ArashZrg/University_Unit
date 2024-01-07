@@ -101,7 +101,7 @@ int Time::finishThirdState() {
     }
 }
 
-bool Time::handleTimeInterference(Time &ob) {
+bool Time::handleTimeInterference(Time &ob) const {
     bool isValid = true;
     if (ob._startHour >= _startHour && ob.computeFinishTime() <= this->computeFinishTime()) {
         isValid = false;
@@ -159,3 +159,5 @@ int Time::getFinishHour() const {
 int Time::getFinishMinute() const {
     return _finishMinute;
 }
+
+

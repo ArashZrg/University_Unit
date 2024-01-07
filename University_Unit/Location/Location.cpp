@@ -57,5 +57,16 @@ void Location::editLocation() {
 
 }
 
+bool Location::handleLocationInterference(Location &ob) const{
+    bool isValid = true;
+
+    if((_facultyName == ob._facultyName) && (_floorNumber == ob._floorNumber) && (_classNumber == ob._classNumber)){
+        isValid = false ;
+        return isValid;
+    }
+
+    return isValid;
+}
 
 int Location::_locationID = 0;
+

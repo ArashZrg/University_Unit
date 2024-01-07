@@ -52,3 +52,64 @@ void Section::addStudentNumber(int studentNumber) {
 const vector<int> &Section::getStudentNumbers() const {
     return _studentNumbers;
 }
+
+
+string Section::showSectionInformation() {
+
+    string result = string(" ID: " + _sectionID + '\n')
+                    + string(" NAME: " + _sectionName + '\n')
+                    + string(" {TIME} -> " + time.showSectionStartTime() + " , " + time.showSectionDuration() + " , " +
+                             time.showSectionFinishTime() + "\n")
+                    + string(" {DATE OF START} \n")
+                    + string(" --> " + date.showSectionStartDate() + '\n')
+                    + string(" {DATE OF EXAM} \n")
+                    + string(" --> " + date.showSectionExamDate() + '\n')
+                    + string(" VIDEO PROJECTOR: " + getProjectorString() + '\n')
+                    + string(" STUDENTS LIST: \n")
+                    + string(" TEACHER: " + _assignedTeacher->getFirstName() + " " + _assignedTeacher->getLastName());
+}
+
+string Section::getProjectorString() const {
+    if (isNeedVideoProjector) {
+        return "TRUE";
+    } else {
+        return "FALSE";
+    }
+}
+
+bool Section::isillegalFirstState(Section &other) const {
+    bool isValid = true;
+
+    bool isTimeInterference = time.handleTimeInterference(other.time);
+
+    bool isTeacherInterference = _assignedTeacher && other._assignedTeacher &&
+                                 _assignedTeacher->handleTeacherInterference(*(other._assignedTeacher));
+
+    if (!(isTimeInterference && isTeacherInterference)) {
+        isValid = false;
+        return isValid;
+    } else {
+        return isValid;
+    }
+
+}
+
+bool Section::isillegalSecondState(Section &other) const {
+    bool isValid = true;
+
+    bool isTimeInterference = time.handleTimeInterference(other.time);
+    bool isLocationInterference = _assignedLocation && other._assignedLocation &&
+                                  _assignedLocation->handleLocationInterference(*(other._assignedLocation));
+    bool isDayInterference = date.handleDayInterference(other.date);
+
+    if (!(isTimeInterference && isLocationInterference && isDayInterference)) {
+        isValid = false;
+        return isValid;
+    } else {
+        return isValid;
+    }
+
+
+}
+
+

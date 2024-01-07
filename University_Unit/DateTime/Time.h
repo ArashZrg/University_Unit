@@ -9,7 +9,7 @@ using namespace std;
 class Time {
 
 private:
-
+//private fields
     int _startHour;
     int _startMinute;
 
@@ -20,10 +20,14 @@ private:
     int _finishMinute = 0;
 
 public:
-
+//Constructor
     Time(int startHour, int startMinute, int sectionDuration, int examDuration);
-
+    bool handleTimeInterference(Time &ob)const;
 private:
+
+// Functions for validating duration and exam duration
+// for section duration , it most be 1 , 2 or 3 hour
+// and exam duration most be 2 or 3 hour
 
     static bool isValidDuration(int duration);
 
@@ -31,19 +35,21 @@ private:
 
 private:
 
+// for compute the Finish time of class , i write it base on duration
     int computeFinishTime();
-
+// for when duration is 1 hour i have finishFirstState()
     int finishFirstState();
-
+// for when duration is 2 hour i have finishSecondState()
     int finishSecondState();
-
+// for when duration is 3 hour i have finishThirdState()
     int finishThirdState();
 
 public:
+    //And this Function handel the interference of two Section
 
-    bool handleTimeInterference(Time &ob);
 
 public:
+
 
     [[nodiscard]] string showSectionStartTime() const;
 
@@ -51,6 +57,8 @@ public:
 
     string showSectionFinishTime();
 
+
+    //Getters
     [[nodiscard]] int getStartHour() const;
 
     [[nodiscard]] int getStartMinute() const;

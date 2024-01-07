@@ -40,4 +40,15 @@ void Teacher::editTeacher() {
     cout << "TEACHER UPDATED SUCCESSFULLY!\n";
 }
 
+bool Teacher::handleTeacherInterference(Teacher &ob) {
+    bool isValid = true;
+
+    if(getTeacherNumber() == ob.getTeacherNumber()){
+        isValid = false;
+        return isValid;
+    }
+
+    return isValid;
+}
+
 int Teacher::_teacherNumber = 3500;

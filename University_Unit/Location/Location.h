@@ -33,6 +33,8 @@ public:
 
     void editLocation();
 
+    bool handleLocationInterference(Location& ob) const;
+
 };
 
 #endif

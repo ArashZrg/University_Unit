@@ -24,6 +24,8 @@ public:
 
     void editTeacher();
 
+    bool handleTeacherInterference(Teacher &ob);
+
 };
 
 #endif

@@ -42,6 +42,14 @@ public:
     void addStudentNumber(int studentNumber);
 
     const vector<int>& getStudentNumbers() const ;
+
+    string showSectionInformation();
+
+    string getProjectorString() const;
+
+    [[nodiscard]] bool isillegalFirstState(Section &other) const;
+
+    [[nodiscard]] bool isillegalSecondState(Section &other) const;
 };
 
 
