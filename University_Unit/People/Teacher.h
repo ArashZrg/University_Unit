@@ -15,17 +15,23 @@ private:
     int _distTeacherNumber;
 
 public:
-
+    //constructor
     Teacher(string firstName, string lastName);
 
-    int getTeacherNumber() const;
+public:
 
     string showPersonInformation() override;
 
     void editTeacher();
 
+public:
+    //to handle the Teacher interference
+    // i use this in (Section class)
     bool handleTeacherInterference(Teacher &ob);
 
+public:
+    //getter
+    [[nodiscard]] int getTeacherNumber() const;
 };
 
 #endif

@@ -64,12 +64,12 @@ string Section::showSectionInformation() {
                     + string(" --> " + date.showSectionStartDate() + '\n')
                     + string(" {DATE OF EXAM} \n")
                     + string(" --> " + date.showSectionExamDate() + '\n')
-                    + string(" VIDEO PROJECTOR: " + getProjectorString() + '\n')
+                    + string(" VIDEO PROJECTOR: " + convertIntResultToString() + '\n')
                     + string(" STUDENTS LIST: \n")
                     + string(" TEACHER: " + _assignedTeacher->getFirstName() + " " + _assignedTeacher->getLastName());
 }
 
-string Section::getProjectorString() const {
+string Section::convertIntResultToString() const {
     if (isNeedVideoProjector) {
         return "TRUE";
     } else {
@@ -77,7 +77,7 @@ string Section::getProjectorString() const {
     }
 }
 
-bool Section::isillegalFirstState(Section &other) const {
+bool Section::firstCaseOfInterference(Section &other) {
     bool isValid = true;
 
     bool isTimeInterference = time.handleTimeInterference(other.time);
@@ -85,7 +85,7 @@ bool Section::isillegalFirstState(Section &other) const {
     bool isTeacherInterference = _assignedTeacher && other._assignedTeacher &&
                                  _assignedTeacher->handleTeacherInterference(*(other._assignedTeacher));
 
-    if (!(isTimeInterference && isTeacherInterference)) {
+    if (isTimeInterference && isTeacherInterference) {
         isValid = false;
         return isValid;
     } else {
@@ -94,7 +94,7 @@ bool Section::isillegalFirstState(Section &other) const {
 
 }
 
-bool Section::isillegalSecondState(Section &other) const {
+bool Section::secondCaseOfInterference(Section &other) {
     bool isValid = true;
 
     bool isTimeInterference = time.handleTimeInterference(other.time);
@@ -102,14 +102,38 @@ bool Section::isillegalSecondState(Section &other) const {
                                   _assignedLocation->handleLocationInterference(*(other._assignedLocation));
     bool isDayInterference = date.handleDayInterference(other.date);
 
-    if (!(isTimeInterference && isLocationInterference && isDayInterference)) {
+    if (isTimeInterference && isLocationInterference && isDayInterference) {
         isValid = false;
         return isValid;
     } else {
         return isValid;
     }
 
+}
+
+bool Section::thirdCaseOfInterference(Section &other) {
+    bool isValid = true;
+
+    bool isTimeInterference = time.handleTimeInterference(other.time);
+    bool isExamDateInterference = date.handleExamDayInterference(other.date);
+
+    if (isTimeInterference && isExamDateInterference) {
+        isValid = false;
+        return isValid;
+    } else {
+        return isValid;
+    }
 
 }
 
+bool Section::toCheckTheInterference(Section &other) {
+    bool isValid = true;
+
+    if (firstCaseOfInterference(other) || secondCaseOfInterference(other) || thirdCaseOfInterference(other)) {
+        isValid = false;
+        return isValid;
+    } else {
+        return isValid;
+    }
+}
 

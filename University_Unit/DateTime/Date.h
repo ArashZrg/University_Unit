@@ -41,18 +41,33 @@ public:
 
     [[nodiscard]] string showSectionExamDate() const;
 
-    [[nodiscard]] int getDayNum() const;
+    static string showSectionDay(int dayNum);
+
 private:
 
     static string formatDate(int date);
 
 public:
 
-    static string showSectionDay(int dayNum);
+    bool handleDayInterference(Date &ob);
 
-    bool handleDayInterference(Date &ob)const;
+    bool handleExamDayInterference(Date &ob);
 
+public:
+    //getters
+    [[nodiscard]] int getDayNum() const;
 
+    [[nodiscard]] int getSectionYear() const;
+
+    [[nodiscard]] int getSectionMonth() const;
+
+    [[nodiscard]] int getSectionDay() const;
+
+    [[nodiscard]] int getExamYear() const;
+
+    [[nodiscard]] int getExamMonth() const;
+
+    [[nodiscard]] int getExamDay() const;
 
 };
 

@@ -13,13 +13,25 @@ private:
     string _facultyName;
     int _floorNumber;
     int _classNumber;
-
     static int _locationID;
     int _mainLocationID;
 
 public:
-
+    //constructor
     Location(string facultyName, int floorNumber, int classNumber);
+
+public:
+    [[nodiscard]] string showLocationAddress() const;
+
+    void editLocation();
+
+public:
+    //for handling the Location interference
+    // i use this function in (Section class)
+    bool handleLocationInterference(Location &ob);
+
+public:
+    //getters
 
     [[nodiscard]] string getFacultyName() const;
 
@@ -28,12 +40,6 @@ public:
     [[nodiscard]] int getClassNumber() const;
 
     [[nodiscard]] int getLocationID() const;
-
-    [[nodiscard]] string showLocationAddress() const;
-
-    void editLocation();
-
-    bool handleLocationInterference(Location& ob) const;
 
 };
 

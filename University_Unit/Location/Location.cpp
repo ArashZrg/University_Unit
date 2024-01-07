@@ -7,22 +7,6 @@ Location::Location(string facultyName, int floorNumber, int classNumber) :
     _mainLocationID = _locationID;
 }
 
-string Location::getFacultyName() const {
-    return _facultyName;
-}
-
-int Location::getFloorNumber() const {
-    return _floorNumber;
-}
-
-int Location::getClassNumber() const {
-    return _classNumber;
-}
-
-int Location::getLocationID() const {
-    return _mainLocationID;
-}
-
 
 string Location::showLocationAddress() const {
     string result = string("*ADDRESS*\n") +
@@ -57,16 +41,34 @@ void Location::editLocation() {
 
 }
 
-bool Location::handleLocationInterference(Location &ob) const{
+bool Location::handleLocationInterference(Location &ob) {
     bool isValid = true;
 
-    if((_facultyName == ob._facultyName) && (_floorNumber == ob._floorNumber) && (_classNumber == ob._classNumber)){
-        isValid = false ;
+    if ((_facultyName == ob._facultyName) && (_floorNumber == ob._floorNumber) && (_classNumber == ob._classNumber)) {
+        isValid = false;
         return isValid;
     }
 
     return isValid;
 }
+
+
+string Location::getFacultyName() const {
+    return _facultyName;
+}
+
+int Location::getFloorNumber() const {
+    return _floorNumber;
+}
+
+int Location::getClassNumber() const {
+    return _classNumber;
+}
+
+int Location::getLocationID() const {
+    return _mainLocationID;
+}
+
 
 int Location::_locationID = 0;
 

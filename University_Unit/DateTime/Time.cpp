@@ -69,7 +69,7 @@ int Time::finishFirstState() {
 
 }
 
-int Time::finishSecondState() {
+int Time::finishSecondState()  {
     int result = 0;
     _finishMinute = _startMinute + 30;
     _finishHour = _startHour + 1;
@@ -101,7 +101,7 @@ int Time::finishThirdState() {
     }
 }
 
-bool Time::handleTimeInterference(Time &ob) const {
+bool Time::handleTimeInterference(Time &ob)  {
     bool isValid = true;
     if (ob._startHour >= _startHour && ob.computeFinishTime() <= this->computeFinishTime()) {
         isValid = false;

@@ -9,9 +9,6 @@ Teacher::Teacher(string firstName, string lastName) : Person(firstName, lastName
 
 }
 
-int Teacher::getTeacherNumber() const {
-    return _distTeacherNumber;
-}
 
 string Teacher::showPersonInformation() {
     string result = "[Name: " + getFirstName() + " " + getLastName() + "]\n"
@@ -49,6 +46,10 @@ bool Teacher::handleTeacherInterference(Teacher &ob) {
     }
 
     return isValid;
+}
+
+int Teacher::getTeacherNumber() const {
+    return _distTeacherNumber;
 }
 
 int Teacher::_teacherNumber = 3500;

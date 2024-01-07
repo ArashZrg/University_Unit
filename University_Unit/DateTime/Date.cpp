@@ -54,7 +54,7 @@ int Date::getDayNum() const {
     return _dayNum;
 }
 
-bool Date::handleDayInterference(Date &ob) const {
+bool Date::handleDayInterference(Date &ob) {
 
     bool isValid = true;
 
@@ -64,4 +64,40 @@ bool Date::handleDayInterference(Date &ob) const {
     }
 
     return isValid;
+}
+
+bool Date::handleExamDayInterference(Date &ob) {
+    bool isValid = true;
+
+    if ((_yearOfExam == ob._yearOfExam) && (_monthOfExam == ob._monthOfExam) && (_dayOfExam == ob._dayOfExam)) {
+        isValid = false;
+        return isValid;
+    } else {
+        return isValid;
+    }
+
+}
+
+int Date::getSectionYear() const {
+    return _yearOfSection;
+}
+
+int Date::getSectionMonth() const {
+    return _monthOfSection;
+}
+
+int Date::getSectionDay() const {
+    return _dayOfSection;
+}
+
+int Date::getExamYear() const {
+    return _yearOfExam;
+}
+
+int Date::getExamMonth() const {
+    return _monthOfExam;
+}
+
+int Date::getExamDay() const {
+    return _dayOfExam;
 }
