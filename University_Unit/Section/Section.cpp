@@ -45,13 +45,20 @@ void Section::assignLocation(Location *location) {
     _assignedLocation = location;
 }
 
-void Section::addStudentNumber(int studentNumber) {
-    _studentNumbers.push_back(studentNumber);
+//Location &loc: locationsList
+void Section::convertIntToStringVector(vector<int> list) {
+    for (int l: list) {
+        cout << to_string(l) << endl;
+    }
 }
 
-const vector<int> &Section::getStudentNumbers() const {
-    return _studentNumbers;
-}
+//void Section::addStudentNumber(int studentNumber) {
+//    _studentNumbers.push_back(studentNumber);
+//}
+
+//const vector<int> &Section::getStudentNumbers() const {
+//    return _studentNumbers;
+//}
 
 
 string Section::showSectionInformation() {
@@ -66,6 +73,7 @@ string Section::showSectionInformation() {
                     + string(" --> " + date.showSectionExamDate() + '\n')
                     + string(" VIDEO PROJECTOR: " + convertIntResultToString() + '\n')
                     + string(" STUDENTS LIST: \n")
+                    + string(convertIntResultToString())
                     + string(" TEACHER: " + _assignedTeacher->getFirstName() + " " + _assignedTeacher->getLastName());
 }
 

@@ -24,7 +24,10 @@ private:
     bool isNeedVideoProjector;
     Teacher *_assignedTeacher;
     Location *_assignedLocation;
-    vector<int> _studentNumbers;
+
+    // ** IT WAS FOR STUDENT **
+//    vector<int> _studentNumbers;
+    // ** IT WAS FOR STUDENT **
 
 public:
     //constructor
@@ -42,10 +45,14 @@ public:
     void assignLocation(Location *location);
 
 public:
+        void convertIntToStringVector(vector<int> stDegrees);
+        // ** IT WAS FOR STUDENT **
     // Doing something for Student List (But i Dont really know) !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    void addStudentNumber(int studentNumber);
-    const vector<int> &getStudentNumbers() const;
+    //       void addStudentNumber(int studentNumber);
+    //        const vector<int> &getStudentNumbers() const;
     // Doing something for Student List (But i Dont really know) !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        // ** IT WAS FOR STUDENT **
+
 public:
     string showSectionInformation();
 private:
