@@ -14,6 +14,7 @@
 using namespace std;
 
 class Section {
+
 private:
 
     string _sectionID;
@@ -24,18 +25,18 @@ private:
     bool isNeedVideoProjector;
     Teacher *_assignedTeacher;
     Location *_assignedLocation;
-
-    // ** IT WAS FOR STUDENT **
-//    vector<int> _studentNumbers;
-    // ** IT WAS FOR STUDENT **
+    vector<int> _studentsNumbers;
 
 public:
     //constructor
     Section(string sectionID, string sectionName, bool projector, int startHour, int startMinute, int sectionDuration,
-            int examDuration, int year, int month, int day, int examYear, int examMonth, int examDay, int dayNum);
+            int examDuration, int year, int month, int day, int examYear, int examMonth, int examDay, int dayNum,
+            vector<int> studentNumbers);
+
 private:
     //to validate the valid IDs
     static bool isSectionIdValid(const string &sectionId);
+
 public:
 
     // to assign Teacher for Section
@@ -44,17 +45,14 @@ public:
     // to assign Location for Section
     void assignLocation(Location *location);
 
-public:
-        void convertIntToStringVector(vector<int> stDegrees);
-        // ** IT WAS FOR STUDENT **
-    // Doing something for Student List (But i Dont really know) !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    //       void addStudentNumber(int studentNumber);
-    //        const vector<int> &getStudentNumbers() const;
-    // Doing something for Student List (But i Dont really know) !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        // ** IT WAS FOR STUDENT **
+private:
+
+    string studentNumbersList();
 
 public:
+    //  This Function Will Show All Information Of Section
     string showSectionInformation();
+
 private:
 
     // I consider 3 state for interference
@@ -62,21 +60,22 @@ private:
     // second state is when we have time and location and day is same
     //third state is when we have same exam time and date
 
-    [[nodiscard]] bool firstCaseOfInterference(Section &other) ;
+    [[nodiscard]] bool firstCaseOfInterference(Section &other);
 
-    [[nodiscard]] bool secondCaseOfInterference(Section &other) ;
+    [[nodiscard]] bool secondCaseOfInterference(Section &other);
 
-    [[nodiscard]] bool thirdCaseOfInterference(Section &other) ;
+    [[nodiscard]] bool thirdCaseOfInterference(Section &other);
 
 public:
     // and i use 3 function (first and second and third) in this function
     // and i hope it work right
-    [[nodiscard]]bool toCheckTheInterference(Section &other) ;
+    [[nodiscard]]bool toCheckTheInterference(Section &other);
 
 public:
     //getters
     [[nodiscard]] string getSectionId() const;
 
+private:
     // I Wrote this fucntion to convert projector Result (0 or 1)
     // Into (False or True)
     // And i use this function in the [showSectionInformation()] function.

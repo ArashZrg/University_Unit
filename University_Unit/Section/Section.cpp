@@ -9,7 +9,8 @@ vector<string> Section::existingSectionIDs;
 
 Section::Section(string sectionID, string sectionName, bool projector, int startHour, int startMinute,
                  int sectionDuration,
-                 int examDuration, int year, int month, int day, int examYear, int examMonth, int examDay, int dayNum) :
+                 int examDuration, int year, int month, int day, int examYear, int examMonth, int examDay, int dayNum,
+                 vector<int> studentNumbers) :
         _assignedLocation(nullptr),
         _assignedTeacher(nullptr),
         isNeedVideoProjector(projector),
@@ -46,19 +47,13 @@ void Section::assignLocation(Location *location) {
 }
 
 //Location &loc: locationsList
-void Section::convertIntToStringVector(vector<int> list) {
-    for (int l: list) {
-        cout << to_string(l) << endl;
+string Section::studentNumbersList() {
+    string result;
+    for (int s: _studentsNumbers) {
+        result += string(to_string(s) + '\n');
     }
+    return result;
 }
-
-//void Section::addStudentNumber(int studentNumber) {
-//    _studentNumbers.push_back(studentNumber);
-//}
-
-//const vector<int> &Section::getStudentNumbers() const {
-//    return _studentNumbers;
-//}
 
 
 string Section::showSectionInformation() {
@@ -73,7 +68,7 @@ string Section::showSectionInformation() {
                     + string(" --> " + date.showSectionExamDate() + '\n')
                     + string(" VIDEO PROJECTOR: " + convertIntResultToString() + '\n')
                     + string(" STUDENTS LIST: \n")
-                    + string(convertIntResultToString())
+                    + string(studentNumbersList())
                     + string(" TEACHER: " + _assignedTeacher->getFirstName() + " " + _assignedTeacher->getLastName());
 }
 
