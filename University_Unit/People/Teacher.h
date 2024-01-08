@@ -32,6 +32,9 @@ public:
 public:
     //getter
     [[nodiscard]] int getTeacherNumber() const;
+public:
+    void saveToFile();
+    static vector<Teacher> loadFromFile();
 };
 
 #endif

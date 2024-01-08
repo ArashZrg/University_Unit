@@ -22,6 +22,10 @@ public:
     [[nodiscard]] int getStudentNumber() const;
 
     void editStudent();
+
+public:
+    void saveToFile();
+    static vector<Student> loadFromFile();
 };
 
 #endif

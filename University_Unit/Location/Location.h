@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -41,6 +42,9 @@ public:
 
     [[nodiscard]] int getLocationID() const;
 
+public:
+    void saveToFile();
+    static vector<Location> loadFromFIle();
 };
 
 #endif

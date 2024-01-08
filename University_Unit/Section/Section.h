@@ -86,6 +86,10 @@ public:
     [[nodiscard]] string getSectionId() const;
 
     [[nodiscard]] string getSectionName() const;
+
+public:
+    static void saveToFile();
+    static vector<Section> loadFromFile();
 };
 
 

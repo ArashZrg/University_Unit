@@ -7,6 +7,8 @@
 #include "People/Teacher.h"
 #include "People/Student.h"
 #include "Section/Section.h"
+#include <fstream>
+#include <sstream>
 
 
 using namespace std;
@@ -69,10 +71,10 @@ string studentMenu() {
 
 int main() {
 
-    vector<Section> sectionList;
-    vector<Location> locationsList;
-    vector<Teacher> teachersList;
-    vector<Student> studentsList;
+    vector<Section> sectionList = Section::loadFromFile();
+    vector<Location> locationsList = Location::loadFromFIle();
+    vector<Teacher> teachersList = Teacher::loadFromFile();
+    vector<Student> studentsList = Student::loadFromFile();
     vector<int> studentsNumbers;
 
     int OPTION;
@@ -197,6 +199,7 @@ int main() {
                         }
 
                         sectionList.push_back(section);
+                        Section::saveToFile(sectionList);
                         break;
                     }
                     case 2: {
