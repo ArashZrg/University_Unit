@@ -37,15 +37,15 @@ public:
 
 public:
 
-    [[nodiscard]] string showSectionStartDate() const;
+    [[nodiscard]] string showSectionStartDate();
 
-    [[nodiscard]] string showSectionExamDate() const;
+    [[nodiscard]] string showSectionExamDate();
 
-    static string showSectionDay(int dayNum);
+    string showSectionDay(int dayNum);
 
 private:
 
-    static string formatDate(int date);
+    string formatDate(int date);
 
 public:
 

@@ -3,8 +3,9 @@
 
 using namespace std;
 
-Person::Person(string firstName, string lastName) : _firstname(firstName),
-                                                    _lastName(lastName) {}
+Person::Person(string firstName, string lastName)
+        : _firstname(firstName),
+          _lastName(lastName) {}
 
 string Person::getFirstName() {
     return _firstname;

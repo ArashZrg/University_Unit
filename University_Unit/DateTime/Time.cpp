@@ -2,8 +2,9 @@
 #include <string>
 #include "Time.h"
 
-Time::Time(int startHour, int startMinute, int sectionDuration, int examDuration) : _startHour(startHour),
-                                                                                    _startMinute(startMinute) {
+Time::Time(int startHour, int startMinute, int sectionDuration, int examDuration)
+        : _startHour(startHour),
+          _startMinute(startMinute) {
     if (isValidDuration(sectionDuration)) {
         _sectionDuration = sectionDuration;
     } else {
@@ -69,7 +70,7 @@ int Time::finishFirstState() {
 
 }
 
-int Time::finishSecondState()  {
+int Time::finishSecondState() {
     int result = 0;
     _finishMinute = _startMinute + 30;
     _finishHour = _startHour + 1;
@@ -101,7 +102,7 @@ int Time::finishThirdState() {
     }
 }
 
-bool Time::handleTimeInterference(Time &ob)  {
+bool Time::handleTimeInterference(Time &ob) {
     bool isValid = true;
     if (ob._startHour >= _startHour && ob.computeFinishTime() <= this->computeFinishTime()) {
         isValid = false;

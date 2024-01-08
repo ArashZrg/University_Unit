@@ -87,9 +87,6 @@ public:
 
     [[nodiscard]] string getSectionName() const;
 
-public:
-    static void saveToFile();
-    static vector<Section> loadFromFile();
 };
 
 

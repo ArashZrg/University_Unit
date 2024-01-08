@@ -15,19 +15,25 @@ private:
     string _lastName;
 
 public:
-
+    //constructor
     Person(string firstName, string lastName);
 
-    string getFirstName();
+public:
 
-    string getLastName();
+    //pure virtual for showing the information of Person
+    virtual string showPersonInformation() = 0;
 
+public:
+    //setters
     void setFirstName(string firstName);
 
     void setLastName(string lastName);
 
-    virtual string showPersonInformation() = 0;
+public:
+    //getters
+    string getFirstName();
 
+    string getLastName();
 };
 
 #endif

@@ -6,7 +6,8 @@
 
 using namespace std;
 
-Teacher::Teacher(string firstName, string lastName) : Person(firstName, lastName) {
+Teacher::Teacher(string firstName, string lastName)
+        : Person(firstName, lastName) {
     _teacherNumber++;
     _distTeacherNumber = _teacherNumber;
 
@@ -37,7 +38,7 @@ void Teacher::editTeacher() {
     setFirstName(firstName);
     setLastName(lastName);
 
-    cout << "TEACHER UPDATED SUCCESSFULLY!\n";
+    cout << "[*TEACHER UPDATED SUCCESSFULLY!*]\n";
 }
 
 bool Teacher::handleTeacherInterference(Teacher &ob) {
@@ -56,32 +57,3 @@ int Teacher::getTeacherNumber() const {
 }
 
 int Teacher::_teacherNumber = 3500;
-
-void Teacher::saveToFile() {
-    ofstream file("teachers.txt", ios::app);
-    if (file.is_open()) {
-        file << getFirstName() << "," << getLastName() << "\n";
-        file.close();
-    } else {
-        cerr << "ERROR OPENING FILE FOR SAVING TEACHER DATA.\n";
-    }
-}
-
-vector<Teacher> Teacher::loadFromFile() {
-    vector<Teacher> teachers;
-    ifstream file("teachers.txt");
-    if (file.is_open()) {
-        string line;
-        while (getline(file, line)) {
-            stringstream ss(line);
-            string firstName , lastName;
-            getline(ss , firstName , ',');
-            getline(ss , lastName);
-            teachers.emplace_back(firstName , lastName);
-        }
-        file.close();
-    }else{
-        cerr << "ERROR OPENING FILE FOR LOADING TEACHERS DATA.\n";
-    }
-    return teachers;
-}

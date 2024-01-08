@@ -23,7 +23,8 @@ public:
 
 public:
     [[nodiscard]] string showLocationAddress() const;
-
+public:
+    //i wrote this function to edit the Location object
     void editLocation();
 
 public:
@@ -42,9 +43,6 @@ public:
 
     [[nodiscard]] int getLocationID() const;
 
-public:
-    void saveToFile();
-    static vector<Location> loadFromFIle();
 };
 
 #endif

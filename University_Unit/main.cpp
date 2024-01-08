@@ -71,11 +71,12 @@ string studentMenu() {
 
 int main() {
 
-    vector<Section> sectionList = Section::loadFromFile();
-    vector<Location> locationsList = Location::loadFromFIle();
-    vector<Teacher> teachersList = Teacher::loadFromFile();
-    vector<Student> studentsList = Student::loadFromFile();
+    vector<Section> sectionList;
+    vector<Location> locationsList;
+    vector<Teacher> teachersList;
+    vector<Student> studentsList;
     vector<int> studentsNumbers;
+
 
     int OPTION;
 
@@ -199,7 +200,6 @@ int main() {
                         }
 
                         sectionList.push_back(section);
-                        Section::saveToFile(sectionList);
                         break;
                     }
                     case 2: {
@@ -245,7 +245,7 @@ int main() {
                     }
                     case 4: {
                         int count = 1;
-                        for (Section section: sectionList) {
+                        for (Section &section: sectionList) {
                             cout << "  ***" << "\n SECTION " << count << "\n";
                             cout << section.showSectionInformation() << endl;
                             count++;
@@ -284,6 +284,7 @@ int main() {
 
                         Location location(facultyName, floorNumber, classNumber);
                         locationsList.push_back(location);
+
                         break;
                     }
                     case 2: {
@@ -332,6 +333,7 @@ int main() {
                     }
 
                     case 5: {
+
                         break;
                     }
                 }
@@ -405,6 +407,7 @@ int main() {
                         break;
                     }
                     case 5: {
+
                         break;
                     }
                 }
@@ -432,6 +435,7 @@ int main() {
                         Student student(firstName, lastName);
                         studentsList.push_back(student);
                         studentsNumbers.push_back(student.getStudentNumber());
+
 
                         break;
                     }
@@ -478,6 +482,7 @@ int main() {
                         break;
                     }
                     case 5: {
+
                         break;
                     }
                 }

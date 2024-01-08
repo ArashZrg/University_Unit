@@ -36,7 +36,7 @@ private:
 
 private:
 
-// for compute the Finish time of class , i write it base on duration
+// for compute the Finish time of class , i write it base on duration and start time
     int computeFinishTime() ;
 // for when duration is 1 hour i have finishFirstState()
     int finishFirstState();

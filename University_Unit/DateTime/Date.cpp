@@ -9,13 +9,13 @@ Date::Date(int year, int month, int day, int examYear, int examMonth, int examDa
           _dayNum(dayNum) {}
 
 
-string Date::showSectionStartDate() const {
+string Date::showSectionStartDate()  {
     string result =
             "[" + to_string(_yearOfSection) + "/" + formatDate(_monthOfSection) + "/" + formatDate(_dayOfSection) + "]";
     return result;
 }
 
-string Date::showSectionExamDate() const {
+string Date::showSectionExamDate()  {
     string result = "[" + to_string(_yearOfExam) + "/" + formatDate(_monthOfExam) + "/" + formatDate(_dayOfExam) + "]";
     return result;
 }

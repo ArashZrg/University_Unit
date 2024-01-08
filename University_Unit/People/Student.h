@@ -15,17 +15,22 @@ private:
     int _distStudentNumber;
 
 public:
+    //constructor
     Student(string firstName, string lastName);
+
+public:
 
     string showPersonInformation() override;
 
-    [[nodiscard]] int getStudentNumber() const;
-
+public:
+    //i wrote this function to edit the Studednt object
     void editStudent();
 
 public:
-    void saveToFile();
-    static vector<Student> loadFromFile();
+    //getter
+
+    [[nodiscard]] int getStudentNumber() const;
+
 };
 
 #endif

@@ -50,15 +50,6 @@ void Section::assignLocation(Location *location) {
     _assignedLocation = location;
 }
 
-//Location &loc: locationsList
-string Section::studentNumbersList() {
-    string result;
-    for (int s: _studentsNumbers) {
-        result += string(to_string(s) + '\n');
-    }
-    return result;
-}
-
 
 string Section::showSectionInformation() {
 
@@ -76,6 +67,18 @@ string Section::showSectionInformation() {
                     + string(" TEACHER: " + _assignedTeacher->getFirstName() + " " + _assignedTeacher->getLastName());
     return result;
 }
+
+
+
+string Section::studentNumbersList() {
+    string result;
+    for (int s: _studentsNumbers) {
+        result += string(to_string(s) + '\n');
+    }
+    return result;
+}
+
+
 
 string Section::convertIntResultToString() const {
     if (isNeedVideoProjector) {
@@ -213,48 +216,4 @@ string Section::getSectionName() const {
 //
 
 
-void Section::saveToFile() {
-    ofstream file("sections.txt", ios::app);
-    if (file.is_open()) {
-        file << getSectionId() << "," << getSectionName() << "," << (isNeedVideoProjector ? "1" : "0") << ","
-             << time.getStartHour() << "," << time.getStartMinute() << ","
-             << time.getDuration() << "," << time.getExamDuration() << ","
-             << date.getSectionYear() << "," << date.getSectionMonth() << "," << date.getSectionDay() << ","
-             << date.getExamYear() << "," << date.getExamMonth() << "," << date.getExamDay() << ","
-             << date.getDayNum() << "\n";
-        file.close();
-    } else {
-        cerr << "ERROR OPENING FILE FOR SAVING SECTION DATE.\n";
-    }
-}
 
-vector<Section> Section::loadFromFile() {
-    vector<Section> sections;
-    ifstream file("sections.txt");
-    if (file.is_open()) {
-        string line;
-        while (getline(file, line)) {
-            stringstream ss(line);
-            string sectionId, sectionName;
-            bool isNeedVideoProjector;
-            int startHour, startMinute, sectionDuration, examDuration, year, month, day,
-                    examYear, examMonth, examDay, dayNum;
-
-            getline(ss, sectionId, ',');
-            getline(ss, sectionName, ',');
-            ss >> isNeedVideoProjector >> startHour >> startMinute >> sectionDuration >> examDuration
-               >> year >> month >> day >> examYear >> examMonth >> examDay >> dayNum;
-
-            vector<int> studentNumbers;
-
-            Section section(sectionId, sectionName, isNeedVideoProjector, startHour, startMinute,
-                            sectionDuration , examDuration , year , month , day , examYear , examMonth ,
-                            examDay , dayNum , studentNumbers);
-            sections.push_back(section);
-        }
-        file.close();
-    }else{
-        cerr << "ENTER OPENING FILE FOR LOADING SECTION DATA.\n";
-    }
-    return sections;
-}
