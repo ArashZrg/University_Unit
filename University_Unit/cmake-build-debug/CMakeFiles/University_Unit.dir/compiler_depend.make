@@ -1112,7 +1112,9 @@ CMakeFiles/University_Unit.dir/Section/Section.cpp.obj: E:/University_Unit/Unive
   E:/University_Unit/University_Unit/People/Teacher.h \
   E:/University_Unit/University_Unit/DateTime/Time.h
 
-CMakeFiles/University_Unit.dir/Section/Section_Test.cpp.obj: E:/University_Unit/University_Unit/Section/Section_Test.cpp \
+CMakeFiles/University_Unit.dir/Section/Section_Test.cpp.obj: E:/University_Unit/University_Unit/Section/Section_Test.cpp
+
+CMakeFiles/University_Unit.dir/main.cpp.obj: E:/University_Unit/University_Unit/main.cpp \
   F:/CLion\ 2023.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
   F:/CLion\ 2023.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
   F:/CLion\ 2023.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -1268,16 +1270,19 @@ CMakeFiles/University_Unit.dir/Section/Section_Test.cpp.obj: E:/University_Unit/
   F:/CLion\ 2023.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_vector.h \
   F:/CLion\ 2023.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_bvector.h \
   F:/CLion\ 2023.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/vector.tcc \
+  E:/University_Unit/University_Unit/DateTime/Time.h \
+  E:/University_Unit/University_Unit/DateTime/Date.h \
+  E:/University_Unit/University_Unit/Location/Location.h \
+  E:/University_Unit/University_Unit/People/Teacher.h \
+  E:/University_Unit/University_Unit/People/Person.h \
+  E:/University_Unit/University_Unit/People/Student.h \
   E:/University_Unit/University_Unit/Section/Section.h \
   E:/University_Unit/University_Unit/DateTime/Date.h \
   E:/University_Unit/University_Unit/Location/Location.h \
   E:/University_Unit/University_Unit/People/Person.h \
   E:/University_Unit/University_Unit/People/Student.h \
-  E:/University_Unit/University_Unit/People/Person.h \
   E:/University_Unit/University_Unit/People/Teacher.h \
   E:/University_Unit/University_Unit/DateTime/Time.h
-
-CMakeFiles/University_Unit.dir/main.cpp.obj: E:/University_Unit/University_Unit/main.cpp
 
 
 F:/CLion\ 2023.2.2/bin/mingw/x86_64-w64-mingw32/include/vadefs.h:

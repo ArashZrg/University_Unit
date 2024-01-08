@@ -53,6 +53,10 @@ public:
     //  This Function Will Show All Information Of Section
     string showSectionInformation();
 
+public:
+    //this function is for editing section
+//    void editSection();
+
 private:
 
     // I consider 3 state for interference
@@ -71,15 +75,17 @@ public:
     // and i hope it work right
     [[nodiscard]]bool toCheckTheInterference(Section &other);
 
-public:
-    //getters
-    [[nodiscard]] string getSectionId() const;
-
 private:
     // I Wrote this fucntion to convert projector Result (0 or 1)
     // Into (False or True)
     // And i use this function in the [showSectionInformation()] function.
     [[nodiscard]] string convertIntResultToString() const;
+
+public:
+    //getters
+    [[nodiscard]] string getSectionId() const;
+
+    [[nodiscard]] string getSectionName() const;
 };
 
 

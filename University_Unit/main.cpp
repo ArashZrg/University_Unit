@@ -219,7 +219,25 @@ int main() {
                         }
                         break;
                     }
+
                     case 3: {
+                        string sectionID;
+                        for (Section section: sectionList) {
+                            cout << "[" << section.getSectionName() << " , "
+                                 << section.getSectionId() << "]" << endl;
+                        }
+
+                        cout << "ENTER THE ID OF THE SECTION TO EDIT: ";
+                        cin.ignore();
+                        getline(cin, sectionID);
+
+                        for (Section section: sectionList) {
+                            if (section.getSectionId() == sectionID) {
+//                                section.edit();
+                                break;
+                            }
+                        }
+
                         break;
                     }
                     case 4: {
