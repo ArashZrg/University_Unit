@@ -68,8 +68,6 @@ string Section::showSectionInformation() {
     return result;
 }
 
-
-
 string Section::studentNumbersList() {
     string result;
     for (int s: _studentsNumbers) {
@@ -77,8 +75,6 @@ string Section::studentNumbersList() {
     }
     return result;
 }
-
-
 
 string Section::convertIntResultToString() const {
     if (isNeedVideoProjector) {

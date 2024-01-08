@@ -10,9 +10,7 @@
 #include <fstream>
 #include <sstream>
 
-
 using namespace std;
-
 
 string whileMenu() {
     string result = string("      [Menu]\n")
@@ -68,7 +66,6 @@ string studentMenu() {
 
 }
 
-
 int main() {
 
     vector<Section> sectionList;
@@ -76,7 +73,6 @@ int main() {
     vector<Teacher> teachersList;
     vector<Student> studentsList;
     vector<int> studentsNumbers;
-
 
     int OPTION;
 
@@ -91,7 +87,7 @@ int main() {
         }
 
         switch (OPTION) {
-
+            //Section Case
             case 1: {
                 int sectionOption;
                 cout << sectionMenu();
@@ -199,6 +195,13 @@ int main() {
                             }
                         }
 
+                        cout << "[*CHECK THE INTERFERENCE*]\n";
+                        for (Section sec: sectionList) {
+                            if (!section.toCheckTheInterference(sec)) {
+                                throw invalid_argument("SECTIONS HAVE INTERFERENCE WITH EACH OTHER!");
+                            }
+                        }
+
                         sectionList.push_back(section);
                         break;
                     }
@@ -222,7 +225,6 @@ int main() {
                         }
                         break;
                     }
-
                     case 3: {
                         string sectionID;
                         for (Section section: sectionList) {
@@ -256,10 +258,9 @@ int main() {
                         break;
                     }
                 }
-
                 break;
             }
-
+                //Location Case
             case 2: {
 
                 int locationOption;
@@ -331,7 +332,6 @@ int main() {
                         }
                         break;
                     }
-
                     case 5: {
 
                         break;
@@ -339,7 +339,7 @@ int main() {
                 }
                 break;
             }
-
+                //Teacher Case
             case 3: {
 
                 int teacherOption;
@@ -356,7 +356,6 @@ int main() {
 
                         string lastName;
                         cout << "ENTER LAST NAME: ";
-                        cin.ignore();
                         getline(cin, lastName);
 
                         Teacher teacher(firstName, lastName);
@@ -407,13 +406,12 @@ int main() {
                         break;
                     }
                     case 5: {
-
                         break;
                     }
                 }
                 break;
             }
-
+                //Student Case
             case 4: {
                 int studentOption;
                 cout << studentMenu();
@@ -429,7 +427,6 @@ int main() {
 
                         string lastName;
                         cout << "ENTER LAST NAME: ";
-                        cin.ignore();
                         getline(cin, lastName);
 
                         Student student(firstName, lastName);
@@ -482,7 +479,6 @@ int main() {
                         break;
                     }
                     case 5: {
-
                         break;
                     }
                 }
@@ -490,8 +486,5 @@ int main() {
             }
 
         }
-
-
     }
-
 }
