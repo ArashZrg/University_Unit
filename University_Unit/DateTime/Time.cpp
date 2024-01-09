@@ -4,7 +4,8 @@
 
 Time::Time(int startHour, int startMinute, int sectionDuration, int examDuration)
         : _startHour(startHour),
-          _startMinute(startMinute) {
+          _startMinute(startMinute){
+
     if (isValidDuration(sectionDuration)) {
         _sectionDuration = sectionDuration;
     } else {
@@ -109,10 +110,10 @@ bool Time::handleTimeInterference(Time &ob) {
         return isValid;
     } else if (ob._startHour <= _startHour && this->computeFinishTime() <= ob.computeFinishTime()) {
         isValid = false;
+        return isValid;
     } else {
         return isValid;
     }
-    return isValid;
 }
 
 string Time::showSectionStartTime() const {

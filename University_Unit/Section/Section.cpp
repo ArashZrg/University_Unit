@@ -269,68 +269,67 @@ string Section::getSectionName() const {
     return _sectionName;
 }
 
-//void Section::editSection() {
-//    cout << "CURRENT SECTION INFORMATION:\n";
-//    cout << showSectionInformation() << endl;
-//
-//    string sectionName;
-//    cout << " ENTER NEW SECTION NAME: ";
-//    cin.ignore();
-//    getline(cin, sectionName);
-//
-//    string answer;
-//    bool isNeed;
-//    cout << " DO YOU NEED PROJECTOR (YES OR NO) ? ";
-//    cin.ignore();
-//    getline(cin, answer);
-//    if (answer == "YES") {
-//        isNeed = true;
-//    } else if (answer == "NO") {
-//        isNeed = false;
-//    }
-//
-//    int startHour;
-//    int startMinute;
-//    cout << " [NEW START TIME INFORMATION] \n";
-//    cout << " HOUR : ";
-//    cin >> startHour;
-//    cout << " MINUTE : ";
-//    cin >> startMinute;
-//
-//    int sectionDuration;
-//    int examDuration;
-//    cout << " [NEW DURATION INFORMATION] \n";
-//    cout << " SECTION DURATION : ";
-//    cin >> sectionDuration;
-//    cout << " EXAM DURATION : ";
-//    cin >> examDuration;
-//
-//    int year, month, day, examYear, examMonth, examDay, daynum;
-//    cout << " [NEW DATE INFORMATION] \n";
-//    cout << " SECTION YEAR : ";
-//    cin >> year;
-//
-//    cout << " SECTION MONTH : ";
-//    cin >> month;
-//
-//    cout << " SECTION DAY : ";
-//    cin >> day;
-//
-//    cout << " YEAR OF EXAM : ";
-//    cin >> examYear;
-//
-//    cout << " MONTH OF EXAM : ";
-//    cin >> examMonth;
-//
-//    cout << " DAY OF EXAM : ";
-//    cin >> examDay;
-//
-//    cout << " [NEW SECTION DAY]  \n";
-//    cout << " ENTER A NUMBER FROM 0 to 6 (Saturday , ... , Friday) -> ";
-//    cin >> daynum;
-//
-//}
-//
+void Section::editSection() {
+    cout << "CURRENT SECTION INFORMATION:\n";
+    cout << showSectionInformation() << endl;
+
+    string sectionName;
+    cout << " ENTER NEW SECTION NAME: ";
+    cin.ignore();
+    getline(cin, sectionName);
+
+    string answer;
+    bool isNeed;
+    cout << " DO YOU NEED PROJECTOR (YES OR NO) ? ";
+    getline(cin, answer);
+    if (answer == "YES") {
+        isNeed = true;
+    } else if (answer == "NO") {
+        isNeed = false;
+    }
+
+    int startHour;
+    int startMinute;
+    cout << " [NEW START TIME INFORMATION] \n";
+    cout << " HOUR : ";
+    cin >> startHour;
+    cout << " MINUTE : ";
+    cin >> startMinute;
+
+    int sectionDuration;
+    int examDuration;
+    cout << " [NEW DURATION INFORMATION] \n";
+    cout << " SECTION DURATION : ";
+    cin >> sectionDuration;
+    cout << " EXAM DURATION : ";
+    cin >> examDuration;
+
+    int year, month, day, examYear, examMonth, examDay, daynum;
+    cout << " [NEW DATE INFORMATION] \n";
+    cout << " SECTION YEAR : ";
+    cin >> year;
+
+    cout << " SECTION MONTH : ";
+    cin >> month;
+
+    cout << " SECTION DAY : ";
+    cin >> day;
+
+    cout << " YEAR OF EXAM : ";
+    cin >> examYear;
+
+    cout << " MONTH OF EXAM : ";
+    cin >> examMonth;
+
+    cout << " DAY OF EXAM : ";
+    cin >> examDay;
+
+    cout << " [NEW SECTION DAY]  \n";
+    cout << " ENTER A NUMBER FROM 0 to 6 (Saturday , ... , Friday) -> ";
+    cin >> daynum;
+
+}
+
 
 
 

@@ -112,13 +112,11 @@ int main() {
 
                         string sectionName;
                         cout << " ENTER SECTION NAME: ";
-                        cin.ignore();
                         getline(cin, sectionName);
 
                         string answer;
                         bool isNeed;
                         cout << " DO YOU NEED PROJECTOR (YES OR NO) ? ";
-                        cin.ignore();
                         getline(cin, answer);
                         if (answer == "YES") {
                             isNeed = true;
@@ -204,8 +202,9 @@ int main() {
                             }
                         }
 
-                        cout << "[*CHECK THE INTERFERENCE*]\n";
+
                         for (Section sec: sectionList) {
+                            cout << "[*CHECK THE INTERFERENCE*]\n";
                             while (!section.toCheckTheInterference(sec)) {
                                 int op;
                                 cout << interferenceMenu();
@@ -363,7 +362,6 @@ int main() {
                         break;
                     }
                     case 5: {
-
                         break;
                     }
                 }

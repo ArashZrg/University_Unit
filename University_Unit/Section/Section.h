@@ -55,7 +55,7 @@ public:
 
 public:
     //this function is for editing section
-//    void editSection();
+    void editSection();
 
 private:
 
