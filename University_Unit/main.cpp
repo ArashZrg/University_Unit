@@ -37,7 +37,9 @@ string sectionMenu() {
 string interferenceMenu() {
     string result = string(" 1-CHANGE THE TIME AND TEACHER \n")
                     + string(" 2-CHANGE THE TIME , LOCATION AND DATE \n")
-                    + string(" 3-CHANGE THE EXAM DATE\n");
+                    + string(" 3-CHANGE THE EXAM DATE\n")
+                    + string(" 4-BACK \n")
+                    + string(" CHOOSE OPTION ->");
     return result;
 }
 
@@ -204,8 +206,29 @@ int main() {
 
                         cout << "[*CHECK THE INTERFERENCE*]\n";
                         for (Section sec: sectionList) {
-                            if (!section.toCheckTheInterference(sec)) {
-                                throw invalid_argument("SECTIONS HAVE INTERFERENCE WITH EACH OTHER!");
+                            while (!section.toCheckTheInterference(sec)) {
+                                int op;
+                                cout << interferenceMenu();
+                                cin >> op;
+                                cout << "*************** \n";
+
+                                switch (op) {
+                                    case 1: {
+                                        section.changeTimeAndTeacher(teachersList, section);
+                                        break;
+                                    }
+                                    case 2: {
+                                        section.changeTimeAndLocationAndDate(locationsList, section);
+                                        break;
+                                    }
+                                    case 3: {
+                                        section.changeExamDate();
+                                        break;
+                                    }
+                                    case 4: {
+                                        break;
+                                    }
+                                }
                             }
                         }
 

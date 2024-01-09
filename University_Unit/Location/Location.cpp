@@ -14,7 +14,8 @@ string Location::showLocationAddress() const {
     string result = string("*ADDRESS*\n") +
                     "[Faculty Name: " + getFacultyName() + "]\n" +
                     "[Floor Number : " + to_string(getFloorNumber()) + "]\n" +
-                    "[Class Number : " + to_string(getClassNumber()) + "]\n";
+                    "[Class Number : " + to_string(getClassNumber()) + "]\n" +
+                    "[Class ID : " + to_string(getLocationID()) + "]\n";
     return result;
 }
 

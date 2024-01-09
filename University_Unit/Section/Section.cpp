@@ -24,7 +24,7 @@ Section::Section(string sectionID, string sectionName, bool projector, int start
         _sectionID = sectionID;
         existingSectionIDs.push_back(sectionID);
     } else {
-        throw invalid_argument("This Section ID Is Already Exist In System ! Please Choose Another ID !");
+        throw invalid_argument("This Section ID Is Already Exist In System !");
     }
 }
 
@@ -105,7 +105,7 @@ void Section::firstMessage() {
     cout << "CHOOSE ANOTHER TIME AND ANOTHER TEACHER!";
 }
 
-void Section::changeTimeAndTeacher(vector<Teacher> teacherList, Section ob) {
+void Section::changeTimeAndTeacher(vector<Teacher> teachersList, Section ob) {
     cout << "[CURRENT SECTION INFORMATION]\n";
     cout << showSectionInformation() << endl;
 
@@ -121,7 +121,7 @@ void Section::changeTimeAndTeacher(vector<Teacher> teacherList, Section ob) {
     time.setStartMinute(startMinute);
 
     int count = 1;
-    for (Teacher tech: teacherList) {
+    for (Teacher tech: teachersList) {
         cout << "  ***" << "\n TEACHER " << count << "\n";
         cout << tech.showPersonInformation() << endl;
         count++;
@@ -131,7 +131,7 @@ void Section::changeTimeAndTeacher(vector<Teacher> teacherList, Section ob) {
     cout << " CHOOSE TEACHER ID : ";
     cin >> number;
 
-    for (Teacher &tech: teacherList) {
+    for (Teacher &tech: teachersList) {
         if (tech.getTeacherNumber() == number) {
             ob.assignTeacher(&tech);
         }

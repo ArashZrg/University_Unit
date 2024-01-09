@@ -76,7 +76,7 @@ public:
     [[nodiscard]]bool toCheckTheInterference(Section &other);
 
     void firstMessage();
-    void changeTimeAndTeacher(vector<Teacher> list , Section ob);
+    void changeTimeAndTeacher(vector<Teacher> teachersList , Section ob);
 
     void secondMessage();
     void changeTimeAndLocationAndDate(vector<Location> locationsList , Section ob);
