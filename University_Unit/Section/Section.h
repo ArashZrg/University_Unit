@@ -75,6 +75,14 @@ public:
     // and i hope it work right
     [[nodiscard]]bool toCheckTheInterference(Section &other);
 
+    void firstMessage();
+    void changeTimeAndTeacher(vector<Teacher> list , Section ob);
+
+    void secondMessage();
+    void changeTimeAndLocationAndDate(vector<Location> locationsList , Section ob);
+
+    void thirdMessage();
+    void changeExamDate();
 private:
     // I Wrote this fucntion to convert projector Result (0 or 1)
     // Into (False or True)

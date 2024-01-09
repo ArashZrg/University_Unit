@@ -73,6 +73,11 @@ public:
 
     [[nodiscard]] int getFinishMinute() const;
 
+public:
+    //setters
+    void setStartHour(int hour);
+
+    void setStartMinute(int minute);
 };
 
 #endif

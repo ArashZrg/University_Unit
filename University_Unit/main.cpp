@@ -34,6 +34,13 @@ string sectionMenu() {
     return result;
 }
 
+string interferenceMenu() {
+    string result = string(" 1-CHANGE THE TIME AND TEACHER \n")
+                    + string(" 2-CHANGE THE TIME , LOCATION AND DATE \n")
+                    + string(" 3-CHANGE THE EXAM DATE\n");
+    return result;
+}
+
 string locationMenu() {
     string result = string(" 1-ADD LOCATION \n")
                     + string(" 2-DELETE LOCATION \n")
@@ -183,14 +190,14 @@ int main() {
                         for (Location location: locationsList) {
                             cout << "  ***" << "\n LOCATION " << count1 << "\n";
                             cout << location.showLocationAddress() << endl;
-                            count++;
+                            count1++;
                         }
 
                         int number1;
                         cout << " CHOOSE LOCATION ID : ";
                         cin >> number1;
                         for (Location &loc: locationsList) {
-                            if (loc.getLocationID() == number) {
+                            if (loc.getLocationID() == number1) {
                                 section.assignLocation(&loc);
                             }
                         }

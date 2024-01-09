@@ -14,6 +14,7 @@ Teacher::Teacher(string firstName, string lastName)
 }
 
 
+
 string Teacher::showPersonInformation() {
     string result = "[Name: " + getFirstName() + " " + getLastName() + "]\n"
                     + "[Teacher Number: " + to_string(getTeacherNumber()) + "]\n";

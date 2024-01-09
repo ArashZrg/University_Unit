@@ -69,6 +69,16 @@ public:
 
     [[nodiscard]] int getExamDay() const;
 
+public:
+    //setters
+    void setYear(int year);
+    void setMonth(int month);
+    void setDay(int day);
+
+    void setExamYear(int year);
+    void setExamMonth(int month);
+    void setExamDay(int day);
+
 };
 
 #endif

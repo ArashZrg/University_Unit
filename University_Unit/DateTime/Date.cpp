@@ -101,3 +101,25 @@ int Date::getExamMonth() const {
 int Date::getExamDay() const {
     return _dayOfExam;
 }
+
+void Date::setYear(int year) {
+    _yearOfSection = year;
+}
+
+void Date::setMonth(int month) {
+    _monthOfSection = month;
+}
+
+void Date::setDay(int day) {
+    _dayOfSection = day;
+}
+
+void Date::setExamYear(int year) {
+    _yearOfExam = year;
+}
+void Date::setExamMonth(int month) {
+    _monthOfExam = month;
+}
+void Date::setExamDay(int day) {
+    _dayOfExam = day;
+}

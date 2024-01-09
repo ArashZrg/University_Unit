@@ -161,4 +161,12 @@ int Time::getFinishMinute() const {
     return _finishMinute;
 }
 
+void Time::setStartHour(int hour) {
+    _startHour = hour;
+}
+
+void Time::setStartMinute(int minute) {
+    _startMinute = minute;
+}
+
 

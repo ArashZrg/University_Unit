@@ -84,21 +84,58 @@ string Section::convertIntResultToString() const {
     }
 }
 
+
 bool Section::firstCaseOfInterference(Section &other) {
     bool isValid = true;
 
     bool isTimeInterference = time.handleTimeInterference(other.time);
-
     bool isTeacherInterference = _assignedTeacher && other._assignedTeacher &&
                                  _assignedTeacher->handleTeacherInterference(*(other._assignedTeacher));
 
-    if (isTimeInterference && isTeacherInterference) {
+    if (!(isTimeInterference && isTeacherInterference)) {
         isValid = false;
         return isValid;
     } else {
         return isValid;
     }
 
+}
+
+void Section::firstMessage() {
+    cout << "CHOOSE ANOTHER TIME AND ANOTHER TEACHER!";
+}
+
+void Section::changeTimeAndTeacher(vector<Teacher> teacherList, Section ob) {
+    cout << "[CURRENT SECTION INFORMATION]\n";
+    cout << showSectionInformation() << endl;
+
+    int startHour;
+    int startMinute;
+    cout << " [START TIME INFORMATION] \n";
+    cout << " HOUR : ";
+    cin >> startHour;
+    cout << " MINUTE : ";
+    cin >> startMinute;
+
+    time.setStartHour(startHour);
+    time.setStartMinute(startMinute);
+
+    int count = 1;
+    for (Teacher tech: teacherList) {
+        cout << "  ***" << "\n TEACHER " << count << "\n";
+        cout << tech.showPersonInformation() << endl;
+        count++;
+    }
+
+    int number;
+    cout << " CHOOSE TEACHER ID : ";
+    cin >> number;
+
+    for (Teacher &tech: teacherList) {
+        if (tech.getTeacherNumber() == number) {
+            ob.assignTeacher(&tech);
+        }
+    }
 }
 
 bool Section::secondCaseOfInterference(Section &other) {
@@ -109,40 +146,124 @@ bool Section::secondCaseOfInterference(Section &other) {
                                   _assignedLocation->handleLocationInterference(*(other._assignedLocation));
     bool isDayInterference = date.handleDayInterference(other.date);
 
-    if (isTimeInterference && isLocationInterference && isDayInterference) {
+    if (!(isTimeInterference && isLocationInterference && isDayInterference)) {
         isValid = false;
         return isValid;
     } else {
         return isValid;
     }
 
+}
+
+void Section::secondMessage() {
+    cout << "CHOOSE ANOTHER TIME , LOCATION AND DATE!";
+}
+
+void Section::changeTimeAndLocationAndDate(vector<Location> locationsList, Section ob) {
+    cout << "[CURRENT SECTION INFORMATION]\n";
+    cout << showSectionInformation() << endl;
+
+    int startHour;
+    int startMinute;
+    cout << " [START TIME INFORMATION] \n";
+    cout << " HOUR : ";
+    cin >> startHour;
+    cout << " MINUTE : ";
+    cin >> startMinute;
+
+    time.setStartHour(startHour);
+    time.setStartMinute(startMinute);
+
+    int year, month, day;
+    cout << " [DATE INFORMATION] \n";
+    cout << " SECTION YEAR : ";
+    cin >> year;
+
+    cout << " SECTION MONTH : ";
+    cin >> month;
+
+    cout << " SECTION DAY : ";
+    cin >> day;
+
+    date.setYear(year);
+    date.setMonth(month);
+    date.setDay(day);
+
+    int count1 = 1;
+    for (Location location: locationsList) {
+        cout << "  ***" << "\n LOCATION " << count1 << "\n";
+        cout << location.showLocationAddress() << endl;
+        count1++;
+    }
+
+    int number1;
+    cout << " CHOOSE LOCATION ID : ";
+    cin >> number1;
+    for (Location &loc: locationsList) {
+        if (loc.getLocationID() == number1) {
+            ob.assignLocation(&loc);
+        }
+    }
 }
 
 bool Section::thirdCaseOfInterference(Section &other) {
     bool isValid = true;
 
-    bool isTimeInterference = time.handleTimeInterference(other.time);
     bool isExamDateInterference = date.handleExamDayInterference(other.date);
 
-    if (isTimeInterference && isExamDateInterference) {
+    if (!isExamDateInterference) {
         isValid = false;
         return isValid;
     } else {
         return isValid;
     }
 
+}
+
+void Section::thirdMessage() {
+    cout << "CHOOSE ANOTHER EXAM DATE!";
+}
+
+void Section::changeExamDate() {
+    cout << "[CURRENT SECTION INFORMATION]\n";
+    cout << showSectionInformation() << endl;
+
+    int examYear, examMonth, examDay;
+    cout << " YEAR OF EXAM : ";
+    cin >> examYear;
+
+    cout << " MONTH OF EXAM : ";
+    cin >> examMonth;
+
+    cout << " DAY OF EXAM : ";
+    cin >> examDay;
+
+    date.setExamYear(examYear);
+    date.setExamMonth(examMonth);
+    date.setExamDay(examDay);
 }
 
 bool Section::toCheckTheInterference(Section &other) {
     bool isValid = true;
 
-    if (firstCaseOfInterference(other) || secondCaseOfInterference(other) || thirdCaseOfInterference(other)) {
+    if (!firstCaseOfInterference(other)) {
         isValid = false;
+        firstMessage();
+        return isValid;
+    } else if (!secondCaseOfInterference(other)) {
+        isValid = false;
+        secondMessage();
+        return isValid;
+    } else if (!thirdCaseOfInterference(other)) {
+        isValid = false;
+        thirdMessage();
         return isValid;
     } else {
         return isValid;
     }
+
 }
+
 
 string Section::getSectionName() const {
     return _sectionName;
