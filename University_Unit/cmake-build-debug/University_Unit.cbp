@@ -106,6 +106,12 @@
 		<Unit filename="E:/University_Unit/University_Unit/Location/Location_Test.cpp">
 			<Option target="University_Unit"/>
 		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/Menu/Menu.cpp">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/Menu/Menu.h">
+			<Option target="University_Unit"/>
+		</Unit>
 		<Unit filename="E:/University_Unit/University_Unit/People/People_Test.cpp">
 			<Option target="University_Unit"/>
 		</Unit>

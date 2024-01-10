@@ -7,73 +7,11 @@
 #include "People/Teacher.h"
 #include "People/Student.h"
 #include "Section/Section.h"
+#include "Menu/Menu.h"
 #include <fstream>
 #include <sstream>
 
 using namespace std;
-
-string whileMenu() {
-    string result = string("      [Menu]\n")
-                    + string(" *************** \n")
-                    + string(" 1-SECTION \n")
-                    + string(" 2-LOCATION \n")
-                    + string(" 3-TEACHER \n")
-                    + string(" 4-STUDENT \n")
-                    + string(" 5-EXIT \n")
-                    + string(" CHOOSE OPTION -> ");
-    return result;
-}
-
-string sectionMenu() {
-    string result = string(" 1-ADD SECTION \n")
-                    + string(" 2-DELETE SECTION \n")
-                    + string(" 3-EDIT SECTION \n")
-                    + string(" 4-SHOW SECTION \n")
-                    + string(" 5-BACK TO MAIN MENU \n")
-                    + string(" CHOOSE OPTION ->");
-    return result;
-}
-
-string interferenceMenu() {
-    string result = string(" 1-CHANGE THE TIME AND TEACHER \n")
-                    + string(" 2-CHANGE THE TIME , LOCATION AND DATE \n")
-                    + string(" 3-CHANGE THE EXAM DATE\n")
-                    + string(" 4-BACK \n")
-                    + string(" CHOOSE OPTION ->");
-    return result;
-}
-
-string locationMenu() {
-    string result = string(" 1-ADD LOCATION \n")
-                    + string(" 2-DELETE LOCATION \n")
-                    + string(" 3-EDIT LOCATION \n")
-                    + string(" 4-SHOW ALL LOCATION \n")
-                    + string(" 5-BACK TO MAIN MENU \n")
-                    + string(" CHOOSE OPTION -> ");
-    return result;
-}
-
-string teacherMenu() {
-
-    string result = string(" 1-ADD TEACHER \n")
-                    + string(" 2-DELETE TEACHER \n")
-                    + string(" 3-EDIT TEACHER \n")
-                    + string(" 4-SHOW ALL TEACHERS \n")
-                    + string(" 5-BACK TO MAIN MENU \n")
-                    + string(" CHOOSE OPTION -> ");
-    return result;
-}
-
-string studentMenu() {
-    string result = string(" 1-ADD STUDENT \n")
-                    + string(" 2-DELETE STUDENT \n")
-                    + string(" 3-EDIT STUDENT \n")
-                    + string(" 4-SHOW ALL STUDENTS \n")
-                    + string(" 5-BACK TO MAIN MENU \n")
-                    + string("CHOOSE OPTION -> ");
-    return result;
-
-}
 
 int main() {
 
@@ -83,11 +21,12 @@ int main() {
     vector<Student> studentsList;
     vector<int> studentsNumbers;
 
+
     int OPTION;
 
     while (OPTION != 5) {
 
-        cout << whileMenu();
+        cout << Menu::whileMenu();
         cin >> OPTION;
         cout << "*************** \n";
 
@@ -99,7 +38,7 @@ int main() {
             //Section Case
             case 1: {
                 int sectionOption;
-                cout << sectionMenu();
+                cout << Menu::sectionMenu();
                 cin >> sectionOption;
                 cout << "*************** \n";
 
@@ -207,7 +146,7 @@ int main() {
                             cout << "[*CHECK THE INTERFERENCE*]\n";
                             while (!section.toCheckTheInterference(sec)) {
                                 int op;
-                                cout << interferenceMenu();
+                                cout << Menu::interferenceMenu();
                                 cin >> op;
                                 cout << "*************** \n";
 
@@ -293,7 +232,7 @@ int main() {
             case 2: {
 
                 int locationOption;
-                cout << locationMenu();
+                cout << Menu::locationMenu();
                 cin >> locationOption;
                 cout << "*************** \n";
 
@@ -371,7 +310,7 @@ int main() {
             case 3: {
 
                 int teacherOption;
-                cout << teacherMenu();
+                cout << Menu::teacherMenu();
                 cin >> teacherOption;
                 cout << "*************** \n";
 
@@ -442,7 +381,7 @@ int main() {
                 //Student Case
             case 4: {
                 int studentOption;
-                cout << studentMenu();
+                cout << Menu::studentMenu();
                 cin >> studentOption;
                 cout << "*************** \n";
 

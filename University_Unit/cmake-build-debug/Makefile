@@ -248,6 +248,30 @@ Location/Location_Test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Location/Location_Test.cpp.s
 .PHONY : Location/Location_Test.cpp.s
 
+Menu/Menu.obj: Menu/Menu.cpp.obj
+.PHONY : Menu/Menu.obj
+
+# target to build an object file
+Menu/Menu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Menu/Menu.cpp.obj
+.PHONY : Menu/Menu.cpp.obj
+
+Menu/Menu.i: Menu/Menu.cpp.i
+.PHONY : Menu/Menu.i
+
+# target to preprocess a source file
+Menu/Menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Menu/Menu.cpp.i
+.PHONY : Menu/Menu.cpp.i
+
+Menu/Menu.s: Menu/Menu.cpp.s
+.PHONY : Menu/Menu.s
+
+# target to generate assembly for a file
+Menu/Menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Menu/Menu.cpp.s
+.PHONY : Menu/Menu.cpp.s
+
 People/People_Test.obj: People/People_Test.cpp.obj
 .PHONY : People/People_Test.obj
 
@@ -440,6 +464,9 @@ help:
 	@echo ... Location/Location_Test.obj
 	@echo ... Location/Location_Test.i
 	@echo ... Location/Location_Test.s
+	@echo ... Menu/Menu.obj
+	@echo ... Menu/Menu.i
+	@echo ... Menu/Menu.s
 	@echo ... People/People_Test.obj
 	@echo ... People/People_Test.i
 	@echo ... People/People_Test.s

@@ -33,7 +33,7 @@ void Teacher::editTeacher() {
 
     string lastName;
     cout << "ENTER NEW LAST NAME: ";
-    cin.ignore();
+
     getline(cin, lastName);
 
     setFirstName(firstName);
