@@ -30,4 +30,6 @@ add_executable(University_Unit main.cpp
         MainOperation/TeacherOperation.h
         MainOperation/LocationOperation.cpp
         MainOperation/LocationOperation.h
+        MainOperation/SectionOperation.cpp
+        MainOperation/SectionOperation.h
 )

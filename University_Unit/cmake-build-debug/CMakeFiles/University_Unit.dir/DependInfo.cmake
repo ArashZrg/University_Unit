@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/University_Unit/University_Unit/Location/Location.cpp" "CMakeFiles/University_Unit.dir/Location/Location.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/Location/Location.cpp.obj.d"
   "E:/University_Unit/University_Unit/Location/Location_Test.cpp" "CMakeFiles/University_Unit.dir/Location/Location_Test.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/Location/Location_Test.cpp.obj.d"
   "E:/University_Unit/University_Unit/MainOperation/LocationOperation.cpp" "CMakeFiles/University_Unit.dir/MainOperation/LocationOperation.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/MainOperation/LocationOperation.cpp.obj.d"
+  "E:/University_Unit/University_Unit/MainOperation/SectionOperation.cpp" "CMakeFiles/University_Unit.dir/MainOperation/SectionOperation.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/MainOperation/SectionOperation.cpp.obj.d"
   "E:/University_Unit/University_Unit/MainOperation/StudentOperation.cpp" "CMakeFiles/University_Unit.dir/MainOperation/StudentOperation.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/MainOperation/StudentOperation.cpp.obj.d"
   "E:/University_Unit/University_Unit/MainOperation/TeacherOperation.cpp" "CMakeFiles/University_Unit.dir/MainOperation/TeacherOperation.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/MainOperation/TeacherOperation.cpp.obj.d"
   "E:/University_Unit/University_Unit/Menu/Menu.cpp" "CMakeFiles/University_Unit.dir/Menu/Menu.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/Menu/Menu.cpp.obj.d"

@@ -272,6 +272,30 @@ MainOperation/LocationOperation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/MainOperation/LocationOperation.cpp.s
 .PHONY : MainOperation/LocationOperation.cpp.s
 
+MainOperation/SectionOperation.obj: MainOperation/SectionOperation.cpp.obj
+.PHONY : MainOperation/SectionOperation.obj
+
+# target to build an object file
+MainOperation/SectionOperation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/MainOperation/SectionOperation.cpp.obj
+.PHONY : MainOperation/SectionOperation.cpp.obj
+
+MainOperation/SectionOperation.i: MainOperation/SectionOperation.cpp.i
+.PHONY : MainOperation/SectionOperation.i
+
+# target to preprocess a source file
+MainOperation/SectionOperation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/MainOperation/SectionOperation.cpp.i
+.PHONY : MainOperation/SectionOperation.cpp.i
+
+MainOperation/SectionOperation.s: MainOperation/SectionOperation.cpp.s
+.PHONY : MainOperation/SectionOperation.s
+
+# target to generate assembly for a file
+MainOperation/SectionOperation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/MainOperation/SectionOperation.cpp.s
+.PHONY : MainOperation/SectionOperation.cpp.s
+
 MainOperation/StudentOperation.obj: MainOperation/StudentOperation.cpp.obj
 .PHONY : MainOperation/StudentOperation.obj
 
@@ -539,6 +563,9 @@ help:
 	@echo ... MainOperation/LocationOperation.obj
 	@echo ... MainOperation/LocationOperation.i
 	@echo ... MainOperation/LocationOperation.s
+	@echo ... MainOperation/SectionOperation.obj
+	@echo ... MainOperation/SectionOperation.i
+	@echo ... MainOperation/SectionOperation.s
 	@echo ... MainOperation/StudentOperation.obj
 	@echo ... MainOperation/StudentOperation.i
 	@echo ... MainOperation/StudentOperation.s

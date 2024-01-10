@@ -112,6 +112,12 @@
 		<Unit filename="E:/University_Unit/University_Unit/MainOperation/LocationOperation.h">
 			<Option target="University_Unit"/>
 		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/MainOperation/SectionOperation.cpp">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/MainOperation/SectionOperation.h">
+			<Option target="University_Unit"/>
+		</Unit>
 		<Unit filename="E:/University_Unit/University_Unit/MainOperation/StudentOperation.cpp">
 			<Option target="University_Unit"/>
 		</Unit>

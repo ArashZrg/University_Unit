@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/University_Unit.dir/Location/Location_Test.cpp.obj.d"
   "CMakeFiles/University_Unit.dir/MainOperation/LocationOperation.cpp.obj"
   "CMakeFiles/University_Unit.dir/MainOperation/LocationOperation.cpp.obj.d"
+  "CMakeFiles/University_Unit.dir/MainOperation/SectionOperation.cpp.obj"
+  "CMakeFiles/University_Unit.dir/MainOperation/SectionOperation.cpp.obj.d"
   "CMakeFiles/University_Unit.dir/MainOperation/StudentOperation.cpp.obj"
   "CMakeFiles/University_Unit.dir/MainOperation/StudentOperation.cpp.obj.d"
   "CMakeFiles/University_Unit.dir/MainOperation/TeacherOperation.cpp.obj"

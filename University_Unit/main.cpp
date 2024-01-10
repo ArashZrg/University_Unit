@@ -7,17 +7,20 @@
 #include "People/Teacher.h"
 #include "People/Student.h"
 #include "Section/Section.h"
-#include "Menu/Menu.h"
-#include "MainOperation/StudentOperation.h"
-#include "MainOperation/TeacherOperation.h"
-#include "MainOperation/LocationOperation.h"
 
+// Folders and classes for (Main)
+#include "Menu/Menu.h"
+#include "MainOperation/SectionOperation.h"
+#include "MainOperation/LocationOperation.h"
+#include "MainOperation/TeacherOperation.h"
+#include "MainOperation/StudentOperation.h"
+// Folders and classes for (Main)
 
 using namespace std;
 
 int main() {
 
-    vector<Section> sectionList;
+    vector<Section> sectionsList;
     vector<Location> locationsList;
     vector<Teacher> teachersList;
     vector<Student> studentsList;
@@ -145,7 +148,7 @@ int main() {
                         }
 
 
-                        for (Section sec: sectionList) {
+                        for (Section sec: sectionsList) {
                             cout << "[*CHECK THE INTERFERENCE*]\n";
                             while (!section.toCheckTheInterference(sec)) {
                                 int op;
@@ -173,32 +176,16 @@ int main() {
                             }
                         }
 
-                        sectionList.push_back(section);
+                        sectionsList.push_back(section);
                         break;
                     }
                     case 2: {
-
-                        cout << "ID OF EXIST SECTIONS : \n";
-                        for (Section section: sectionList) {
-                            cout << "[" << section.getSectionId() << "]" << endl;
-                        }
-
-                        string id;
-                        cout << "ENTER YOUR PREFERRED SECTION ID -->";
-                        cin.ignore();
-                        getline(cin, id);
-
-                        for (int i = 0; i < sectionList.size(); ++i) {
-                            if (sectionList[i].getSectionId() == id) {
-                                sectionList.erase(sectionList.begin() + i);
-                                break;
-                            }
-                        }
+                        SectionOperation::DeleteSection(sectionsList);
                         break;
                     }
                     case 3: {
                         string sectionID;
-                        for (Section section: sectionList) {
+                        for (Section section: sectionsList) {
                             cout << "[" << section.getSectionName() << " , "
                                  << section.getSectionId() << "]" << endl;
                         }
@@ -207,7 +194,7 @@ int main() {
                         cin.ignore();
                         getline(cin, sectionID);
 
-                        for (Section section: sectionList) {
+                        for (Section section: sectionsList) {
                             if (section.getSectionId() == sectionID) {
 //                                section.edit();
                                 break;
@@ -217,12 +204,7 @@ int main() {
                         break;
                     }
                     case 4: {
-                        int count = 1;
-                        for (Section &section: sectionList) {
-                            cout << "  ***" << "\n SECTION " << count << "\n";
-                            cout << section.showSectionInformation() << endl;
-                            count++;
-                        }
+                        SectionOperation::ShowSection(sectionsList);
                         break;
                     }
                     case 5: {
