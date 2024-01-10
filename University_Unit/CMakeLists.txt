@@ -18,10 +18,6 @@ add_executable(University_Unit main.cpp
         Location/Location.h
         Section/Section.cpp
         Section/Section.h
-        DateTime/DateTime_Test.cpp
-        Location/Location_Test.cpp
-        People/People_Test.cpp
-        Section/Section_Test.cpp
         Menu/Menu.cpp
         Menu/Menu.h
         MainOperation/StudentOperation.cpp

@@ -33,8 +33,8 @@ public:
     bool handleLocationInterference(Location &ob);
 
 public:
-    //getters
 
+    //getters
     [[nodiscard]] string getFacultyName() const;
 
     [[nodiscard]] int getFloorNumber() const;

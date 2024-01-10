@@ -9,21 +9,17 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/University_Unit/University_Unit/DateTime/Date.cpp" "CMakeFiles/University_Unit.dir/DateTime/Date.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/DateTime/Date.cpp.obj.d"
-  "E:/University_Unit/University_Unit/DateTime/DateTime_Test.cpp" "CMakeFiles/University_Unit.dir/DateTime/DateTime_Test.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/DateTime/DateTime_Test.cpp.obj.d"
   "E:/University_Unit/University_Unit/DateTime/Time.cpp" "CMakeFiles/University_Unit.dir/DateTime/Time.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/DateTime/Time.cpp.obj.d"
   "E:/University_Unit/University_Unit/Location/Location.cpp" "CMakeFiles/University_Unit.dir/Location/Location.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/Location/Location.cpp.obj.d"
-  "E:/University_Unit/University_Unit/Location/Location_Test.cpp" "CMakeFiles/University_Unit.dir/Location/Location_Test.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/Location/Location_Test.cpp.obj.d"
   "E:/University_Unit/University_Unit/MainOperation/LocationOperation.cpp" "CMakeFiles/University_Unit.dir/MainOperation/LocationOperation.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/MainOperation/LocationOperation.cpp.obj.d"
   "E:/University_Unit/University_Unit/MainOperation/SectionOperation.cpp" "CMakeFiles/University_Unit.dir/MainOperation/SectionOperation.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/MainOperation/SectionOperation.cpp.obj.d"
   "E:/University_Unit/University_Unit/MainOperation/StudentOperation.cpp" "CMakeFiles/University_Unit.dir/MainOperation/StudentOperation.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/MainOperation/StudentOperation.cpp.obj.d"
   "E:/University_Unit/University_Unit/MainOperation/TeacherOperation.cpp" "CMakeFiles/University_Unit.dir/MainOperation/TeacherOperation.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/MainOperation/TeacherOperation.cpp.obj.d"
   "E:/University_Unit/University_Unit/Menu/Menu.cpp" "CMakeFiles/University_Unit.dir/Menu/Menu.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/Menu/Menu.cpp.obj.d"
-  "E:/University_Unit/University_Unit/People/People_Test.cpp" "CMakeFiles/University_Unit.dir/People/People_Test.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/People/People_Test.cpp.obj.d"
   "E:/University_Unit/University_Unit/People/Person.cpp" "CMakeFiles/University_Unit.dir/People/Person.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/People/Person.cpp.obj.d"
   "E:/University_Unit/University_Unit/People/Student.cpp" "CMakeFiles/University_Unit.dir/People/Student.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/People/Student.cpp.obj.d"
   "E:/University_Unit/University_Unit/People/Teacher.cpp" "CMakeFiles/University_Unit.dir/People/Teacher.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/People/Teacher.cpp.obj.d"
   "E:/University_Unit/University_Unit/Section/Section.cpp" "CMakeFiles/University_Unit.dir/Section/Section.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/Section/Section.cpp.obj.d"
-  "E:/University_Unit/University_Unit/Section/Section_Test.cpp" "CMakeFiles/University_Unit.dir/Section/Section_Test.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/Section/Section_Test.cpp.obj.d"
   "E:/University_Unit/University_Unit/main.cpp" "CMakeFiles/University_Unit.dir/main.cpp.obj" "gcc" "CMakeFiles/University_Unit.dir/main.cpp.obj.d"
   )
 

@@ -50,10 +50,17 @@ int main() {
 
                 switch (sectionOption) {
                     case 1: {
+                        //Need To Check Exactly Here
                         string sectionID;
-                        cout << " ENTER SECTION ID: ";
+                        cout << "  ENTER SECTION ID: ";
                         cin.ignore();
                         getline(cin, sectionID);
+                        while (!Section::isSectionIdValid(sectionID)) {
+                            cout << "[*!THIS SECTION ID ALREADY EXIST!*]\n";
+                            cout << " ENTER NEW SECTION ID: ";
+                            getline(cin, sectionID);
+                        }
+                        //Need To Check Exactly Here
 
                         string sectionName;
                         cout << " ENTER SECTION NAME: ";
@@ -72,22 +79,32 @@ int main() {
                         int startHour;
                         int startMinute;
                         cout << " [START TIME INFORMATION] \n";
-                        cout << " HOUR : ";
+                        cout << "  HOUR : ";
                         cin >> startHour;
                         cout << " MINUTE : ";
                         cin >> startMinute;
 
+                        //Need To Check Exactly Here
                         int sectionDuration;
                         int examDuration;
                         cout << " [DURATION INFORMATION] \n";
-                        cout << " SECTION DURATION : ";
+                        cout << "  SECTION DURATION : ";
                         cin >> sectionDuration;
                         cout << " EXAM DURATION : ";
                         cin >> examDuration;
+                        while (!(Time::isValidDuration(sectionDuration) && Time::isValidExamDuration(examDuration))) {
+                            cout << "[*!SECTION DURATION MOST BE 1 , 2 OR 3 HOUR!*]\n";
+                            cout << " [*!EXAM DURATION MOST BE 2 OR 3 HOUR!*]\n";
+                            cout << "  NEW SECTION DURATION : ";
+                            cin >> sectionDuration;
+                            cout << " NEW EXAM DURATION : ";
+                            cin >> examDuration;
+                        }
+                        //Need To Check Exactly Here
 
                         int year, month, day, examYear, examMonth, examDay, daynum;
                         cout << " [DATE INFORMATION] \n";
-                        cout << " SECTION YEAR : ";
+                        cout << "  SECTION YEAR : ";
                         cin >> year;
 
                         cout << " SECTION MONTH : ";

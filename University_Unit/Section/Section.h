@@ -33,7 +33,7 @@ public:
             int examDuration, int year, int month, int day, int examYear, int examMonth, int examDay, int dayNum,
             vector<int> studentNumbers);
 
-private:
+public:
     //to validate the valid IDs
     static bool isSectionIdValid(const string &sectionId);
 
@@ -76,13 +76,17 @@ public:
     [[nodiscard]]bool toCheckTheInterference(Section &other);
 
     void firstMessage();
-    void changeTimeAndTeacher(vector<Teacher> teachersList , Section ob);
+
+    void changeTimeAndTeacher(vector<Teacher> teachersList, Section ob);
 
     void secondMessage();
-    void changeTimeAndLocationAndDate(vector<Location> locationsList , Section ob);
+
+    void changeTimeAndLocationAndDate(vector<Location> locationsList, Section ob);
 
     void thirdMessage();
+
     void changeExamDate();
+
 private:
     // I Wrote this fucntion to convert projector Result (0 or 1)
     // Into (False or True)

@@ -25,7 +25,7 @@ public:
 //Constructor
     Time(int startHour, int startMinute, int sectionDuration, int examDuration);
 
-private:
+public:
 
 // Functions for validating duration and exam duration
 // for section duration , it most be 1 , 2 or 3 hour
@@ -37,11 +37,14 @@ private:
 private:
 
 // for compute the Finish time of class , i write it base on duration and start time
-    int computeFinishTime() ;
+    int computeFinishTime();
+
 // for when duration is 1 hour i have finishFirstState()
     int finishFirstState();
+
 // for when duration is 2 hour i have finishSecondState()
     int finishSecondState();
+
 // for when duration is 3 hour i have finishThirdState()
     int finishThirdState();
 
@@ -78,6 +81,10 @@ public:
     void setStartHour(int hour);
 
     void setStartMinute(int minute);
+
+    void setSectionDuration(int sectionDuration);
+
+    void setExamDuration(int examDuration);
 };
 
 #endif

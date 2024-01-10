@@ -152,30 +152,6 @@ DateTime/Date.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/DateTime/Date.cpp.s
 .PHONY : DateTime/Date.cpp.s
 
-DateTime/DateTime_Test.obj: DateTime/DateTime_Test.cpp.obj
-.PHONY : DateTime/DateTime_Test.obj
-
-# target to build an object file
-DateTime/DateTime_Test.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/DateTime/DateTime_Test.cpp.obj
-.PHONY : DateTime/DateTime_Test.cpp.obj
-
-DateTime/DateTime_Test.i: DateTime/DateTime_Test.cpp.i
-.PHONY : DateTime/DateTime_Test.i
-
-# target to preprocess a source file
-DateTime/DateTime_Test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/DateTime/DateTime_Test.cpp.i
-.PHONY : DateTime/DateTime_Test.cpp.i
-
-DateTime/DateTime_Test.s: DateTime/DateTime_Test.cpp.s
-.PHONY : DateTime/DateTime_Test.s
-
-# target to generate assembly for a file
-DateTime/DateTime_Test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/DateTime/DateTime_Test.cpp.s
-.PHONY : DateTime/DateTime_Test.cpp.s
-
 DateTime/Time.obj: DateTime/Time.cpp.obj
 .PHONY : DateTime/Time.obj
 
@@ -223,30 +199,6 @@ Location/Location.s: Location/Location.cpp.s
 Location/Location.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Location/Location.cpp.s
 .PHONY : Location/Location.cpp.s
-
-Location/Location_Test.obj: Location/Location_Test.cpp.obj
-.PHONY : Location/Location_Test.obj
-
-# target to build an object file
-Location/Location_Test.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Location/Location_Test.cpp.obj
-.PHONY : Location/Location_Test.cpp.obj
-
-Location/Location_Test.i: Location/Location_Test.cpp.i
-.PHONY : Location/Location_Test.i
-
-# target to preprocess a source file
-Location/Location_Test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Location/Location_Test.cpp.i
-.PHONY : Location/Location_Test.cpp.i
-
-Location/Location_Test.s: Location/Location_Test.cpp.s
-.PHONY : Location/Location_Test.s
-
-# target to generate assembly for a file
-Location/Location_Test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Location/Location_Test.cpp.s
-.PHONY : Location/Location_Test.cpp.s
 
 MainOperation/LocationOperation.obj: MainOperation/LocationOperation.cpp.obj
 .PHONY : MainOperation/LocationOperation.obj
@@ -368,30 +320,6 @@ Menu/Menu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Menu/Menu.cpp.s
 .PHONY : Menu/Menu.cpp.s
 
-People/People_Test.obj: People/People_Test.cpp.obj
-.PHONY : People/People_Test.obj
-
-# target to build an object file
-People/People_Test.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/People/People_Test.cpp.obj
-.PHONY : People/People_Test.cpp.obj
-
-People/People_Test.i: People/People_Test.cpp.i
-.PHONY : People/People_Test.i
-
-# target to preprocess a source file
-People/People_Test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/People/People_Test.cpp.i
-.PHONY : People/People_Test.cpp.i
-
-People/People_Test.s: People/People_Test.cpp.s
-.PHONY : People/People_Test.s
-
-# target to generate assembly for a file
-People/People_Test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/People/People_Test.cpp.s
-.PHONY : People/People_Test.cpp.s
-
 People/Person.obj: People/Person.cpp.obj
 .PHONY : People/Person.obj
 
@@ -488,30 +416,6 @@ Section/Section.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Section/Section.cpp.s
 .PHONY : Section/Section.cpp.s
 
-Section/Section_Test.obj: Section/Section_Test.cpp.obj
-.PHONY : Section/Section_Test.obj
-
-# target to build an object file
-Section/Section_Test.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Section/Section_Test.cpp.obj
-.PHONY : Section/Section_Test.cpp.obj
-
-Section/Section_Test.i: Section/Section_Test.cpp.i
-.PHONY : Section/Section_Test.i
-
-# target to preprocess a source file
-Section/Section_Test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Section/Section_Test.cpp.i
-.PHONY : Section/Section_Test.cpp.i
-
-Section/Section_Test.s: Section/Section_Test.cpp.s
-.PHONY : Section/Section_Test.s
-
-# target to generate assembly for a file
-Section/Section_Test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Section/Section_Test.cpp.s
-.PHONY : Section/Section_Test.cpp.s
-
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -548,18 +452,12 @@ help:
 	@echo ... DateTime/Date.obj
 	@echo ... DateTime/Date.i
 	@echo ... DateTime/Date.s
-	@echo ... DateTime/DateTime_Test.obj
-	@echo ... DateTime/DateTime_Test.i
-	@echo ... DateTime/DateTime_Test.s
 	@echo ... DateTime/Time.obj
 	@echo ... DateTime/Time.i
 	@echo ... DateTime/Time.s
 	@echo ... Location/Location.obj
 	@echo ... Location/Location.i
 	@echo ... Location/Location.s
-	@echo ... Location/Location_Test.obj
-	@echo ... Location/Location_Test.i
-	@echo ... Location/Location_Test.s
 	@echo ... MainOperation/LocationOperation.obj
 	@echo ... MainOperation/LocationOperation.i
 	@echo ... MainOperation/LocationOperation.s
@@ -575,9 +473,6 @@ help:
 	@echo ... Menu/Menu.obj
 	@echo ... Menu/Menu.i
 	@echo ... Menu/Menu.s
-	@echo ... People/People_Test.obj
-	@echo ... People/People_Test.i
-	@echo ... People/People_Test.s
 	@echo ... People/Person.obj
 	@echo ... People/Person.i
 	@echo ... People/Person.s
@@ -590,9 +485,6 @@ help:
 	@echo ... Section/Section.obj
 	@echo ... Section/Section.i
 	@echo ... Section/Section.s
-	@echo ... Section/Section_Test.obj
-	@echo ... Section/Section_Test.i
-	@echo ... Section/Section_Test.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

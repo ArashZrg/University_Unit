@@ -4,20 +4,9 @@
 
 Time::Time(int startHour, int startMinute, int sectionDuration, int examDuration)
         : _startHour(startHour),
-          _startMinute(startMinute){
-
-    if (isValidDuration(sectionDuration)) {
-        _sectionDuration = sectionDuration;
-    } else {
-        throw invalid_argument("Time Of Section Most Be (1 , 2 Or 3) Hour!");
-    }
-
-    if (isValidExamDuration(examDuration)) {
-        _examDuration = examDuration;
-    } else {
-        throw invalid_argument("Time Of Test Most Be (2 Or 3) Hour");
-    }
-}
+          _startMinute(startMinute),
+          _sectionDuration(sectionDuration),
+          _examDuration(examDuration) {}
 
 bool Time::isValidDuration(int duration) {
     bool isValid = true;
@@ -170,4 +159,12 @@ void Time::setStartMinute(int minute) {
     _startMinute = minute;
 }
 
+
+void Time::setSectionDuration(int sectionDuration) {
+    _sectionDuration = sectionDuration;
+}
+
+void Time::setExamDuration(int examDuration) {
+    _examDuration = examDuration;
+}
 

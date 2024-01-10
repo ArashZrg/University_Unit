@@ -19,13 +19,10 @@ Section::Section(string sectionID, string sectionName, bool projector, int start
         _assignedTeacher(nullptr),
         isNeedVideoProjector(projector),
         time(startHour, startMinute, sectionDuration, examDuration),
-        date(year, month, day, examYear, examMonth, examDay, dayNum) {
-    if (isSectionIdValid(sectionID)) {
-        _sectionID = sectionID;
-        existingSectionIDs.push_back(sectionID);
-    } else {
-        throw invalid_argument("This Section ID Is Already Exist In System !");
-    }
+        date(year, month, day, examYear, examMonth, examDay, dayNum),
+        _sectionID(sectionID) {
+    existingSectionIDs.push_back(sectionID);
+
 }
 
 

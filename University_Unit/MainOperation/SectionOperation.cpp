@@ -5,6 +5,11 @@
 #include "SectionOperation.h"
 
 
+
+//void SectionOperation::AddSecion() {}
+
+//void SectionOperation::EditSection() {}
+
 void SectionOperation::DeleteSection(vector<Section> & sectionsList) {
     cout << "ID OF EXIST SECTIONS : \n";
     for (Section section: sectionsList) {
