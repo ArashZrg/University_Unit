@@ -8,8 +8,10 @@
 #include "People/Student.h"
 #include "Section/Section.h"
 #include "Menu/Menu.h"
-#include <fstream>
-#include <sstream>
+#include "MainOperation/StudentOperation.h"
+#include "MainOperation/TeacherOperation.h"
+#include "MainOperation/LocationOperation.h"
+
 
 using namespace std;
 
@@ -35,6 +37,7 @@ int main() {
         }
 
         switch (OPTION) {
+
             //Section Case
             case 1: {
                 int sectionOption;
@@ -228,6 +231,7 @@ int main() {
                 }
                 break;
             }
+
                 //Location Case
             case 2: {
 
@@ -238,66 +242,19 @@ int main() {
 
                 switch (locationOption) {
                     case 1: {
-                        string facultyName;
-                        cout << "ENTER FACULTY NAME: ";
-                        cin.ignore();
-                        getline(cin, facultyName);
-
-                        int floorNumber;
-                        cout << "ENTER FLOOR NUMBER: ";
-                        cin >> floorNumber;
-
-                        int classNumber;
-                        cout << "ENTER CLASS NUMBER: ";
-                        cin >> classNumber;
-
-                        Location location(facultyName, floorNumber, classNumber);
-                        locationsList.push_back(location);
-
+                        LocationOperation::AddLocation(locationsList);
                         break;
                     }
                     case 2: {
-                        cout << "ID OF EXIST LOCATIONS : \n";
-                        for (Location location: locationsList) {
-                            cout << "[" << location.getFacultyName() << " , " << location.getLocationID() << "]"
-                                 << endl;
-                        }
-
-                        int number;
-                        cout << "ENTER YOUR PREFERRED LOCATION ID -->";
-                        cin >> number;
-                        for (int i = 0; i < locationsList.size(); ++i) {
-                            if (locationsList[i].getLocationID() == number) {
-                                locationsList.erase(locationsList.begin() + i);
-                                break;
-                            }
-                        }
+                        LocationOperation::DeleteLocation(locationsList);
                         break;
                     }
                     case 3: {
-                        int locationId;
-                        for (Location location: locationsList) {
-                            cout << "[" << location.getFacultyName() << " , "
-                                 << location.getLocationID() << "]" << endl;
-                        }
-                        cout << "ENTER THE ID OF THE LOCATION TO EDIT: ";
-                        cin >> locationId;
-
-                        for (Location &loc: locationsList) {
-                            if (loc.getLocationID() == locationId) {
-                                loc.editLocation();
-                                break;
-                            }
-                        }
+                        LocationOperation::EditLocation(locationsList);
                         break;
                     }
                     case 4: {
-                        int count = 1;
-                        for (Location location: locationsList) {
-                            cout << "  ***" << "\n LOCATION " << count << "\n";
-                            cout << location.showLocationAddress() << endl;
-                            count++;
-                        }
+                        LocationOperation::ShowLocation(locationsList);
                         break;
                     }
                     case 5: {
@@ -306,6 +263,7 @@ int main() {
                 }
                 break;
             }
+
                 //Teacher Case
             case 3: {
 
@@ -316,60 +274,19 @@ int main() {
 
                 switch (teacherOption) {
                     case 1: {
-                        string firstName;
-                        cout << " ENTER FIRST NAME: ";
-                        cin.ignore();
-                        getline(cin, firstName);
-
-                        string lastName;
-                        cout << "ENTER LAST NAME: ";
-                        getline(cin, lastName);
-
-                        Teacher teacher(firstName, lastName);
-                        teachersList.push_back(teacher);
+                        TeacherOperation::AddTeacher(teachersList);
                         break;
                     }
                     case 2: {
-                        cout << "ID OF EXIST TEACHERS : \n";
-                        for (Teacher tech: teachersList) {
-                            cout << "[" << tech.getFirstName() << "_" << tech.getLastName() << " , "
-                                 << tech.getTeacherNumber() << "]" << endl;
-                        }
-                        int number;
-                        cout << "ENTER YOUR PREFERRED ID --> ";
-                        cin >> number;
-                        for (int i = 0; i < teachersList.size(); ++i) {
-                            if (teachersList[i].getTeacherNumber() == number) {
-                                teachersList.erase(teachersList.begin() + i);
-                                break;
-                            }
-                        }
+                        TeacherOperation::DeleteTeacher(teachersList);
                         break;
                     }
                     case 3: {
-                        int teacherNumber;
-                        for (Teacher tech: teachersList) {
-                            cout << "[" << tech.getFirstName() << "_" << tech.getLastName() << " , "
-                                 << tech.getTeacherNumber() << "]" << endl;
-                        }
-                        cout << "ENTER THE NUMBER OF THE TEACHER TO EDIT: ";
-                        cin >> teacherNumber;
-
-                        for (Teacher &tech: teachersList) {
-                            if (tech.getTeacherNumber() == teacherNumber) {
-                                tech.editTeacher();
-                                break;
-                            }
-                        }
+                        TeacherOperation::EditTeacher(teachersList);
                         break;
                     }
                     case 4: {
-                        int count = 1;
-                        for (Teacher tech: teachersList) {
-                            cout << "  ***" << "\n TEACHER " << count << "\n";
-                            cout << tech.showPersonInformation() << endl;
-                            count++;
-                        }
+                        TeacherOperation::ShowTeacher(teachersList);
                         break;
                     }
                     case 5: {
@@ -378,6 +295,7 @@ int main() {
                 }
                 break;
             }
+
                 //Student Case
             case 4: {
                 int studentOption;
@@ -387,62 +305,19 @@ int main() {
 
                 switch (studentOption) {
                     case 1: {
-                        string firstName;
-                        cout << "ENTER FIRST NAME: ";
-                        cin.ignore();
-                        getline(cin, firstName);
-
-                        string lastName;
-                        cout << "ENTER LAST NAME: ";
-                        getline(cin, lastName);
-
-                        Student student(firstName, lastName);
-                        studentsList.push_back(student);
-                        studentsNumbers.push_back(student.getStudentNumber());
-
-
+                        StudentOperation::AddStudent(studentsList, studentsNumbers);
                         break;
                     }
                     case 2: {
-                        cout << "EXIST STUDENTS NUMBERS: \n";
-                        for (Student student: studentsList) {
-                            cout << student.getStudentNumber() << endl;
-                        }
-                        int number;
-                        cout << "ENTER YOUR PREFERRED Number --> ";
-                        cin >> number;
-                        for (int i = 0; i < studentsList.size(); ++i) {
-                            if (studentsList[i].getStudentNumber() == number) {
-                                studentsList.erase(studentsList.begin() + i);
-                                break;
-                            }
-                        }
+                        StudentOperation::DeleteStudent(studentsList);
                         break;
                     }
                     case 3: {
-                        int studentNumber;
-                        for (Student student: studentsList) {
-                            cout << "[" << student.getFirstName() << "_" << student.getLastName() << " , "
-                                 << student.getStudentNumber() << "]" << endl;
-                        }
-                        cout << "ENTER THE NUMBER OF THE STUDENT TO EDIT: ";
-                        cin >> studentNumber;
-
-                        for (Student &student: studentsList) {
-                            if (student.getStudentNumber() == studentNumber) {
-                                student.editStudent();
-                                break;
-                            }
-                        }
+                        StudentOperation::EditStudent(studentsList);
                         break;
                     }
                     case 4: {
-                        int count = 1;
-                        for (Student student: studentsList) {
-                            cout << "  ***" << "\n STUDENT " << count << "\n";
-                            cout << student.showPersonInformation() << endl;
-                            count++;
-                        }
+                        StudentOperation::ShowStudents(studentsList);
                         break;
                     }
                     case 5: {

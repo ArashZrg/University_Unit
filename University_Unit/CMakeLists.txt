@@ -23,4 +23,11 @@ add_executable(University_Unit main.cpp
         People/People_Test.cpp
         Section/Section_Test.cpp
         Menu/Menu.cpp
-        Menu/Menu.h)
+        Menu/Menu.h
+        MainOperation/StudentOperation.cpp
+        MainOperation/StudentOperation.h
+        MainOperation/TeacherOperation.cpp
+        MainOperation/TeacherOperation.h
+        MainOperation/LocationOperation.cpp
+        MainOperation/LocationOperation.h
+)

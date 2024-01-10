@@ -250,6 +250,48 @@ CMakeFiles/University_Unit.dir/Menu/Menu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/University_Unit.dir/Menu/Menu.cpp.s"
 	"F:\CLion 2023.2.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\University_Unit\University_Unit\Menu\Menu.cpp -o CMakeFiles\University_Unit.dir\Menu\Menu.cpp.s
 
+CMakeFiles/University_Unit.dir/MainOperation/StudentOperation.cpp.obj: CMakeFiles/University_Unit.dir/flags.make
+CMakeFiles/University_Unit.dir/MainOperation/StudentOperation.cpp.obj: E:/University_Unit/University_Unit/MainOperation/StudentOperation.cpp
+CMakeFiles/University_Unit.dir/MainOperation/StudentOperation.cpp.obj: CMakeFiles/University_Unit.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\University_Unit\University_Unit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/University_Unit.dir/MainOperation/StudentOperation.cpp.obj"
+	"F:\CLion 2023.2.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/University_Unit.dir/MainOperation/StudentOperation.cpp.obj -MF CMakeFiles\University_Unit.dir\MainOperation\StudentOperation.cpp.obj.d -o CMakeFiles\University_Unit.dir\MainOperation\StudentOperation.cpp.obj -c E:\University_Unit\University_Unit\MainOperation\StudentOperation.cpp
+
+CMakeFiles/University_Unit.dir/MainOperation/StudentOperation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/University_Unit.dir/MainOperation/StudentOperation.cpp.i"
+	"F:\CLion 2023.2.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\University_Unit\University_Unit\MainOperation\StudentOperation.cpp > CMakeFiles\University_Unit.dir\MainOperation\StudentOperation.cpp.i
+
+CMakeFiles/University_Unit.dir/MainOperation/StudentOperation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/University_Unit.dir/MainOperation/StudentOperation.cpp.s"
+	"F:\CLion 2023.2.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\University_Unit\University_Unit\MainOperation\StudentOperation.cpp -o CMakeFiles\University_Unit.dir\MainOperation\StudentOperation.cpp.s
+
+CMakeFiles/University_Unit.dir/MainOperation/TeacherOperation.cpp.obj: CMakeFiles/University_Unit.dir/flags.make
+CMakeFiles/University_Unit.dir/MainOperation/TeacherOperation.cpp.obj: E:/University_Unit/University_Unit/MainOperation/TeacherOperation.cpp
+CMakeFiles/University_Unit.dir/MainOperation/TeacherOperation.cpp.obj: CMakeFiles/University_Unit.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\University_Unit\University_Unit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/University_Unit.dir/MainOperation/TeacherOperation.cpp.obj"
+	"F:\CLion 2023.2.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/University_Unit.dir/MainOperation/TeacherOperation.cpp.obj -MF CMakeFiles\University_Unit.dir\MainOperation\TeacherOperation.cpp.obj.d -o CMakeFiles\University_Unit.dir\MainOperation\TeacherOperation.cpp.obj -c E:\University_Unit\University_Unit\MainOperation\TeacherOperation.cpp
+
+CMakeFiles/University_Unit.dir/MainOperation/TeacherOperation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/University_Unit.dir/MainOperation/TeacherOperation.cpp.i"
+	"F:\CLion 2023.2.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\University_Unit\University_Unit\MainOperation\TeacherOperation.cpp > CMakeFiles\University_Unit.dir\MainOperation\TeacherOperation.cpp.i
+
+CMakeFiles/University_Unit.dir/MainOperation/TeacherOperation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/University_Unit.dir/MainOperation/TeacherOperation.cpp.s"
+	"F:\CLion 2023.2.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\University_Unit\University_Unit\MainOperation\TeacherOperation.cpp -o CMakeFiles\University_Unit.dir\MainOperation\TeacherOperation.cpp.s
+
+CMakeFiles/University_Unit.dir/MainOperation/LocationOperation.cpp.obj: CMakeFiles/University_Unit.dir/flags.make
+CMakeFiles/University_Unit.dir/MainOperation/LocationOperation.cpp.obj: E:/University_Unit/University_Unit/MainOperation/LocationOperation.cpp
+CMakeFiles/University_Unit.dir/MainOperation/LocationOperation.cpp.obj: CMakeFiles/University_Unit.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\University_Unit\University_Unit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/University_Unit.dir/MainOperation/LocationOperation.cpp.obj"
+	"F:\CLion 2023.2.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/University_Unit.dir/MainOperation/LocationOperation.cpp.obj -MF CMakeFiles\University_Unit.dir\MainOperation\LocationOperation.cpp.obj.d -o CMakeFiles\University_Unit.dir\MainOperation\LocationOperation.cpp.obj -c E:\University_Unit\University_Unit\MainOperation\LocationOperation.cpp
+
+CMakeFiles/University_Unit.dir/MainOperation/LocationOperation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/University_Unit.dir/MainOperation/LocationOperation.cpp.i"
+	"F:\CLion 2023.2.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\University_Unit\University_Unit\MainOperation\LocationOperation.cpp > CMakeFiles\University_Unit.dir\MainOperation\LocationOperation.cpp.i
+
+CMakeFiles/University_Unit.dir/MainOperation/LocationOperation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/University_Unit.dir/MainOperation/LocationOperation.cpp.s"
+	"F:\CLion 2023.2.2\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\University_Unit\University_Unit\MainOperation\LocationOperation.cpp -o CMakeFiles\University_Unit.dir\MainOperation\LocationOperation.cpp.s
+
 # Object files for target University_Unit
 University_Unit_OBJECTS = \
 "CMakeFiles/University_Unit.dir/main.cpp.obj" \
@@ -264,7 +306,10 @@ University_Unit_OBJECTS = \
 "CMakeFiles/University_Unit.dir/Location/Location_Test.cpp.obj" \
 "CMakeFiles/University_Unit.dir/People/People_Test.cpp.obj" \
 "CMakeFiles/University_Unit.dir/Section/Section_Test.cpp.obj" \
-"CMakeFiles/University_Unit.dir/Menu/Menu.cpp.obj"
+"CMakeFiles/University_Unit.dir/Menu/Menu.cpp.obj" \
+"CMakeFiles/University_Unit.dir/MainOperation/StudentOperation.cpp.obj" \
+"CMakeFiles/University_Unit.dir/MainOperation/TeacherOperation.cpp.obj" \
+"CMakeFiles/University_Unit.dir/MainOperation/LocationOperation.cpp.obj"
 
 # External object files for target University_Unit
 University_Unit_EXTERNAL_OBJECTS =
@@ -282,11 +327,14 @@ University_Unit.exe: CMakeFiles/University_Unit.dir/Location/Location_Test.cpp.o
 University_Unit.exe: CMakeFiles/University_Unit.dir/People/People_Test.cpp.obj
 University_Unit.exe: CMakeFiles/University_Unit.dir/Section/Section_Test.cpp.obj
 University_Unit.exe: CMakeFiles/University_Unit.dir/Menu/Menu.cpp.obj
+University_Unit.exe: CMakeFiles/University_Unit.dir/MainOperation/StudentOperation.cpp.obj
+University_Unit.exe: CMakeFiles/University_Unit.dir/MainOperation/TeacherOperation.cpp.obj
+University_Unit.exe: CMakeFiles/University_Unit.dir/MainOperation/LocationOperation.cpp.obj
 University_Unit.exe: CMakeFiles/University_Unit.dir/build.make
 University_Unit.exe: CMakeFiles/University_Unit.dir/linkLibs.rsp
 University_Unit.exe: CMakeFiles/University_Unit.dir/objects1.rsp
 University_Unit.exe: CMakeFiles/University_Unit.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\University_Unit\University_Unit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable University_Unit.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\University_Unit\University_Unit\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable University_Unit.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\University_Unit.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

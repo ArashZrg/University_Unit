@@ -248,6 +248,78 @@ Location/Location_Test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/Location/Location_Test.cpp.s
 .PHONY : Location/Location_Test.cpp.s
 
+MainOperation/LocationOperation.obj: MainOperation/LocationOperation.cpp.obj
+.PHONY : MainOperation/LocationOperation.obj
+
+# target to build an object file
+MainOperation/LocationOperation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/MainOperation/LocationOperation.cpp.obj
+.PHONY : MainOperation/LocationOperation.cpp.obj
+
+MainOperation/LocationOperation.i: MainOperation/LocationOperation.cpp.i
+.PHONY : MainOperation/LocationOperation.i
+
+# target to preprocess a source file
+MainOperation/LocationOperation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/MainOperation/LocationOperation.cpp.i
+.PHONY : MainOperation/LocationOperation.cpp.i
+
+MainOperation/LocationOperation.s: MainOperation/LocationOperation.cpp.s
+.PHONY : MainOperation/LocationOperation.s
+
+# target to generate assembly for a file
+MainOperation/LocationOperation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/MainOperation/LocationOperation.cpp.s
+.PHONY : MainOperation/LocationOperation.cpp.s
+
+MainOperation/StudentOperation.obj: MainOperation/StudentOperation.cpp.obj
+.PHONY : MainOperation/StudentOperation.obj
+
+# target to build an object file
+MainOperation/StudentOperation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/MainOperation/StudentOperation.cpp.obj
+.PHONY : MainOperation/StudentOperation.cpp.obj
+
+MainOperation/StudentOperation.i: MainOperation/StudentOperation.cpp.i
+.PHONY : MainOperation/StudentOperation.i
+
+# target to preprocess a source file
+MainOperation/StudentOperation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/MainOperation/StudentOperation.cpp.i
+.PHONY : MainOperation/StudentOperation.cpp.i
+
+MainOperation/StudentOperation.s: MainOperation/StudentOperation.cpp.s
+.PHONY : MainOperation/StudentOperation.s
+
+# target to generate assembly for a file
+MainOperation/StudentOperation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/MainOperation/StudentOperation.cpp.s
+.PHONY : MainOperation/StudentOperation.cpp.s
+
+MainOperation/TeacherOperation.obj: MainOperation/TeacherOperation.cpp.obj
+.PHONY : MainOperation/TeacherOperation.obj
+
+# target to build an object file
+MainOperation/TeacherOperation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/MainOperation/TeacherOperation.cpp.obj
+.PHONY : MainOperation/TeacherOperation.cpp.obj
+
+MainOperation/TeacherOperation.i: MainOperation/TeacherOperation.cpp.i
+.PHONY : MainOperation/TeacherOperation.i
+
+# target to preprocess a source file
+MainOperation/TeacherOperation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/MainOperation/TeacherOperation.cpp.i
+.PHONY : MainOperation/TeacherOperation.cpp.i
+
+MainOperation/TeacherOperation.s: MainOperation/TeacherOperation.cpp.s
+.PHONY : MainOperation/TeacherOperation.s
+
+# target to generate assembly for a file
+MainOperation/TeacherOperation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\University_Unit.dir\build.make CMakeFiles/University_Unit.dir/MainOperation/TeacherOperation.cpp.s
+.PHONY : MainOperation/TeacherOperation.cpp.s
+
 Menu/Menu.obj: Menu/Menu.cpp.obj
 .PHONY : Menu/Menu.obj
 
@@ -464,6 +536,15 @@ help:
 	@echo ... Location/Location_Test.obj
 	@echo ... Location/Location_Test.i
 	@echo ... Location/Location_Test.s
+	@echo ... MainOperation/LocationOperation.obj
+	@echo ... MainOperation/LocationOperation.i
+	@echo ... MainOperation/LocationOperation.s
+	@echo ... MainOperation/StudentOperation.obj
+	@echo ... MainOperation/StudentOperation.i
+	@echo ... MainOperation/StudentOperation.s
+	@echo ... MainOperation/TeacherOperation.obj
+	@echo ... MainOperation/TeacherOperation.i
+	@echo ... MainOperation/TeacherOperation.s
 	@echo ... Menu/Menu.obj
 	@echo ... Menu/Menu.i
 	@echo ... Menu/Menu.s

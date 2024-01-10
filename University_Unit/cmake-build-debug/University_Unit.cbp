@@ -106,6 +106,24 @@
 		<Unit filename="E:/University_Unit/University_Unit/Location/Location_Test.cpp">
 			<Option target="University_Unit"/>
 		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/MainOperation/LocationOperation.cpp">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/MainOperation/LocationOperation.h">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/MainOperation/StudentOperation.cpp">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/MainOperation/StudentOperation.h">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/MainOperation/TeacherOperation.cpp">
+			<Option target="University_Unit"/>
+		</Unit>
+		<Unit filename="E:/University_Unit/University_Unit/MainOperation/TeacherOperation.h">
+			<Option target="University_Unit"/>
+		</Unit>
 		<Unit filename="E:/University_Unit/University_Unit/Menu/Menu.cpp">
 			<Option target="University_Unit"/>
 		</Unit>
