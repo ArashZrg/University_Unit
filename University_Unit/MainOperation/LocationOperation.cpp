@@ -1,6 +1,8 @@
 #include "LocationOperation.h"
 #include <iostream>
 #include <fstream>
+#include <sstream>
+
 
 void LocationOperation::AddLocation(vector<Location> & locationsList) {
     string facultyName;
@@ -68,15 +70,47 @@ void LocationOperation::ShowLocation(vector<Location> & locationsList) {
     }
 }
 
+//void LocationOperation::saveLocationFile(const Location &location, const std::string &fileName) {
+//    ofstream file(fileName);
+//
+//    if (file.is_open()) {
+//        file << location.getFacultyName() << endl;
+//        file << location.getFloorNumber() << endl;
+//        file << location.getClassNumber() << endl;
+//        file << location.getLocationID() << endl;
+//
+//        file.close();
+//        cout << "LOCATION SAVED TO FILE SUCCESSFULLY.\n";
+//    } else {
+//        cout << "UNABLE TO OPEN THE FILE FOR SAVING.\n";
+//    }
+//}
+//
+//void LocationOperation::loadLocationFromFile(Location &location, const std::string &fileName) {
+//    ifstream file(fileName);
+//
+//    if (file.is_open()) {
+//        string facultyName;
+//        int floorNubmer, classNumber, locationID;
+//
+//        getline(file, facultyName);
+//        file >> floorNubmer >> classNumber >> locationID;
+//
+//        location = Location(facultyName, floorNubmer, classNumber);
+//
+//        file.close();
+//        cout << "LOCATION LOADED FROM FILE SUCCESSFULLY.\n";
+//    } else {
+//        cout << "UNABLE TO OPEN FILE FOR LOADING.\n";
+//    }
+//}
+
 void LocationOperation::saveLocationFile(const Location &location, const std::string &fileName) {
     ofstream file(fileName);
 
     if (file.is_open()) {
-        file << location.getFacultyName() << endl;
-        file << location.getFloorNumber() << endl;
-        file << location.getClassNumber() << endl;
-        file << location.getLocationID() << endl;
-
+        file << location.getFacultyName() << " " << location.getFloorNumber() << " " << location.getClassNumber() << " "
+             << location.getLocationID() << endl;
         file.close();
         cout << "LOCATION SAVED TO FILE SUCCESSFULLY.\n";
     } else {
@@ -90,15 +124,17 @@ void LocationOperation::loadLocationFromFile(Location &location, const std::stri
     if (file.is_open()) {
         string facultyName;
         int floorNubmer, classNumber, locationID;
+        string str;
+        getline(file, str);
+        stringstream ss(str);
+        ss >> facultyName;
+        ss >> floorNubmer;
+        ss >> classNumber;
+        ss >> locationID;
 
-        getline(file, facultyName);
-        file >> floorNubmer >> classNumber >> locationID;
 
         location = Location(facultyName, floorNubmer, classNumber);
 
         file.close();
-        cout << "LOCATION LOADED FROM FILE SUCCESSFULLY.\n";
-    } else {
-        cout << "UNABLE TO OPEN FILE FOR LOADING.\n";
     }
 }
