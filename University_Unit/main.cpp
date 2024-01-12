@@ -7,6 +7,8 @@
 #include "People/Teacher.h"
 #include "People/Student.h"
 #include "Section/Section.h"
+#include <fstream>
+#include <sstream>
 
 // Folders and classes for (Main)
 #include "Menu/Menu.h"
@@ -17,6 +19,7 @@
 // Folders and classes for (Main)
 
 using namespace std;
+
 
 int main() {
 

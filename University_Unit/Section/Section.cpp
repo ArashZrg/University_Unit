@@ -85,11 +85,13 @@ string Section::convertIntResultToString() const {
 bool Section::firstCaseOfInterference(Section &other) {
     bool isValid = true;
 
+//    bool isTeacherInterference = _assignedTeacher && other._assignedTeacher &&
+//                                 _assignedTeacher->handleTeacherInterference(*(other._assignedTeacher));
+    bool isTeacherInterference = _assignedTeacher->handleTeacherInterference(*other._assignedTeacher);
     bool isTimeInterference = time.handleTimeInterference(other.time);
-    bool isTeacherInterference = _assignedTeacher && other._assignedTeacher &&
-                                 _assignedTeacher->handleTeacherInterference(*(other._assignedTeacher));
+    bool isDayInterference = date.handleDayInterference(other.date);
 
-    if (!(isTimeInterference && isTeacherInterference)) {
+    if (!(isTeacherInterference && isTimeInterference && isDayInterference)) {
         isValid = false;
         return isValid;
     } else {
@@ -99,7 +101,7 @@ bool Section::firstCaseOfInterference(Section &other) {
 }
 
 void Section::firstMessage() {
-    cout << "CHOOSE ANOTHER TIME AND ANOTHER TEACHER!";
+    cout << "CHOOSE ANOTHER TEACHER!\n";
 }
 
 void Section::changeTimeAndTeacher(vector<Teacher> teachersList, Section ob) {
@@ -139,8 +141,9 @@ bool Section::secondCaseOfInterference(Section &other) {
     bool isValid = true;
 
     bool isTimeInterference = time.handleTimeInterference(other.time);
-    bool isLocationInterference = _assignedLocation && other._assignedLocation &&
-                                  _assignedLocation->handleLocationInterference(*(other._assignedLocation));
+//    bool isLocationInterference = _assignedLocation && other._assignedLocation &&
+//                                  _assignedLocation->handleLocationInterference(*(other._assignedLocation));
+    bool isLocationInterference = _assignedLocation->handleLocationInterference(*other._assignedLocation);
     bool isDayInterference = date.handleDayInterference(other.date);
 
     if (!(isTimeInterference && isLocationInterference && isDayInterference)) {
@@ -153,7 +156,7 @@ bool Section::secondCaseOfInterference(Section &other) {
 }
 
 void Section::secondMessage() {
-    cout << "CHOOSE ANOTHER TIME , LOCATION AND DATE!";
+    cout << "CHOOSE ANOTHER LOCATION!\n";
 }
 
 void Section::changeTimeAndLocationAndDate(vector<Location> locationsList, Section ob) {
@@ -218,7 +221,7 @@ bool Section::thirdCaseOfInterference(Section &other) {
 }
 
 void Section::thirdMessage() {
-    cout << "CHOOSE ANOTHER EXAM DATE!";
+    cout << "CHOOSE ANOTHER TIME FOR EXAM!\n";
 }
 
 void Section::changeExamDate() {

@@ -1,7 +1,3 @@
-//
-// Created by Arash on 1/10/2024.
-//
-
 #ifndef UNIVERSITY_UNIT_LOCATIONOPERATION_H
 #define UNIVERSITY_UNIT_LOCATIONOPERATION_H
 
@@ -17,6 +13,12 @@ public:
     static void EditLocation(vector<Location> & locationsList);
 
     static void ShowLocation(vector<Location> & locationsList);
+
+    static void saveLocationFile(const Location &location, const string &fileName);
+
+    static void loadLocationFromFile(Location& location , const string& fileName);
+public:
+
 };
 
 

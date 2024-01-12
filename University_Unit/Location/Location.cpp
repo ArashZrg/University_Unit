@@ -47,7 +47,7 @@ void Location::editLocation() {
 bool Location::handleLocationInterference(Location &ob) {
     bool isValid = true;
 
-    if ((_facultyName == ob._facultyName) && (_floorNumber == ob._floorNumber) && (_classNumber == ob._classNumber)) {
+    if (((_facultyName == ob._facultyName) && (_floorNumber == ob._floorNumber) && (_classNumber == ob._classNumber))) {
         isValid = false;
         return isValid;
     }

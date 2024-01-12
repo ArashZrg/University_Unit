@@ -1,8 +1,6 @@
-//
-// Created by Arash on 1/10/2024.
-//
-
 #include "LocationOperation.h"
+#include <iostream>
+#include <fstream>
 
 void LocationOperation::AddLocation(vector<Location> & locationsList) {
     string facultyName;
@@ -19,6 +17,8 @@ void LocationOperation::AddLocation(vector<Location> & locationsList) {
     cin >> classNumber;
 
     Location location(facultyName, floorNumber, classNumber);
+
+    saveLocationFile(location, "location.txt");
     locationsList.push_back(location);
 }
 
@@ -61,7 +61,44 @@ void LocationOperation::ShowLocation(vector<Location> & locationsList) {
     int count = 1;
     for (Location location: locationsList) {
         cout << "  ***" << "\n LOCATION " << count << "\n";
+
+        loadLocationFromFile(location, "location.txt");
         cout << location.showLocationAddress() << endl;
         count++;
+    }
+}
+
+void LocationOperation::saveLocationFile(const Location &location, const std::string &fileName) {
+    ofstream file(fileName);
+
+    if (file.is_open()) {
+        file << location.getFacultyName() << endl;
+        file << location.getFloorNumber() << endl;
+        file << location.getClassNumber() << endl;
+        file << location.getLocationID() << endl;
+
+        file.close();
+        cout << "LOCATION SAVED TO FILE SUCCESSFULLY.\n";
+    } else {
+        cout << "UNABLE TO OPEN THE FILE FOR SAVING.\n";
+    }
+}
+
+void LocationOperation::loadLocationFromFile(Location &location, const std::string &fileName) {
+    ifstream file(fileName);
+
+    if (file.is_open()) {
+        string facultyName;
+        int floorNubmer, classNumber, locationID;
+
+        getline(file, facultyName);
+        file >> floorNubmer >> classNumber >> locationID;
+
+        location = Location(facultyName, floorNubmer, classNumber);
+
+        file.close();
+        cout << "LOCATION LOADED FROM FILE SUCCESSFULLY.\n";
+    } else {
+        cout << "UNABLE TO OPEN FILE FOR LOADING.\n";
     }
 }
