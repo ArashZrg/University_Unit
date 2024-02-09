@@ -1,8 +1,6 @@
 #include "Teacher.h"
 #include <string>
-#include <iostream>
-#include <fstream>
-#include <sstream>
+
 
 using namespace std;
 

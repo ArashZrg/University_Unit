@@ -2,8 +2,6 @@
 #define UNIVERSITY_UNIT_LOCATION_H
 
 #include <iostream>
-#include <string>
-#include <vector>
 
 using namespace std;
 
@@ -23,6 +21,7 @@ public:
 
 public:
     [[nodiscard]] string showLocationAddress() const;
+
 public:
     //i wrote this function to edit the Location object
     void editLocation();

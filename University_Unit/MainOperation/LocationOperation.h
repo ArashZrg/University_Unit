@@ -3,7 +3,7 @@
 
 
 #include "../Location/Location.h"
-
+#include <vector>
 class LocationOperation {
 public:
     static void AddLocation(vector<Location> & locationsList);
@@ -14,9 +14,6 @@ public:
 
     static void ShowLocation(vector<Location> & locationsList);
 
-    static void saveLocationFile(const Location &location, const string &fileName);
-
-    static void loadLocationFromFile(Location& location , const string& fileName);
 public:
 
 };

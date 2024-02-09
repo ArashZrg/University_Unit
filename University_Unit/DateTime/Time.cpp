@@ -1,4 +1,3 @@
-#include <iostream>
 #include <string>
 #include "Time.h"
 
@@ -158,7 +157,6 @@ void Time::setStartHour(int hour) {
 void Time::setStartMinute(int minute) {
     _startMinute = minute;
 }
-
 
 void Time::setSectionDuration(int sectionDuration) {
     _sectionDuration = sectionDuration;

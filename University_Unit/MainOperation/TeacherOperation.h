@@ -7,6 +7,7 @@
 
 
 #include "../People/Teacher.h"
+#include <vector>
 
 class TeacherOperation {
 public:

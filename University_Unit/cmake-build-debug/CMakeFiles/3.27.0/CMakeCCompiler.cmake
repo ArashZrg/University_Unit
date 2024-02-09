@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "F:/CLion 2023.2.2/bin/mingw/bin/gcc.exe")
+set(CMAKE_C_COMPILER "F:/CLion 2023.3.1/bin/mingw/bin/gcc.exe")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "13.1.0")
@@ -21,12 +21,13 @@ set(CMAKE_C_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "F:/CLion 2023.2.2/bin/mingw/bin/ar.exe")
-set(CMAKE_C_COMPILER_AR "F:/CLion 2023.2.2/bin/mingw/bin/gcc-ar.exe")
-set(CMAKE_RANLIB "F:/CLion 2023.2.2/bin/mingw/bin/ranlib.exe")
-set(CMAKE_C_COMPILER_RANLIB "F:/CLion 2023.2.2/bin/mingw/bin/gcc-ranlib.exe")
-set(CMAKE_LINKER "F:/CLion 2023.2.2/bin/mingw/bin/ld.exe")
+set(CMAKE_AR "F:/CLion 2023.3.1/bin/mingw/bin/ar.exe")
+set(CMAKE_C_COMPILER_AR "F:/CLion 2023.3.1/bin/mingw/bin/gcc-ar.exe")
+set(CMAKE_RANLIB "F:/CLion 2023.3.1/bin/mingw/bin/ranlib.exe")
+set(CMAKE_C_COMPILER_RANLIB "F:/CLion 2023.3.1/bin/mingw/bin/gcc-ranlib.exe")
+set(CMAKE_LINKER "F:/CLion 2023.3.1/bin/mingw/bin/ld.exe")
 set(CMAKE_MT "")
+set(CMAKE_TAPI "CMAKE_TAPI-NOTFOUND")
 set(CMAKE_COMPILER_IS_GNUCC 1)
 set(CMAKE_C_COMPILER_LOADED 1)
 set(CMAKE_C_COMPILER_WORKS TRUE)
@@ -38,6 +39,7 @@ set(CMAKE_C_COMPILER_ID_RUN 1)
 set(CMAKE_C_SOURCE_FILE_EXTENSIONS c;m)
 set(CMAKE_C_IGNORE_EXTENSIONS h;H;o;O;obj;OBJ;def;DEF;rc;RC)
 set(CMAKE_C_LINKER_PREFERENCE 10)
+set(CMAKE_C_LINKER_DEPFILE_SUPPORTED TRUE)
 
 # Save compiler ABI information.
 set(CMAKE_C_SIZEOF_DATA_PTR "8")
@@ -66,7 +68,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "F:/CLion 2023.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include;F:/CLion 2023.2.2/bin/mingw/include;F:/CLion 2023.2.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed;F:/CLion 2023.2.2/bin/mingw/x86_64-w64-mingw32/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "F:/CLion 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include;F:/CLion 2023.3.1/bin/mingw/include;F:/CLion 2023.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed;F:/CLion 2023.3.1/bin/mingw/x86_64-w64-mingw32/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "")
 set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

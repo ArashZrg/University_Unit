@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "E:/University_Unit/University_Unit/cmake-build-debug",
-		"source" : "E:/University_Unit/University_Unit"
+		"build" : "F:/c++-Projects/University_Unit/cmake-build-debug",
+		"source" : "F:/c++-Projects/University_Unit"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 5
+		"minor" : 6
 	}
 }

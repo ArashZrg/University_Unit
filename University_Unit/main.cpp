@@ -7,8 +7,7 @@
 #include "People/Teacher.h"
 #include "People/Student.h"
 #include "Section/Section.h"
-#include <fstream>
-#include <sstream>
+
 
 // Folders and classes for (Main)
 #include "Menu/Menu.h"
@@ -178,18 +177,15 @@ int main() {
 
                                 switch (op) {
                                     case 1: {
-                                        section.changeTimeAndTeacher(teachersList, section);
+                                        section.changeTeacher(teachersList, section);
                                         break;
                                     }
                                     case 2: {
-                                        section.changeTimeAndLocationAndDate(locationsList, section);
+                                        section.changeLocation(locationsList, section);
                                         break;
                                     }
                                     case 3: {
                                         section.changeExamDate();
-                                        break;
-                                    }
-                                    case 4: {
                                         break;
                                     }
                                 }
@@ -204,30 +200,10 @@ int main() {
                         break;
                     }
                     case 3: {
-                        string sectionID;
-                        for (Section section: sectionsList) {
-                            cout << "[" << section.getSectionName() << " , "
-                                 << section.getSectionId() << "]" << endl;
-                        }
-
-                        cout << "ENTER THE ID OF THE SECTION TO EDIT: ";
-                        cin.ignore();
-                        getline(cin, sectionID);
-
-                        for (Section section: sectionsList) {
-                            if (section.getSectionId() == sectionID) {
-//                                section.edit();
-                                break;
-                            }
-                        }
-
-                        break;
-                    }
-                    case 4: {
                         SectionOperation::ShowSection(sectionsList);
                         break;
                     }
-                    case 5: {
+                    case 4: {
                         break;
                     }
                 }

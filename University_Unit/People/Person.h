@@ -2,8 +2,6 @@
 #define UNIVERSITY_UNIT_PERSON_H
 
 #include <iostream>
-#include <string>
-#include <vector>
 
 using namespace std;
 

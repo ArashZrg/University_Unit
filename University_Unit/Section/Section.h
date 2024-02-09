@@ -2,7 +2,6 @@
 #define UNIVERSITY_UNIT_SECTION_H
 
 #include <iostream>
-#include <string>
 #include <vector>
 #include "../DateTime/Date.h"
 #include "../Location/Location.h"
@@ -19,12 +18,17 @@ private:
 
     string _sectionID;
     static vector<string> existingSectionIDs;
+
     string _sectionName;
+
     Time time;
     Date date;
+
     bool isNeedVideoProjector;
+
     Teacher *_assignedTeacher;
     Location *_assignedLocation;
+
     vector<int> _studentsNumbers;
 
 public:
@@ -53,9 +57,6 @@ public:
     //  This Function Will Show All Information Of Section
     string showSectionInformation();
 
-public:
-    //this function is for editing section
-    void editSection();
 
 private:
 
@@ -76,12 +77,15 @@ public:
     [[nodiscard]]bool toCheckTheInterference(Section &other);
 
     void firstMessage();
-    void changeTimeAndTeacher(vector<Teacher> teachersList, Section ob);
 
-    void changeTimeAndLocationAndDate(vector<Location> locationsList, Section ob);
+    void changeTeacher(vector<Teacher> &teachersList, Section &ob);
+
+    void changeLocation(vector<Location> &locationsList, Section &ob);
+
     void secondMessage();
 
     void changeExamDate();
+
     void thirdMessage();
 
 private:

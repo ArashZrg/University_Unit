@@ -2,7 +2,6 @@
 #define UNIVERSITY_UNIT_STUDENT_H
 
 #include <iostream>
-#include <string>
 #include "Person.h"
 
 using namespace std;

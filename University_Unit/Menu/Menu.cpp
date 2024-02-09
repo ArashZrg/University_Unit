@@ -16,18 +16,16 @@ string Menu::whileMenu() {
 string Menu::sectionMenu() {
     string result = string(" 1-ADD SECTION \n")
                     + string(" 2-DELETE SECTION \n")
-                    + string(" 3-EDIT SECTION \n")
-                    + string(" 4-SHOW SECTION \n")
-                    + string(" 5-BACK TO MAIN MENU \n")
+                    + string(" 3-SHOW SECTION \n")
+                    + string(" 4-BACK TO MAIN MENU \n")
                     + string(" CHOOSE OPTION ->");
     return result;
 }
 
 string Menu::interferenceMenu() {
-    string result = string(" 1-CHANGE THE TIME AND TEACHER \n")
-                    + string(" 2-CHANGE THE TIME , LOCATION AND DATE \n")
+    string result = string(" 1-CHANGE TEACHER \n")
+                    + string(" 2-CHANGE LOCATION \n")
                     + string(" 3-CHANGE THE EXAM DATE\n")
-                    + string(" 4-BACK \n")
                     + string(" CHOOSE OPTION ->");
     return result;
 }

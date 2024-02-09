@@ -50,10 +50,6 @@ string Date::showSectionDay(int dayNum) {
     }
 }
 
-int Date::getDayNum() const {
-    return _dayNum;
-}
-
 bool Date::handleDayInterference(Date &ob) {
 
     bool isValid = true;
@@ -76,6 +72,10 @@ bool Date::handleExamDayInterference(Date &ob) {
         return isValid;
     }
 
+}
+
+int Date::getDayNum() const {
+    return _dayNum;
 }
 
 int Date::getSectionYear() const {
@@ -117,9 +117,11 @@ void Date::setDay(int day) {
 void Date::setExamYear(int year) {
     _yearOfExam = year;
 }
+
 void Date::setExamMonth(int month) {
     _monthOfExam = month;
 }
+
 void Date::setExamDay(int day) {
     _dayOfExam = day;
 }

@@ -1,9 +1,6 @@
 #include "Section.h"
-#include <iostream>
 #include <string>
-#include <vector>
-#include <fstream>
-#include <sstream>
+
 
 using namespace std;
 
@@ -81,43 +78,39 @@ string Section::convertIntResultToString() const {
     }
 }
 
-
+//TEACHER INTERFERENCE
 bool Section::firstCaseOfInterference(Section &other) {
     bool isValid = true;
 
-//    bool isTeacherInterference = _assignedTeacher && other._assignedTeacher &&
-//                                 _assignedTeacher->handleTeacherInterference(*(other._assignedTeacher));
-    bool isTeacherInterference = _assignedTeacher->handleTeacherInterference(*other._assignedTeacher);
+    bool isTeacherInterference = _assignedTeacher && other._assignedTeacher &&
+                                 _assignedTeacher->handleTeacherInterference(*(other._assignedTeacher));
+
     bool isTimeInterference = time.handleTimeInterference(other.time);
     bool isDayInterference = date.handleDayInterference(other.date);
 
-    if (!(isTeacherInterference && isTimeInterference && isDayInterference)) {
+    if (!(isTeacherInterference || isTimeInterference || isDayInterference)) {
         isValid = false;
         return isValid;
-    } else {
-        return isValid;
     }
+    return isValid;
 
 }
+//    bool isTeacherInterference = _assignedTeacher->handleTeacherInterference(*other._assignedTeacher);
+
+//    if (!(isTeacherInterference && isTimeInterference && isDayInterference)) {
+//        isValid = false;
+//        return isValid;
+//    } else {
+//        return isValid;
+//    }
 
 void Section::firstMessage() {
     cout << "CHOOSE ANOTHER TEACHER!\n";
 }
 
-void Section::changeTimeAndTeacher(vector<Teacher> teachersList, Section ob) {
+void Section::changeTeacher(vector<Teacher> &teachersList, Section &ob) {
     cout << "[CURRENT SECTION INFORMATION]\n";
     cout << showSectionInformation() << endl;
-
-    int startHour;
-    int startMinute;
-    cout << " [START TIME INFORMATION] \n";
-    cout << " HOUR : ";
-    cin >> startHour;
-    cout << " MINUTE : ";
-    cin >> startMinute;
-
-    time.setStartHour(startHour);
-    time.setStartMinute(startMinute);
 
     int count = 1;
     for (Teacher tech: teachersList) {
@@ -136,58 +129,41 @@ void Section::changeTimeAndTeacher(vector<Teacher> teachersList, Section ob) {
         }
     }
 }
+//TEACHER INTERFERENCE
 
+// LOCATION INTERFERENCE
 bool Section::secondCaseOfInterference(Section &other) {
     bool isValid = true;
 
     bool isTimeInterference = time.handleTimeInterference(other.time);
-//    bool isLocationInterference = _assignedLocation && other._assignedLocation &&
-//                                  _assignedLocation->handleLocationInterference(*(other._assignedLocation));
     bool isLocationInterference = _assignedLocation->handleLocationInterference(*other._assignedLocation);
     bool isDayInterference = date.handleDayInterference(other.date);
 
-    if (!(isTimeInterference && isLocationInterference && isDayInterference)) {
+    if (!(isTimeInterference || isLocationInterference || isDayInterference)) {
         isValid = false;
         return isValid;
-    } else {
-        return isValid;
     }
+    return isValid;
 
 }
+
+//    bool isLocationInterference = _assignedLocation && other._assignedLocation &&
+//                                  _assignedLocation->handleLocationInterference(*(other._assignedLocation));
+
+//    if (!(isTimeInterference && isLocationInterference && isDayInterference)) {
+//        isValid = false;
+//        return isValid;
+//    } else {
+//        return isValid;
+//    }
 
 void Section::secondMessage() {
     cout << "CHOOSE ANOTHER LOCATION!\n";
 }
 
-void Section::changeTimeAndLocationAndDate(vector<Location> locationsList, Section ob) {
+void Section::changeLocation(vector<Location> &locationsList, Section &ob) {
     cout << "[CURRENT SECTION INFORMATION]\n";
     cout << showSectionInformation() << endl;
-
-    int startHour;
-    int startMinute;
-    cout << " [START TIME INFORMATION] \n";
-    cout << " HOUR : ";
-    cin >> startHour;
-    cout << " MINUTE : ";
-    cin >> startMinute;
-
-    time.setStartHour(startHour);
-    time.setStartMinute(startMinute);
-
-    int year, month, day;
-    cout << " [DATE INFORMATION] \n";
-    cout << " SECTION YEAR : ";
-    cin >> year;
-
-    cout << " SECTION MONTH : ";
-    cin >> month;
-
-    cout << " SECTION DAY : ";
-    cin >> day;
-
-    date.setYear(year);
-    date.setMonth(month);
-    date.setDay(day);
 
     int count1 = 1;
     for (Location location: locationsList) {
@@ -205,7 +181,9 @@ void Section::changeTimeAndLocationAndDate(vector<Location> locationsList, Secti
         }
     }
 }
+// LOCATION INTERFERENCE
 
+//EXAM DATE INTERFERENCE
 bool Section::thirdCaseOfInterference(Section &other) {
     bool isValid = true;
 
@@ -221,7 +199,7 @@ bool Section::thirdCaseOfInterference(Section &other) {
 }
 
 void Section::thirdMessage() {
-    cout << "CHOOSE ANOTHER TIME FOR EXAM!\n";
+    cout << "CHOOSE ANOTHER DATE FOR EXAM!\n";
 }
 
 void Section::changeExamDate() {
@@ -242,6 +220,7 @@ void Section::changeExamDate() {
     date.setExamMonth(examMonth);
     date.setExamDay(examDay);
 }
+//EXAM DATE INTERFERENCE
 
 bool Section::toCheckTheInterference(Section &other) {
     bool isValid = true;
@@ -268,68 +247,3 @@ bool Section::toCheckTheInterference(Section &other) {
 string Section::getSectionName() const {
     return _sectionName;
 }
-
-void Section::editSection() {
-    cout << "CURRENT SECTION INFORMATION:\n";
-    cout << showSectionInformation() << endl;
-
-    string sectionName;
-    cout << " ENTER NEW SECTION NAME: ";
-    cin.ignore();
-    getline(cin, sectionName);
-
-    string answer;
-    bool isNeed;
-    cout << " DO YOU NEED PROJECTOR (YES OR NO) ? ";
-    getline(cin, answer);
-    if (answer == "YES") {
-        isNeed = true;
-    } else if (answer == "NO") {
-        isNeed = false;
-    }
-
-    int startHour;
-    int startMinute;
-    cout << " [NEW START TIME INFORMATION] \n";
-    cout << " HOUR : ";
-    cin >> startHour;
-    cout << " MINUTE : ";
-    cin >> startMinute;
-
-    int sectionDuration;
-    int examDuration;
-    cout << " [NEW DURATION INFORMATION] \n";
-    cout << " SECTION DURATION : ";
-    cin >> sectionDuration;
-    cout << " EXAM DURATION : ";
-    cin >> examDuration;
-
-    int year, month, day, examYear, examMonth, examDay, daynum;
-    cout << " [NEW DATE INFORMATION] \n";
-    cout << " SECTION YEAR : ";
-    cin >> year;
-
-    cout << " SECTION MONTH : ";
-    cin >> month;
-
-    cout << " SECTION DAY : ";
-    cin >> day;
-
-    cout << " YEAR OF EXAM : ";
-    cin >> examYear;
-
-    cout << " MONTH OF EXAM : ";
-    cin >> examMonth;
-
-    cout << " DAY OF EXAM : ";
-    cin >> examDay;
-
-    cout << " [NEW SECTION DAY]  \n";
-    cout << " ENTER A NUMBER FROM 0 to 6 (Saturday , ... , Friday) -> ";
-    cin >> daynum;
-
-}
-
-
-
-
